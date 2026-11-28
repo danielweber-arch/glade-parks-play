@@ -1,0 +1,622 @@
+[
+  {
+    "id": "bed_dawn_hope",
+    "bus": "music",
+    "gain": 0.35,
+    "loop": true,
+    "file": null,
+    "recipe": {
+      "pad": {
+        "notes": [
+          220.0,
+          277.18,
+          329.63
+        ],
+        "wave": "triangle",
+        "attack": 2.0,
+        "release": 2.0,
+        "lfoHz": 0.1,
+        "cutoff": 900
+      }
+    }
+  },
+  {
+    "id": "bed_golden_hour",
+    "bus": "music",
+    "gain": 0.35,
+    "loop": true,
+    "file": null,
+    "recipe": {
+      "pad": {
+        "notes": [
+          196.0,
+          246.94,
+          293.66
+        ],
+        "wave": "triangle",
+        "attack": 2.0,
+        "release": 2.0,
+        "lfoHz": 0.1,
+        "cutoff": 1000
+      }
+    }
+  },
+  {
+    "id": "bed_noon_clean",
+    "bus": "music",
+    "gain": 0.35,
+    "loop": true,
+    "file": null,
+    "recipe": {
+      "pad": {
+        "notes": [
+          261.63,
+          329.63,
+          392.0
+        ],
+        "wave": "sine",
+        "attack": 2.0,
+        "release": 2.0,
+        "lfoHz": 0.1,
+        "cutoff": 1200
+      }
+    }
+  },
+  {
+    "id": "bed_celebration",
+    "bus": "music",
+    "gain": 0.35,
+    "loop": true,
+    "file": null,
+    "recipe": {
+      "pad": {
+        "notes": [
+          293.66,
+          369.99,
+          440.0
+        ],
+        "wave": "triangle",
+        "attack": 2.0,
+        "release": 2.0,
+        "lfoHz": 0.1,
+        "cutoff": 1400
+      }
+    }
+  },
+  {
+    "id": "bed_warm_deal",
+    "bus": "music",
+    "gain": 0.35,
+    "loop": true,
+    "file": null,
+    "recipe": {
+      "pad": {
+        "notes": [
+          174.61,
+          220.0,
+          261.63
+        ],
+        "wave": "sine",
+        "attack": 2.0,
+        "release": 2.0,
+        "lfoHz": 0.1,
+        "cutoff": 800
+      }
+    }
+  },
+  {
+    "id": "bed_tense_steel",
+    "bus": "music",
+    "gain": 0.35,
+    "loop": true,
+    "file": null,
+    "recipe": {
+      "pad": {
+        "notes": [
+          146.83,
+          174.61
+        ],
+        "wave": "sawtooth",
+        "attack": 2.0,
+        "release": 2.0,
+        "lfoHz": 0.1,
+        "cutoff": 600
+      }
+    }
+  },
+  {
+    "id": "bed_court_steel",
+    "bus": "music",
+    "gain": 0.35,
+    "loop": true,
+    "file": null,
+    "recipe": {
+      "pad": {
+        "notes": [
+          130.81,
+          155.56,
+          196.0
+        ],
+        "wave": "square",
+        "attack": 2.0,
+        "release": 2.0,
+        "lfoHz": 0.1,
+        "cutoff": 500
+      }
+    }
+  },
+  {
+    "id": "bed_bust_cold",
+    "bus": "music",
+    "gain": 0.35,
+    "loop": true,
+    "file": null,
+    "recipe": {
+      "pad": {
+        "notes": [
+          110.0,
+          130.81
+        ],
+        "wave": "sine",
+        "attack": 2.0,
+        "release": 2.0,
+        "lfoHz": 0.1,
+        "cutoff": 450
+      }
+    }
+  },
+  {
+    "id": "bed_bleak_gray",
+    "bus": "music",
+    "gain": 0.35,
+    "loop": true,
+    "file": null,
+    "recipe": {
+      "pad": {
+        "notes": [
+          98.0,
+          116.54
+        ],
+        "wave": "sine",
+        "attack": 2.0,
+        "release": 2.0,
+        "lfoHz": 0.1,
+        "cutoff": 400
+      }
+    }
+  },
+  {
+    "id": "bed_gloss_night",
+    "bus": "music",
+    "gain": 0.35,
+    "loop": true,
+    "file": null,
+    "recipe": {
+      "pad": {
+        "notes": [
+          220.0,
+          261.63,
+          329.63
+        ],
+        "wave": "triangle",
+        "attack": 2.0,
+        "release": 2.0,
+        "lfoHz": 0.1,
+        "cutoff": 1100
+      }
+    }
+  },
+  {
+    "id": "bed_epic_night",
+    "bus": "music",
+    "gain": 0.35,
+    "loop": true,
+    "file": null,
+    "recipe": {
+      "pad": {
+        "notes": [
+          146.83,
+          220.0,
+          293.66
+        ],
+        "wave": "triangle",
+        "attack": 2.0,
+        "release": 2.0,
+        "lfoHz": 0.1,
+        "cutoff": 900
+      }
+    }
+  },
+  {
+    "id": "bed_gold_warm",
+    "bus": "music",
+    "gain": 0.35,
+    "loop": true,
+    "file": null,
+    "recipe": {
+      "pad": {
+        "notes": [
+          196.0,
+          246.94,
+          329.63
+        ],
+        "wave": "triangle",
+        "attack": 2.0,
+        "release": 2.0,
+        "lfoHz": 0.1,
+        "cutoff": 1000
+      }
+    }
+  },
+  {
+    "id": "bed_steel_cold",
+    "bus": "music",
+    "gain": 0.35,
+    "loop": true,
+    "file": null,
+    "recipe": {
+      "pad": {
+        "notes": [
+          130.81,
+          164.81,
+          196.0
+        ],
+        "wave": "sawtooth",
+        "attack": 2.0,
+        "release": 2.0,
+        "lfoHz": 0.1,
+        "cutoff": 550
+      }
+    }
+  },
+  {
+    "id": "sting_reveal",
+    "bus": "stinger",
+    "gain": 0.6,
+    "file": null,
+    "recipe": {
+      "layers": [
+        {
+          "wave": "sine",
+          "freq": 220,
+          "toFreq": 440,
+          "attack": 0.01,
+          "decay": 0.9,
+          "gain": 0.5
+        },
+        {
+          "wave": "noise",
+          "filter": "lowpass",
+          "cutoff": 1800,
+          "attack": 0.0,
+          "decay": 0.3,
+          "gain": 0.2
+        }
+      ]
+    }
+  },
+  {
+    "id": "sting_riser",
+    "bus": "stinger",
+    "gain": 0.5,
+    "file": null,
+    "recipe": {
+      "layers": [
+        {
+          "wave": "sawtooth",
+          "freq": 110,
+          "toFreq": 880,
+          "attack": 1.2,
+          "decay": 0.2,
+          "gain": 0.3
+        },
+        {
+          "wave": "noise",
+          "filter": "highpass",
+          "cutoff": 2000,
+          "attack": 1.0,
+          "decay": 0.2,
+          "gain": 0.15
+        }
+      ]
+    }
+  },
+  {
+    "id": "sting_whoosh",
+    "bus": "stinger",
+    "gain": 0.5,
+    "file": null,
+    "recipe": {
+      "layers": [
+        {
+          "wave": "noise",
+          "filter": "bandpass",
+          "cutoff": 1200,
+          "attack": 0.08,
+          "decay": 0.35,
+          "gain": 0.4
+        }
+      ]
+    }
+  },
+  {
+    "id": "sting_pen",
+    "bus": "stinger",
+    "gain": 0.45,
+    "file": null,
+    "recipe": {
+      "layers": [
+        {
+          "wave": "noise",
+          "filter": "highpass",
+          "cutoff": 3500,
+          "attack": 0.0,
+          "decay": 0.25,
+          "gain": 0.3
+        },
+        {
+          "wave": "sine",
+          "freq": 1800,
+          "toFreq": 1500,
+          "attack": 0.0,
+          "decay": 0.08,
+          "gain": 0.08
+        }
+      ]
+    }
+  },
+  {
+    "id": "sting_shovel",
+    "bus": "stinger",
+    "gain": 0.6,
+    "file": null,
+    "recipe": {
+      "layers": [
+        {
+          "wave": "noise",
+          "filter": "lowpass",
+          "cutoff": 600,
+          "attack": 0.0,
+          "decay": 0.3,
+          "gain": 0.5
+        },
+        {
+          "wave": "sine",
+          "freq": 90,
+          "toFreq": 60,
+          "attack": 0.0,
+          "decay": 0.25,
+          "gain": 0.4
+        }
+      ]
+    }
+  },
+  {
+    "id": "sting_snip",
+    "bus": "stinger",
+    "gain": 0.5,
+    "file": null,
+    "recipe": {
+      "layers": [
+        {
+          "wave": "noise",
+          "filter": "highpass",
+          "cutoff": 4500,
+          "attack": 0.0,
+          "decay": 0.06,
+          "gain": 0.4
+        },
+        {
+          "wave": "square",
+          "freq": 2400,
+          "toFreq": 2000,
+          "attack": 0.0,
+          "decay": 0.04,
+          "gain": 0.1
+        }
+      ]
+    }
+  },
+  {
+    "id": "sting_gavel",
+    "bus": "stinger",
+    "gain": 0.65,
+    "file": null,
+    "recipe": {
+      "layers": [
+        {
+          "wave": "sine",
+          "freq": 160,
+          "toFreq": 110,
+          "attack": 0.0,
+          "decay": 0.2,
+          "gain": 0.6
+        },
+        {
+          "wave": "noise",
+          "filter": "lowpass",
+          "cutoff": 900,
+          "attack": 0.0,
+          "decay": 0.12,
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "id": "sting_bell",
+    "bus": "stinger",
+    "gain": 0.6,
+    "file": null,
+    "recipe": {
+      "layers": [
+        {
+          "wave": "sine",
+          "freq": 880,
+          "toFreq": 880,
+          "attack": 0.0,
+          "decay": 2.5,
+          "gain": 0.4
+        },
+        {
+          "wave": "sine",
+          "freq": 2217,
+          "toFreq": 2217,
+          "attack": 0.0,
+          "decay": 1.2,
+          "gain": 0.15
+        }
+      ]
+    }
+  },
+  {
+    "id": "sting_cash",
+    "bus": "stinger",
+    "gain": 0.55,
+    "file": null,
+    "recipe": {
+      "layers": [
+        {
+          "wave": "sine",
+          "freq": 1318.5,
+          "toFreq": 1318.5,
+          "attack": 0.0,
+          "decay": 0.25,
+          "gain": 0.35
+        },
+        {
+          "wave": "sine",
+          "freq": 1975.5,
+          "toFreq": 1975.5,
+          "attack": 0.08,
+          "decay": 0.4,
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "id": "sting_drop",
+    "bus": "stinger",
+    "gain": 0.6,
+    "file": null,
+    "recipe": {
+      "layers": [
+        {
+          "wave": "sine",
+          "freq": 110,
+          "toFreq": 40,
+          "attack": 0.02,
+          "decay": 1.6,
+          "gain": 0.6
+        },
+        {
+          "wave": "noise",
+          "filter": "lowpass",
+          "cutoff": 300,
+          "attack": 0.0,
+          "decay": 0.8,
+          "gain": 0.2
+        }
+      ]
+    }
+  },
+  {
+    "id": "ui_press",
+    "bus": "ui",
+    "gain": 0.3,
+    "file": null,
+    "recipe": {
+      "layers": [
+        {
+          "wave": "sine",
+          "freq": 660,
+          "toFreq": 660,
+          "attack": 0.0,
+          "decay": 0.05,
+          "gain": 0.4
+        }
+      ]
+    }
+  },
+  {
+    "id": "ui_open",
+    "bus": "ui",
+    "gain": 0.3,
+    "file": null,
+    "recipe": {
+      "layers": [
+        {
+          "wave": "sine",
+          "freq": 520,
+          "toFreq": 780,
+          "attack": 0.0,
+          "decay": 0.09,
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "id": "ui_back",
+    "bus": "ui",
+    "gain": 0.3,
+    "file": null,
+    "recipe": {
+      "layers": [
+        {
+          "wave": "sine",
+          "freq": 780,
+          "toFreq": 520,
+          "attack": 0.0,
+          "decay": 0.09,
+          "gain": 0.35
+        }
+      ]
+    }
+  },
+  {
+    "id": "ui_confirm",
+    "bus": "ui",
+    "gain": 0.32,
+    "file": null,
+    "recipe": {
+      "layers": [
+        {
+          "wave": "sine",
+          "freq": 660,
+          "toFreq": 660,
+          "attack": 0.0,
+          "decay": 0.06,
+          "gain": 0.35
+        },
+        {
+          "wave": "sine",
+          "freq": 990,
+          "toFreq": 990,
+          "attack": 0.06,
+          "decay": 0.12,
+          "gain": 0.3
+        }
+      ]
+    }
+  },
+  {
+    "id": "ui_error",
+    "bus": "ui",
+    "gain": 0.3,
+    "file": null,
+    "recipe": {
+      "layers": [
+        {
+          "wave": "square",
+          "freq": 220,
+          "toFreq": 180,
+          "attack": 0.0,
+          "decay": 0.18,
+          "gain": 0.2
+        }
+      ]
+    }
+  }
+]

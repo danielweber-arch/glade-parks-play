@@ -1,0 +1,353 @@
+[
+  {
+    "id": "dawn_hope",
+    "time": "dawn",
+    "why": "First light on a new start.",
+    "light": {
+      "sun": "#ffcf9e",
+      "sunIntensity": 2.2,
+      "sunElevation": 12,
+      "sunAzimuth": 100,
+      "skyTop": "#7fa8d9",
+      "skyHorizon": "#f6c9a0",
+      "ground": "#6b5a4a",
+      "fog": "#f1c6a4",
+      "fogDensity": 0.004,
+      "exposure": 1.0
+    },
+    "tint": "#ffd9b0",
+    "tintAmount": 0.12,
+    "vignette": 0.25,
+    "grain": 0.04,
+    "grade": {
+      "lut": "lut_dawn_hope",
+      "saturation": 1.05,
+      "contrast": 1.05
+    },
+    "bed": "bed_dawn_hope"
+  },
+  {
+    "id": "golden_hour",
+    "time": "dusk",
+    "why": "Low warm sun that makes a building look its best.",
+    "light": {
+      "sun": "#ffb86b",
+      "sunIntensity": 2.6,
+      "sunElevation": 8,
+      "sunAzimuth": 250,
+      "skyTop": "#6f93c8",
+      "skyHorizon": "#ffc58a",
+      "ground": "#6e5a40",
+      "fog": "#f4c08c",
+      "fogDensity": 0.003,
+      "exposure": 1.05
+    },
+    "tint": "#ffcc88",
+    "tintAmount": 0.15,
+    "vignette": 0.22,
+    "grain": 0.03,
+    "grade": {
+      "lut": "lut_golden_hour",
+      "saturation": 1.1,
+      "contrast": 1.08
+    },
+    "bed": "bed_golden_hour"
+  },
+  {
+    "id": "noon_clean",
+    "time": "noon",
+    "why": "Clear midday light for plain, happy work.",
+    "light": {
+      "sun": "#fff4e0",
+      "sunIntensity": 3.0,
+      "sunElevation": 60,
+      "sunAzimuth": 180,
+      "skyTop": "#5d9be0",
+      "skyHorizon": "#cfe4f7",
+      "ground": "#7a6e5c",
+      "fog": "#dfeaf4",
+      "fogDensity": 0.002,
+      "exposure": 1.0
+    },
+    "tint": "#ffffff",
+    "tintAmount": 0.03,
+    "vignette": 0.15,
+    "grain": 0.02,
+    "grade": {
+      "lut": "lut_noon_clean",
+      "saturation": 1.0,
+      "contrast": 1.02
+    },
+    "bed": "bed_noon_clean"
+  },
+  {
+    "id": "celebration",
+    "time": "day",
+    "why": "Bright and warm for a big day with a crowd.",
+    "light": {
+      "sun": "#ffe7b8",
+      "sunIntensity": 3.0,
+      "sunElevation": 40,
+      "sunAzimuth": 160,
+      "skyTop": "#5a97e6",
+      "skyHorizon": "#f9dcae",
+      "ground": "#7b6a52",
+      "fog": "#f6e2c2",
+      "fogDensity": 0.002,
+      "exposure": 1.08
+    },
+    "tint": "#ffe0a8",
+    "tintAmount": 0.1,
+    "vignette": 0.18,
+    "grain": 0.03,
+    "grade": {
+      "lut": "lut_celebration",
+      "saturation": 1.15,
+      "contrast": 1.08
+    },
+    "bed": "bed_celebration"
+  },
+  {
+    "id": "warm_deal",
+    "time": "afternoon",
+    "why": "Soft warm light for a handshake at a table.",
+    "light": {
+      "sun": "#ffd6a6",
+      "sunIntensity": 2.2,
+      "sunElevation": 30,
+      "sunAzimuth": 220,
+      "skyTop": "#7aa0cf",
+      "skyHorizon": "#f2d2b0",
+      "ground": "#6a5847",
+      "fog": "#ecd0b4",
+      "fogDensity": 0.003,
+      "exposure": 1.0
+    },
+    "tint": "#ffd2a0",
+    "tintAmount": 0.1,
+    "vignette": 0.28,
+    "grain": 0.03,
+    "grade": {
+      "lut": "lut_warm_deal",
+      "saturation": 1.05,
+      "contrast": 1.04
+    },
+    "bed": "bed_warm_deal"
+  },
+  {
+    "id": "tense_steel",
+    "time": "overcast",
+    "why": "Cool flat light for a face off with a rival.",
+    "light": {
+      "sun": "#cfd8e4",
+      "sunIntensity": 1.6,
+      "sunElevation": 25,
+      "sunAzimuth": 200,
+      "skyTop": "#55657a",
+      "skyHorizon": "#9aa7b6",
+      "ground": "#4c4f52",
+      "fog": "#9aa4ae",
+      "fogDensity": 0.006,
+      "exposure": 0.95
+    },
+    "tint": "#a8bccf",
+    "tintAmount": 0.14,
+    "vignette": 0.35,
+    "grain": 0.05,
+    "grade": {
+      "lut": "lut_tense_steel",
+      "saturation": 0.9,
+      "contrast": 1.15
+    },
+    "bed": "bed_tense_steel"
+  },
+  {
+    "id": "court_steel",
+    "time": "day",
+    "why": "Cold indoor light for a hearing in court.",
+    "light": {
+      "sun": "#dfe6ee",
+      "sunIntensity": 1.8,
+      "sunElevation": 45,
+      "sunAzimuth": 170,
+      "skyTop": "#6b7a8c",
+      "skyHorizon": "#b4bfca",
+      "ground": "#55575a",
+      "fog": "#b0b8c2",
+      "fogDensity": 0.004,
+      "exposure": 0.95
+    },
+    "tint": "#b8c8d8",
+    "tintAmount": 0.12,
+    "vignette": 0.32,
+    "grain": 0.04,
+    "grade": {
+      "lut": "lut_court_steel",
+      "saturation": 0.88,
+      "contrast": 1.12
+    },
+    "bed": "bed_court_steel"
+  },
+  {
+    "id": "bust_cold",
+    "time": "overcast",
+    "why": "Gray cold light when the market falls.",
+    "light": {
+      "sun": "#b8c0c8",
+      "sunIntensity": 1.2,
+      "sunElevation": 20,
+      "sunAzimuth": 190,
+      "skyTop": "#5b636c",
+      "skyHorizon": "#8c949c",
+      "ground": "#47494b",
+      "fog": "#8e959c",
+      "fogDensity": 0.009,
+      "exposure": 0.85
+    },
+    "tint": "#9aa6b2",
+    "tintAmount": 0.2,
+    "vignette": 0.4,
+    "grain": 0.06,
+    "grade": {
+      "lut": "lut_bust_cold",
+      "saturation": 0.65,
+      "contrast": 1.1
+    },
+    "bed": "bed_bust_cold"
+  },
+  {
+    "id": "bleak_gray",
+    "time": "overcast",
+    "why": "Flat dim light when the cash runs out.",
+    "light": {
+      "sun": "#a9adb2",
+      "sunIntensity": 1.0,
+      "sunElevation": 15,
+      "sunAzimuth": 200,
+      "skyTop": "#4e5359",
+      "skyHorizon": "#7c8187",
+      "ground": "#3f4143",
+      "fog": "#7e8388",
+      "fogDensity": 0.012,
+      "exposure": 0.8
+    },
+    "tint": "#8e949a",
+    "tintAmount": 0.22,
+    "vignette": 0.45,
+    "grain": 0.07,
+    "grade": {
+      "lut": "lut_bleak_gray",
+      "saturation": 0.5,
+      "contrast": 1.05
+    },
+    "bed": "bed_bleak_gray"
+  },
+  {
+    "id": "gloss_night",
+    "time": "night",
+    "why": "Shiny city lights for a rich list night.",
+    "light": {
+      "sun": "#9fb4ff",
+      "sunIntensity": 1.4,
+      "sunElevation": 25,
+      "sunAzimuth": 300,
+      "skyTop": "#141c3a",
+      "skyHorizon": "#46387a",
+      "ground": "#24222e",
+      "fog": "#2c2850",
+      "fogDensity": 0.005,
+      "exposure": 1.1
+    },
+    "tint": "#c8a8ff",
+    "tintAmount": 0.14,
+    "vignette": 0.3,
+    "grain": 0.04,
+    "grade": {
+      "lut": "lut_gloss_night",
+      "saturation": 1.15,
+      "contrast": 1.12
+    },
+    "bed": "bed_gloss_night"
+  },
+  {
+    "id": "epic_night",
+    "time": "night",
+    "why": "A dark sky so a lit tower can shine.",
+    "light": {
+      "sun": "#8ea6ff",
+      "sunIntensity": 1.2,
+      "sunElevation": 30,
+      "sunAzimuth": 280,
+      "skyTop": "#0c1230",
+      "skyHorizon": "#2e3a6e",
+      "ground": "#1d1d26",
+      "fog": "#232a48",
+      "fogDensity": 0.004,
+      "exposure": 1.05
+    },
+    "tint": "#a8b8ff",
+    "tintAmount": 0.12,
+    "vignette": 0.32,
+    "grain": 0.04,
+    "grade": {
+      "lut": "lut_epic_night",
+      "saturation": 1.1,
+      "contrast": 1.15
+    },
+    "bed": "bed_epic_night"
+  },
+  {
+    "id": "gold_warm",
+    "time": "dusk",
+    "why": "Warm gold light for an honest ending.",
+    "light": {
+      "sun": "#ffc070",
+      "sunIntensity": 2.4,
+      "sunElevation": 10,
+      "sunAzimuth": 240,
+      "skyTop": "#6d8cc0",
+      "skyHorizon": "#ffcf90",
+      "ground": "#6c5638",
+      "fog": "#f2c894",
+      "fogDensity": 0.003,
+      "exposure": 1.05
+    },
+    "tint": "#ffd08a",
+    "tintAmount": 0.16,
+    "vignette": 0.25,
+    "grain": 0.03,
+    "grade": {
+      "lut": "lut_gold_warm",
+      "saturation": 1.12,
+      "contrast": 1.06
+    },
+    "bed": "bed_gold_warm"
+  },
+  {
+    "id": "steel_cold",
+    "time": "dusk",
+    "why": "Cold blue light for a hard ending.",
+    "light": {
+      "sun": "#c4d0e0",
+      "sunIntensity": 1.6,
+      "sunElevation": 10,
+      "sunAzimuth": 260,
+      "skyTop": "#3c4a66",
+      "skyHorizon": "#8696b0",
+      "ground": "#45484e",
+      "fog": "#8a96a8",
+      "fogDensity": 0.005,
+      "exposure": 0.95
+    },
+    "tint": "#a0b4d0",
+    "tintAmount": 0.16,
+    "vignette": 0.35,
+    "grain": 0.04,
+    "grade": {
+      "lut": "lut_steel_cold",
+      "saturation": 0.85,
+      "contrast": 1.12
+    },
+    "bed": "bed_steel_cold"
+  }
+]

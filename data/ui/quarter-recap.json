@@ -1,0 +1,34 @@
+{
+  "formatVersion": 1,
+  "_note": "P7.4 quarter recap words. One screen after every quarter: what came in, what went out, what changed, what needs me. Category words follow Docs/word-bible.md.",
+  "text": {
+    "title": "Year {y} quarter {q} recap",
+    "cameIn": "What came in",
+    "wentOut": "What went out",
+    "changed": "What changed",
+    "needsMe": "What needs me",
+    "net": "Cash went {dir} by {amount} this quarter.",
+    "up": "up",
+    "down": "down",
+    "nothingIn": "Nothing came in.",
+    "nothingOut": "Nothing went out.",
+    "nothingChanged": "A quiet quarter.",
+    "allClear": "Nothing needs you right now.",
+    "opened": "{n} buildings opened.",
+    "leased": "{site} is {pct} leased.",
+    "honor": "Honor moved {delta}.",
+    "heat": "Heat stars: {n}.",
+    "decisions": "{n} choices are waiting for you.",
+    "short": "Cash ran short by {amount}.",
+    "investigation": "The city is investigating you. Permits are frozen.",
+    "hearing": "Your hearing is ready."
+  },
+  "cat": {
+    "Other": "Other", "Opening": "Starting cash", "Rent": "Rent", "Sale": "Sales", "Refinance": "New loans", "LoanDraw": "Loan money",
+    "LoanPayment": "Loan payments", "Equity": "Partner money", "Construction": "Building costs", "Fee": "Fees", "Tax": "Tax",
+    "Upkeep": "Upkeep", "Reward": "Rewards", "Penalty": "Fines", "Lawsuit": "Lawsuits", "Broker": "Broker fees", "Auction": "Auctions",
+    "Staff": "Staff pay", "Personal": "Personal", "Transfer": "Transfers", "Interest": "Interest", "Land": "Land", "Investor": "Investors",
+    "Event": "Surprises", "Refund": "Money back", "Talk": "Deals made in talks", "LeaseDeposit": "Deposits", "CamTrueUp": "Shared cost true up",
+    "ParkAdmission": "Park tickets", "ParkingFees": "Parking fees", "Investment": "Stocks", "Trading": "Trades"
+  }
+}

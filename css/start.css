@@ -1,0 +1,14 @@
+/* N437 sunny look: a sky, a sun and two hills behind the panel on Start and Home, pure CSS layers, no images.
+   On Home the 3D world (css/world.css, slot n3) may draw over this; when WebGL is off this is what shows. */
+body:has(#panel[data-screen="start"]), body:has(#panel[data-screen="home"]) {
+  background:
+    radial-gradient(circle at 82% 14%, var(--sun) 0 6vmin, var(--sun-glow) 6.2vmin 13vmin, transparent 13.2vmin),
+    radial-gradient(ellipse 70% 30% at 20% 108%, var(--hill-2) 0 99%, transparent 100%),
+    radial-gradient(ellipse 80% 34% at 85% 112%, var(--hill-1) 0 99%, transparent 100%),
+    linear-gradient(180deg, var(--sky-top), var(--sky-bottom));
+  background-attachment: fixed;
+}
+.game-title {
+  font-size: clamp(40px, 7vmin, 64px); line-height: 1.05; letter-spacing: 0.01em; font-weight: 700;
+  color: var(--title-ink); text-shadow: 0 3px 0 var(--title-shadow), 0 6px 12px rgba(0, 0, 0, 0.15);
+}

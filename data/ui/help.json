@@ -1,0 +1,215 @@
+{
+  "formatVersion": 1,
+  "_note": "P7.4 What's this? help: one or two short lines per money or deal word. Keys are concept ids in Data/ui/lexicon.json; the word shown is the lexicon word for the active mode. Lines follow Docs/word-bible.md.",
+  "maxLines": {
+    "value": 2,
+    "source": "Docs/plan-5.md game feel gaps",
+    "why": "one or two short lines"
+  },
+  "maxChars": {
+    "value": 120,
+    "source": "Docs/word-bible.md readable by a 12 year old",
+    "why": "keeps each line short"
+  },
+  "words": {
+    "company_cash": [
+      "Money the company has right now.",
+      "Building, staff and loan payments come out of it."
+    ],
+    "personal_cash": [
+      "Your own money, kept apart from the company."
+    ],
+    "pay_yourself": [
+      "Move money from the company to you.",
+      "The company has less to build with after."
+    ],
+    "cash_put_in": [
+      "The money you paid from your own pocket for a project, not borrowed."
+    ],
+    "cash_to_you": [
+      "What you keep from a sale after loans, fees and tax are paid."
+    ],
+    "yearly_income": [
+      "Rent in a year, minus the cost to run the buildings.",
+      "Loan payments are not taken out yet."
+    ],
+    "quarter_income": [
+      "Rent this quarter, minus the cost to run the buildings."
+    ],
+    "rent": [
+      "What tenants pay you to use your space."
+    ],
+    "value": [
+      "What a buyer would likely pay for it today."
+    ],
+    "land_value": [
+      "What the empty ground is worth without buildings."
+    ],
+    "holding_cost": [
+      "What it costs each quarter just to own it: tax, upkeep and loan payments."
+    ],
+    "project_verdict": [
+      "Compares what a project earns with what it cost.",
+      "Pays for itself is good. Loses money means rent is too low for the cost."
+    ],
+    "payroll": [
+      "What you pay your staff each quarter."
+    ],
+    "lender": [
+      "A bank or fund that lends you money for a project."
+    ],
+    "lender_type": [
+      "The kind of lender. Each one lends a different amount at a different price."
+    ],
+    "loan_payment": [
+      "What you pay the lender each month, interest and some of the loan."
+    ],
+    "capital_stack": [
+      "How a project is paid for: your cash, loans and partner money."
+    ],
+    "risk_presets": [
+      "Safe borrows less. Risky borrows more, so profits and losses both get bigger."
+    ],
+    "layer_senior": [
+      "The biggest loan. It gets paid back before anyone else."
+    ],
+    "layer_mezz": [
+      "A smaller loan on top of the main one. It costs more because it is paid back second."
+    ],
+    "layer_pref": [
+      "Partner money that gets its return before you see a profit."
+    ],
+    "layer_investor": [
+      "Money from investors who share in the profit with you."
+    ],
+    "ltv": [
+      "How much you owe compared with what the building is worth."
+    ],
+    "dscr": [
+      "How many times your income covers your loan payments. Under 1 means you cannot pay."
+    ],
+    "income_drop_to_default": [
+      "How far income can fall before you cannot make the loan payment."
+    ],
+    "cap_rate": [
+      "Yearly income divided by price. Buyers pay more when it is low."
+    ],
+    "interest_rate": [
+      "The full yearly price of the loan, base rate plus the lender's extra."
+    ],
+    "base_rate": [
+      "The rate every loan in town starts from. It moves with the market."
+    ],
+    "loan_spread": [
+      "What the lender adds on top of the base rate."
+    ],
+    "dev_spread": [
+      "What a project earns over what buyers expect. Bigger is safer."
+    ],
+    "floating_rate": [
+      "Your loan payment moves up or down when rates change."
+    ],
+    "fixed_rate": [
+      "Your loan payment stays the same until the loan ends."
+    ],
+    "missed_payment": [
+      "You did not pay the lender on time. Miss too many and you can lose the building."
+    ],
+    "foreclosure": [
+      "The lender takes the building because the loan was not paid."
+    ],
+    "credit_line": [
+      "A backup loan that covers you when cash runs out. It charges interest."
+    ],
+    "refinance": [
+      "Swap your loan for a new one, often to pull cash out of a finished building."
+    ],
+    "investor_target": [
+      "The return investors get before you share in the profit."
+    ],
+    "promote": [
+      "Your extra share of the profit once investors get their target."
+    ],
+    "backs_out": [
+      "Someone walks away from a deal after saying yes."
+    ],
+    "check_size": [
+      "How much money an investor puts in."
+    ],
+    "offer": [
+      "The price you say you will pay or take."
+    ],
+    "counter_offer": [
+      "A new price sent back after an offer."
+    ],
+    "handshake_deal": [
+      "A promise with no contract. Breaking it hurts your honor."
+    ],
+    "diligence": [
+      "Check the land before you buy: who owns it, the ground and the rules."
+    ],
+    "title_problem": [
+      "Someone else may have a claim on the land. Fix it before you build."
+    ],
+    "dirty_ground": [
+      "The soil needs cleaning before anyone can build. That costs money and time."
+    ],
+    "easement": [
+      "Someone else has a right to cross part of the land."
+    ],
+    "off_market": [
+      "A deal no other buyer has seen, so you can pay less."
+    ],
+    "distressed": [
+      "An owner who has to sell soon, often for less."
+    ],
+    "auction": [
+      "Land sold at the courthouse to the highest bid. You pay fast."
+    ],
+    "infill": [
+      "An empty lot inside town, close to people and roads."
+    ],
+    "sell": [
+      "Sell a property to a buyer. Loans get paid off from the price."
+    ],
+    "closing": [
+      "The day a sale is done and the money moves."
+    ],
+    "roll_over": [
+      "Put sale profit into a new deal before a deadline to put off the tax."
+    ],
+    "exit_tax": [
+      "Tax on the profit when you sell."
+    ],
+    "buyer_reit": [
+      "A big company that buys many buildings. It pays well for steady rent."
+    ],
+    "buyer_private": [
+      "A local investor. Faster, but often pays less."
+    ],
+    "buyer_1031": [
+      "A buyer who must buy before a deadline, so may pay a little more."
+    ],
+    "go_public": [
+      "Sell shares of your company to the public for a lot of cash."
+    ],
+    "shareholders": [
+      "People who own part of your company and want income each quarter."
+    ],
+    "quarter_target": [
+      "The income you promised shareholders. Missing it drops your share price."
+    ],
+    "seller_note": [
+      "You lend the buyer part of the price and they pay you back over time."
+    ],
+    "heat": [
+      "How much the city is watching you. Five stars starts an investigation."
+    ],
+    "honor": [
+      "How fair people think you are. High honor opens doors."
+    ],
+    "bad_sport": [
+      "A tag for backing out of deals. New deals freeze while you have it."
+    ]
+  }
+}

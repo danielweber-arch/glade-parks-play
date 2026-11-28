@@ -1,0 +1,344 @@
+{
+ "_note": "P12.1 cut rules (plan-cinematic section 2) as numbers, read by Sim/Cine/Lint/CutLint. Times in real seconds, angles in degrees, heights in meters. Flash, brightness and shake caps are checked once per list by Sim/Cine/Reveals/StageLint, reached through CutLint.Run.",
+ "formatVersion": 1,
+ "shotLength": {
+  "minSeconds": {
+   "value": 1.0,
+   "source": "plan-cinematic section 2",
+   "why": "No shot under 1 s except a whip pan."
+  },
+  "maxSeconds": {
+   "value": 8.0,
+   "source": "plan-cinematic section 2",
+   "why": "No shot over 8 s."
+  },
+  "averageMin": {
+   "value": 2.5,
+   "source": "plan-cinematic section 2",
+   "why": "Scene average shot length floor."
+  },
+  "averageMax": {
+   "value": 5.0,
+   "source": "plan-cinematic section 2",
+   "why": "Scene average shot length ceiling."
+  },
+  "shortTypeIds": [
+   "whip_pan"
+  ],
+  "averageExemptKinds": {
+   "value": [
+    "stinger",
+    "chapter"
+   ],
+   "source": "plan-cinematic section 2 conflict: a chapter (4 to 6 s, 3+ shots) averages 2 s a shot at most; a two shot stinger (2 to 4 s) averages 2 s at most and a one shot stinger can be under 2.5 s",
+   "why": "Scene kinds that skip the average shot length check, because their length and shot count rules force an average under the floor."
+  }
+ },
+ "sceneSeconds": {
+  "stinger": {
+   "value": [
+    2,
+    4
+   ],
+   "source": "plan-cinematic section 2",
+   "why": "Cut in window length."
+  },
+  "chapter": {
+   "value": [
+    4,
+    6
+   ],
+   "source": "plan-cinematic section 2",
+   "why": "Chapter card scene."
+  },
+  "beat": {
+   "value": [
+    6,
+    12
+   ],
+   "source": "plan-cinematic section 2",
+   "why": "A career beat."
+  },
+  "opening": {
+   "value": [
+    8,
+    14
+   ],
+   "source": "plan-cinematic section 2",
+   "why": "New game opening."
+  },
+  "reveal": {
+   "value": [
+    6,
+    15
+   ],
+   "source": "plan-cinematic section 2",
+   "why": "Building reveal."
+  },
+  "ceremony": {
+   "value": [
+    10,
+    18
+   ],
+   "source": "plan-cinematic section 2",
+   "why": "Ceremony scene."
+  },
+  "story": {
+   "value": [
+    15,
+    45
+   ],
+   "source": "plan-cinematic section 2",
+   "why": "Story scene."
+  },
+  "ending": {
+   "value": [
+    0,
+    60
+   ],
+   "source": "plan-cinematic section 2",
+   "why": "Ending is 60 s or less."
+  },
+  "_note": "backdrop loops and has no length rule, so it is not listed."
+ },
+ "shotCount": {
+  "fullMin": {
+   "value": 3,
+   "source": "plan-cinematic section 2",
+   "why": "A full scene has 3 shots or more."
+  },
+  "stingerMin": {
+   "value": 1,
+   "source": "plan-cinematic section 2",
+   "why": "A stinger has 1 shot or more."
+  },
+  "stingerMax": {
+   "value": 2,
+   "source": "plan-cinematic section 2",
+   "why": "A stinger has 2 shots or fewer."
+  }
+ },
+ "captions": {
+  "secondsPerWord": {
+   "value": 0.4,
+   "source": "plan-cinematic section 2",
+   "why": "Reading time per word."
+  },
+  "minSeconds": {
+   "value": 2.0,
+   "source": "plan-cinematic section 2",
+   "why": "Shortest caption."
+  },
+  "afterCutSeconds": {
+   "value": 0.3,
+   "source": "plan-cinematic section 2",
+   "why": "No caption starts this soon after a cut."
+  }
+ },
+ "comfort": {
+  "sampleHz": {
+   "value": 30,
+   "source": "plan-cinematic section 2",
+   "why": "Poses are sampled 30 times a second inside each shot."
+  },
+  "maxRoll": {
+   "value": 0,
+   "source": "plan-cinematic section 2",
+   "why": "No roll by default."
+  },
+  "tenseMaxRoll": {
+   "value": 3,
+   "source": "plan-cinematic section 2",
+   "why": "Up to 3 degrees of roll in a mood marked tense."
+  },
+  "tenseMoodIds": {
+   "value": [
+    "tense_steel",
+    "court_steel",
+    "bust_cold",
+    "bleak_gray"
+   ],
+   "source": "Data/cine/moods.json and plan-cinematic section 3 event map",
+   "why": "Real mood ids that may roll up to tenseMaxRoll: the rival, courtroom, bust and broke moods."
+  },
+  "maxYawRate": {
+   "value": 40,
+   "source": "plan-cinematic section 2",
+   "why": "Camera yaw speed cap in degrees a second."
+  },
+  "maxPitchRate": {
+   "value": 15,
+   "source": "plan-cinematic section 2",
+   "why": "Camera pitch speed cap in degrees a second."
+  },
+  "maxFovRate": {
+   "value": 10,
+   "source": "plan-cinematic section 2",
+   "why": "Field of view change cap in degrees a second."
+  },
+  "maxWhipPans": {
+   "value": 1,
+   "source": "plan-cinematic section 2",
+   "why": "One whip pan a scene at most."
+  },
+  "shakeMaxDegrees": {
+   "value": 0.15,
+   "source": "plan-cinematic section 2",
+   "why": "Shake cap. Checked in wave 2."
+  },
+  "shakeMoodIds": {
+   "value": [
+    "bust_cold",
+    "bleak_gray"
+   ],
+   "source": "plan-cinematic section 2 and the section 3 event map (bust uses bust_cold, broke uses bleak_gray)",
+   "why": "The only moods that may shake. Checked in wave 2."
+  },
+  "maxFlashes": {
+   "value": 1,
+   "source": "plan-cinematic section 2",
+   "why": "Full screen flashes a scene. Checked in wave 2."
+  },
+  "maxBrightnessJump": {
+   "value": 0.2,
+   "source": "plan-cinematic section 2",
+   "why": "Largest brightness jump inside the window below. Checked in wave 2."
+  },
+  "brightnessWindowSeconds": {
+   "value": 0.333,
+   "source": "plan-cinematic section 2",
+   "why": "A third of a second. Checked in wave 2."
+  }
+ },
+ "height": {
+  "minMeters": {
+   "value": 0.3,
+   "source": "plan-cinematic section 2",
+   "why": "The camera never goes under 0.3 m above the ground."
+  },
+  "groundY": {
+   "value": 0.0,
+   "source": "starting guess, owner to tune by feel",
+   "why": "Ground height on the plain district stage."
+  }
+ },
+ "thirtyDegree": {
+  "minDegrees": {
+   "value": 30,
+   "source": "plan-cinematic section 2",
+   "why": "Two shots in a row on one subject differ by 30 degrees or more."
+  },
+  "minSizeSteps": {
+   "value": 2,
+   "source": "plan-cinematic section 2",
+   "why": "Or by two size steps."
+  }
+ },
+ "line180": {
+  "neutralDegrees": {
+   "value": 10,
+   "source": "plan-cinematic section 2",
+   "why": "A shot within 10 degrees of the line is neutral and may reset the side."
+  },
+  "nearMeters": {
+   "value": 1.5,
+   "source": "N167 Line180 definition shared with the director (r38)",
+   "why": "A subject whose center is this close to the segment between the two people (a midpoint, a prop between them) is held to the line too. A wide of a building 30 m away stays exempt."
+  }
+ },
+ "cutOnAction": {
+  "toleranceSeconds": {
+   "value": 0.033334,
+   "source": "plan-cinematic section 2",
+   "why": "One thirtieth of a second (0.0333...) rounded up at the sixth decimal so a cut placed exactly one frame from actionAt passes and anything later fails."
+  }
+ },
+ "text": {
+  "title": {
+   "value": 28,
+   "source": "plan-cinematic appendix B",
+   "why": "Title characters."
+  },
+  "sub": {
+   "value": 48,
+   "source": "plan-cinematic appendix B",
+   "why": "Subtitle characters."
+  },
+  "name": {
+   "value": 32,
+   "source": "plan-cinematic appendix B",
+   "why": "Lower third name characters."
+  },
+  "role": {
+   "value": 48,
+   "source": "plan-cinematic appendix B",
+   "why": "Lower third role characters."
+  },
+  "captionLine": {
+   "value": 42,
+   "source": "plan-cinematic appendix B",
+   "why": "Characters a caption line."
+  },
+  "captionLines": {
+   "value": 2,
+   "source": "plan-cinematic appendix B",
+   "why": "Caption lines."
+  },
+  "captionWords": {
+   "value": 14,
+   "source": "plan-cinematic appendix B",
+   "why": "Words a caption."
+  }
+ },
+ "actors": {
+  "modelDir": "kenney/mini-characters/Models/GLB format/",
+  "modelIds": [
+   "kenney/mini-characters/Models/GLB format/character-female-a.glb",
+   "kenney/mini-characters/Models/GLB format/character-female-b.glb",
+   "kenney/mini-characters/Models/GLB format/character-female-c.glb",
+   "kenney/mini-characters/Models/GLB format/character-female-d.glb",
+   "kenney/mini-characters/Models/GLB format/character-female-e.glb",
+   "kenney/mini-characters/Models/GLB format/character-female-f.glb",
+   "kenney/mini-characters/Models/GLB format/character-male-a.glb",
+   "kenney/mini-characters/Models/GLB format/character-male-b.glb",
+   "kenney/mini-characters/Models/GLB format/character-male-c.glb",
+   "kenney/mini-characters/Models/GLB format/character-male-d.glb",
+   "kenney/mini-characters/Models/GLB format/character-male-e.glb",
+   "kenney/mini-characters/Models/GLB format/character-male-f.glb",
+   "kenney/mini-characters/Models/GLB format/character-male-g.glb",
+   "kenney/mini-characters/Models/GLB format/character-worker.glb"
+  ],
+  "bannedModelIds": [
+   "kenney/mini-characters/Models/GLB format/character-knight.glb",
+   "kenney/mini-characters/Models/GLB format/character-robot.glb",
+   "kenney/mini-characters/Models/GLB format/character-zombie.glb",
+   "kenney/mini-characters/Models/GLB format/character-alien.glb",
+   "kenney/mini-characters/Models/GLB format/character-soldier.glb",
+   "kenney/mini-characters/Models/GLB format/character-raider.glb"
+  ],
+  "clipIds": [
+   "idle",
+   "walk",
+   "sit",
+   "emote-yes",
+   "emote-no",
+   "interact-right",
+   "interact-left",
+   "pick-up",
+   "holding-right"
+  ],
+  "bannedClipIds": [
+   "shoot",
+   "attack",
+   "kick",
+   "die"
+  ]
+ },
+ "letterbox": {
+  "aspect": {
+   "value": 2.39,
+   "source": "the value hard coded in Cine.Build.cs and Cine.Stinger.cs before N212 (2.39:1 scope)",
+   "why": "Letterbox bar aspect ratio for the full list and the stinger (2.39:1 scope)."
+  }
+ }
+}

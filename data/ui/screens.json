@@ -1,0 +1,673 @@
+{
+  "_note": "P7.5 screen table read by Sim/Screens/ScreenTable.cs. Ids, titles, action ids, labels and commands match Docs/ui/screens.json (ScreenRegistryTests checks it). Parent is the screen you open this one from; an empty parent is a root (home, and start: the title screen, owner call 2). Parents are chosen so every action is 3 presses or fewer from its root, and presses are computed from it, never copied.",
+  "screens": [
+    {
+      "id": "home",
+      "title": "Home",
+      "parent": "",
+      "actions": [
+        {
+          "id": "home.end-quarter",
+          "label": "End the quarter",
+          "command": "EndQuarter"
+        },
+        {
+          "id": "home.speed",
+          "label": "Change speed (Pause, 1x, 2x, 3x)",
+          "command": "SetClockSpeed"
+        },
+        {
+          "id": "home.skip",
+          "label": "Skip to next thing",
+          "command": "SkipToNextThing"
+        }
+      ]
+    },
+    {
+      "id": "city",
+      "title": "City",
+      "parent": "home",
+      "actions": []
+    },
+    {
+      "id": "more",
+      "title": "More",
+      "parent": "home",
+      "actions": []
+    },
+    {
+      "id": "phone",
+      "title": "Phone",
+      "parent": "more",
+      "actions": []
+    },
+    {
+      "id": "money",
+      "title": "Money",
+      "parent": "home",
+      "actions": [
+        {
+          "id": "money.pay-yourself",
+          "label": "Pay yourself",
+          "command": "PayYourself"
+        },
+        {
+          "id": "money.take-loan",
+          "label": "Take a loan quote",
+          "command": "TakeLoanQuote"
+        }
+      ]
+    },
+    {
+      "id": "money-status",
+      "title": "Money status (broke and comeback)",
+      "parent": "home",
+      "actions": [
+        {
+          "id": "broke.fire-sale",
+          "label": "Fire sale: sell a building fast",
+          "command": "FireSale"
+        },
+        {
+          "id": "broke.investor",
+          "label": "Bring in an investor",
+          "command": "BringInInvestor"
+        },
+        {
+          "id": "broke.restructure",
+          "label": "Restructure the debt (costs honor)",
+          "command": "RestructureDebt"
+        },
+        {
+          "id": "broke.sell-things",
+          "label": "Sell personal things",
+          "command": "SellPersonalThings"
+        },
+        {
+          "id": "broke.family",
+          "label": "Ask family for help (once)",
+          "command": "AskFamily"
+        }
+      ]
+    },
+    {
+      "id": "history",
+      "title": "History chart",
+      "parent": "money",
+      "actions": []
+    },
+    {
+      "id": "goals",
+      "title": "Goals",
+      "parent": "home",
+      "actions": [
+        {
+          "id": "goals.check",
+          "label": "Check goals",
+          "command": "CheckGoals"
+        },
+        {
+          "id": "goals.ask",
+          "label": "Ask Lorraine",
+          "command": "AskAdvisor"
+        },
+        {
+          "id": "goals.life",
+          "label": "Pick a life goal",
+          "command": "PickLifeGoal"
+        },
+        {
+          "id": "goals.perk",
+          "label": "Buy a perk",
+          "command": "BuyPerk"
+        }
+      ]
+    },
+    {
+      "id": "market-report",
+      "title": "Market report",
+      "parent": "city",
+      "actions": []
+    },
+    {
+      "id": "districts",
+      "title": "Districts",
+      "parent": "city",
+      "actions": []
+    },
+    {
+      "id": "specs",
+      "title": "Specializations and policies",
+      "parent": "city",
+      "actions": [
+        {
+          "id": "specs.propose",
+          "label": "Ask the council for a specialization",
+          "command": "ProposeSpecialization"
+        },
+        {
+          "id": "specs.policy",
+          "label": "Turn a property policy on or off",
+          "command": "SetPolicy"
+        }
+      ]
+    },
+    {
+      "id": "seasons",
+      "title": "Seasons and town calendar",
+      "parent": "city",
+      "actions": []
+    },
+    {
+      "id": "portfolio",
+      "title": "Portfolio",
+      "parent": "money",
+      "actions": [
+        {
+          "id": "portfolio.buy-fund",
+          "label": "Buy a fund",
+          "command": "BuyFund"
+        },
+        {
+          "id": "portfolio.buy-stock",
+          "label": "Buy a stock (not on Easy)",
+          "command": "BuyStock"
+        },
+        {
+          "id": "portfolio.sell",
+          "label": "Sell",
+          "command": "SellFund"
+        },
+        {
+          "id": "portfolio.announce",
+          "label": "Announce a deal (not on Easy)",
+          "command": "AnnounceDeal"
+        }
+      ]
+    },
+    {
+      "id": "honor",
+      "title": "Honor",
+      "parent": "people",
+      "actions": []
+    },
+    {
+      "id": "news",
+      "title": "News",
+      "parent": "people",
+      "actions": [
+        {
+          "id": "news.read",
+          "label": "Read a story",
+          "command": ""
+        }
+      ]
+    },
+    {
+      "id": "staff",
+      "title": "Staff",
+      "parent": "people",
+      "actions": [
+        {
+          "id": "staff.hire",
+          "label": "Hire",
+          "command": "HireStaff"
+        },
+        {
+          "id": "staff.fire",
+          "label": "Let go",
+          "command": "FireStaff"
+        },
+        {
+          "id": "staff.delegate",
+          "label": "Let them answer the inbox",
+          "command": "SetDelegate"
+        },
+        {
+          "id": "staff.send",
+          "label": "Send to a meeting",
+          "command": "SendStaff"
+        }
+      ]
+    },
+    {
+      "id": "brand",
+      "title": "Brand",
+      "parent": "money",
+      "actions": []
+    },
+    {
+      "id": "inbox",
+      "title": "Inbox",
+      "parent": "home",
+      "actions": []
+    },
+    {
+      "id": "inbox-item",
+      "title": "Inbox item",
+      "parent": "inbox",
+      "actions": [
+        {
+          "id": "inbox.answer",
+          "label": "Pick a choice (hold to confirm)",
+          "command": "AnswerInboxItem"
+        }
+      ]
+    },
+    {
+      "id": "clock",
+      "title": "Clock",
+      "parent": "home",
+      "actions": [
+        {
+          "id": "clock.speed",
+          "label": "Pick a speed",
+          "command": "SetClockSpeed"
+        },
+        {
+          "id": "clock.skip",
+          "label": "Skip to next thing",
+          "command": "SkipToNextThing"
+        },
+        {
+          "id": "clock.rule",
+          "label": "Turn an auto-pause on or off",
+          "command": "SetClockRule"
+        }
+      ]
+    },
+    {
+      "id": "build",
+      "title": "Build tablet",
+      "parent": "home",
+      "actions": [
+        {
+          "id": "build.type",
+          "label": "Pick a building type (legal types only)",
+          "command": ""
+        },
+        {
+          "id": "build.floors",
+          "label": "Pick floors",
+          "command": ""
+        },
+        {
+          "id": "build.draw",
+          "label": "Draw a box",
+          "command": "PlaceRect"
+        },
+        {
+          "id": "build.starter",
+          "label": "Use the starter plan",
+          "command": ""
+        },
+        {
+          "id": "build.undo",
+          "label": "Undo",
+          "command": "Undo"
+        },
+        {
+          "id": "build.start",
+          "label": "Start construction",
+          "command": "StartConstruction"
+        }
+      ]
+    },
+    {
+      "id": "leasing",
+      "title": "Leasing",
+      "parent": "home",
+      "actions": [
+        {
+          "id": "leasing.accept-best",
+          "label": "Accept the best offer for every space",
+          "command": "AcceptLeaseOffer"
+        },
+        {
+          "id": "leasing.sign",
+          "label": "Sign one offer",
+          "command": "AcceptLeaseOffer"
+        }
+      ]
+    },
+    {
+      "id": "lease-terms",
+      "title": "Lease terms card",
+      "parent": "leasing",
+      "actions": [
+        {
+          "id": "terms.sign",
+          "label": "Sign on these terms",
+          "command": "AcceptLeaseOffer"
+        },
+        {
+          "id": "terms.sign-nnn",
+          "label": "Sign on NNN terms (tenant pays costs)",
+          "command": "AcceptLeaseOffer"
+        }
+      ]
+    },
+    {
+      "id": "deals",
+      "title": "Deals",
+      "parent": "home",
+      "actions": [
+        {
+          "id": "deals.offer",
+          "label": "Make an offer on a lot",
+          "command": "BuyLot"
+        },
+        {
+          "id": "deals.close",
+          "label": "Close on an agreed lot",
+          "command": "CloseLot"
+        },
+        {
+          "id": "deals.courthouse",
+          "label": "Courthouse sales",
+          "command": "CourthouseCmd"
+        },
+        {
+          "id": "deals.broker",
+          "label": "Answer a broker",
+          "command": "AnswerBroker"
+        }
+      ]
+    },
+    {
+      "id": "refinance",
+      "title": "Sell or refinance",
+      "parent": "deals",
+      "actions": [
+        {
+          "id": "exit.sell",
+          "label": "Sell to the best buyer",
+          "command": "SellProject"
+        },
+        {
+          "id": "exit.refinance",
+          "label": "Refinance",
+          "command": "RefinanceProject"
+        }
+      ]
+    },
+    {
+      "id": "investors",
+      "title": "Investors and capital stack",
+      "parent": "deals",
+      "actions": [
+        {
+          "id": "investors.raise",
+          "label": "Raise money from investors",
+          "command": "RaiseInvestors"
+        },
+        {
+          "id": "investors.answer",
+          "label": "Answer an investor call",
+          "command": "AnswerInvestorCall"
+        },
+        {
+          "id": "investors.stack",
+          "label": "Choose how to pay for a project",
+          "command": "ChooseStack"
+        },
+        {
+          "id": "investors.go-public",
+          "label": "Go public",
+          "command": "GoPublic"
+        }
+      ]
+    },
+    {
+      "id": "parks",
+      "title": "Parks",
+      "parent": "build",
+      "actions": [
+        {
+          "id": "parks.build",
+          "label": "Build a park",
+          "command": "BuildPark"
+        },
+        {
+          "id": "parks.paid",
+          "label": "Free or gate fee",
+          "command": "SetParkPaid"
+        },
+        {
+          "id": "parks.budget",
+          "label": "Set the upkeep budget",
+          "command": "SetParkBudget"
+        },
+        {
+          "id": "parks.donate",
+          "label": "Give it to the city",
+          "command": "DonatePark"
+        }
+      ]
+    },
+    {
+      "id": "popups",
+      "title": "Pop-ups",
+      "parent": "map",
+      "actions": [
+        {
+          "id": "popups.host",
+          "label": "Host a pop-up on held land",
+          "command": ""
+        },
+        {
+          "id": "popups.graduate",
+          "label": "Offer a vendor a lease",
+          "command": ""
+        }
+      ]
+    },
+    {
+      "id": "map",
+      "title": "Drive and map",
+      "parent": "home",
+      "actions": [
+        {
+          "id": "map.drive-site",
+          "label": "Drive to your site",
+          "command": ""
+        },
+        {
+          "id": "map.drive-lot",
+          "label": "Drive to a lot for sale",
+          "command": "BookSiteVisit"
+        }
+      ]
+    },
+    {
+      "id": "people",
+      "title": "People",
+      "parent": "home",
+      "actions": [
+        {
+          "id": "people.book",
+          "label": "Book a meeting",
+          "command": "BookAppointment"
+        },
+        {
+          "id": "people.lunch",
+          "label": "Book a broker lunch",
+          "command": "BookBrokerLunch"
+        },
+        {
+          "id": "people.amends",
+          "label": "Make amends",
+          "command": "MakeAmends"
+        }
+      ]
+    },
+    {
+      "id": "talk",
+      "title": "Talk",
+      "parent": "people",
+      "actions": [
+        {
+          "id": "talk.choose",
+          "label": "Pick what you say",
+          "command": "ApplyDialogueOutcome"
+        }
+      ]
+    },
+    {
+      "id": "trades",
+      "title": "Trades and transit",
+      "parent": "home",
+      "actions": [
+        {
+          "id": "trades.offer",
+          "label": "Offer a trade",
+          "command": ""
+        },
+        {
+          "id": "transit.lobby",
+          "label": "Back a transit stop",
+          "command": ""
+        }
+      ]
+    },
+    {
+      "id": "recap",
+      "title": "Recap",
+      "parent": "home",
+      "actions": [
+        {
+          "id": "recap.restart",
+          "label": "Start again with legacy perks (career over only)",
+          "command": "NewGame"
+        }
+      ]
+    },
+    {
+      "id": "pause",
+      "title": "Pause",
+      "parent": "home",
+      "actions": [
+        {
+          "id": "pause.resume",
+          "label": "Resume",
+          "command": ""
+        }
+      ]
+    },
+    {
+      "id": "captions",
+      "title": "Cutscene captions",
+      "parent": "pause",
+      "actions": [
+        {
+          "id": "captions.next",
+          "label": "Next line",
+          "command": ""
+        },
+        {
+          "id": "captions.skip",
+          "label": "Skip the scene",
+          "command": ""
+        }
+      ]
+    },
+    {
+      "id": "settings",
+      "title": "Settings",
+      "parent": "home",
+      "actions": [
+        {
+          "id": "settings.mute-hints",
+          "label": "Mute Lorraine's hints",
+          "command": "MuteAdvisor"
+        },
+        {
+          "id": "settings.text-size",
+          "label": "Text size",
+          "command": ""
+        },
+        {
+          "id": "settings.colorblind",
+          "label": "Color help",
+          "command": ""
+        },
+        {
+          "id": "settings.controls",
+          "label": "Change controls",
+          "command": ""
+        },
+        {
+          "id": "settings.build-pause",
+          "label": "Pause when build mode opens",
+          "command": "SetClockRule"
+        }
+      ]
+    },
+    {
+      "id": "save-load",
+      "title": "Save and load",
+      "parent": "settings",
+      "actions": [
+        {
+          "id": "save.save",
+          "label": "Save to a slot",
+          "command": ""
+        },
+        {
+          "id": "save.load",
+          "label": "Load a slot",
+          "command": ""
+        }
+      ]
+    },
+    {
+      "id": "difficulty",
+      "title": "Difficulty picker",
+      "parent": "start",
+      "actions": [
+        {
+          "id": "difficulty.easy",
+          "label": "Start on Easy",
+          "command": "NewGame"
+        },
+        {
+          "id": "difficulty.normal",
+          "label": "Start on Normal",
+          "command": "NewGame"
+        },
+        {
+          "id": "difficulty.tycoon",
+          "label": "Start on Tycoon (Ironman row)",
+          "command": "NewGame"
+        }
+      ]
+    },
+    {
+      "id": "start",
+      "title": "Title screen",
+      "parent": "",
+      "actions": [
+        {
+          "id": "start.continue",
+          "label": "Continue",
+          "command": "Continue"
+        },
+        {
+          "id": "start.new-game",
+          "label": "New game",
+          "command": ""
+        },
+        {
+          "id": "start.load",
+          "label": "Load",
+          "command": ""
+        },
+        {
+          "id": "start.settings",
+          "label": "Settings",
+          "command": ""
+        }
+      ]
+    }
+  ]
+}

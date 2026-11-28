@@ -1,0 +1,14 @@
+/* P7.10 B: the talk panel. Colors and font come from tokens.css. */
+.gp-talk { position: fixed; inset: auto 16px 16px 16px; max-width: 760px; margin: 0 auto; z-index: 40;
+  background: var(--bg); color: var(--fg, #1d1d1d); font-family: var(--font-body), 'Atkinson Hyperlegible', sans-serif;
+  border: 2px solid var(--accent); border-radius: 12px; padding: 16px; max-height: 70vh; overflow-y: auto; }
+.gp-talk-line { display: flex; gap: 12px; align-items: flex-start; margin: 0 0 10px; }
+.gp-talk-line[data-reply="true"] { flex-direction: row-reverse; text-align: right; }
+.gp-talk-avatar { flex: 0 0 40px; height: 40px; border-radius: 50%; display: grid; place-items: center; color: #fff; font-weight: 700; }
+.gp-talk-name { font-weight: 700; display: block; }
+.gp-talk-choices { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 8px; }
+.gp-talk-choice { width: 100%; text-align: left; font: inherit; padding: 10px 12px; border-radius: 8px; cursor: pointer;
+  border: 1px solid var(--accent); background: var(--bg); color: inherit; }
+.gp-talk-choice[data-active="true"], .gp-talk-choice:focus-visible { outline: 3px solid var(--focus-ring); }
+.gp-talk-choice[data-locked="true"] { opacity: 0.5; cursor: not-allowed; }
+.gp-talk-note { display: block; font-size: 0.9em; opacity: 0.85; }

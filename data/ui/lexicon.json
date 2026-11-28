@@ -1,0 +1,2115 @@
+{
+  "formatVersion": 1,
+  "_note": "Word bible, machine-readable. Human version: Docs/word-bible.md. Player text uses the easy/normal/tycoon word for the active mode. Tests/GladeParks.Sim.Tests/Text/TextLintTests.cs reads this file: em/en dashes, a spaced double hyphen, and bannedEverywhere terms plus Data/people/names.json Banned (minus ambiguousNames; bannedCaseSensitive match only as written) fail the build unless pinned in known-breaks.json (file + path + term); jargonTycoonOnly hits outside tycoonOnlySources are reported, not failed. playerTextUnderSkippedKeys re-opens a skipped key where it is player text; effects[].text is scanned only for effectTextKinds.",
+  "concepts": {
+    "back": {
+      "area": "system",
+      "code": "Back",
+      "easy": "Back",
+      "normal": "Back",
+      "tycoon": "Back",
+      "avoid": [
+        "Return",
+        "Go back"
+      ],
+      "source": "Docs/word-bible.md; r60 k1 (K1-2) and N419: the one word for leaving a screen, read by ScreenContext W(\"back\"), the talk panel Back row and the host's number screen Back row",
+      "why": "One Back word on every screen, kept in Data so a word change needs no code change."
+    },
+    "company_cash": {
+      "area": "money",
+      "code": "CompanyCash",
+      "easy": "Company cash",
+      "normal": "Company cash",
+      "tycoon": "Company cash",
+      "avoid": [
+        "Company (alone, as a label)",
+        "business account",
+        "wallet"
+      ]
+    },
+    "personal_cash": {
+      "area": "money",
+      "code": "PersonalCash",
+      "easy": "Your cash",
+      "normal": "Your cash",
+      "tycoon": "Your cash",
+      "avoid": [
+        "You (alone, as a label)",
+        "phone wallet",
+        "wallet",
+        "personal cash"
+      ]
+    },
+    "pay_yourself": {
+      "area": "money",
+      "code": "PayYourself",
+      "easy": "Pay yourself",
+      "normal": "Pay yourself",
+      "tycoon": "Owner draw",
+      "avoid": [
+        "take a draw (Easy/Normal)"
+      ]
+    },
+    "cash_put_in": {
+      "area": "money",
+      "code": "Equity / cashIn",
+      "easy": "Cash you put in",
+      "normal": "Cash you put in",
+      "tycoon": "Your equity",
+      "avoid": [
+        "Your cash in",
+        "Your cash (as a stack layer)",
+        "equity (Easy/Normal)"
+      ]
+    },
+    "cash_to_you": {
+      "area": "money",
+      "code": "CashToYou",
+      "easy": "Cash to you",
+      "normal": "Cash to you",
+      "tycoon": "Net proceeds",
+      "avoid": [
+        "banked",
+        "Take the money (as a label)"
+      ]
+    },
+    "yearly_income": {
+      "area": "money",
+      "code": "NoiYear",
+      "easy": "Yearly income",
+      "normal": "Yearly income",
+      "tycoon": "NOI (yearly pace)",
+      "avoid": [
+        "Money in each year",
+        "a year in income",
+        "revenue",
+        "net income",
+        "income equivalent"
+      ]
+    },
+    "quarter_income": {
+      "area": "money",
+      "code": "QuarterIncome",
+      "easy": "Income this quarter",
+      "normal": "Income this quarter",
+      "tycoon": "Quarter NOI",
+      "avoid": [
+        "Quarter income",
+        "rent (for total income)"
+      ]
+    },
+    "rent": {
+      "area": "money",
+      "code": "Rent",
+      "easy": "Rent",
+      "normal": "Rent",
+      "tycoon": "Rent",
+      "avoid": [
+        "income (for what one tenant pays)",
+        "thin rent"
+      ]
+    },
+    "value": {
+      "area": "money",
+      "code": "Value",
+      "easy": "What it is worth",
+      "normal": "Value",
+      "tycoon": "Value",
+      "avoid": [
+        "going price",
+        "over today"
+      ]
+    },
+    "land_value": {
+      "area": "money",
+      "code": "LandValue",
+      "easy": "Land value",
+      "normal": "Land value",
+      "tycoon": "Land value",
+      "avoid": [
+        "price per foot"
+      ]
+    },
+    "holding_cost": {
+      "area": "money",
+      "code": "HoldingCost",
+      "easy": "Cost to keep it",
+      "normal": "Cost to keep it",
+      "tycoon": "Carry cost",
+      "avoid": [
+        "costs to hold"
+      ]
+    },
+    "project_verdict": {
+      "area": "money",
+      "code": "ProjectVerdict",
+      "easy": "Pays for itself / Barely pays / Loses money",
+      "normal": "Pays for itself / Barely pays / Loses money",
+      "tycoon": "Yield on cost vs cap rate",
+      "avoid": [
+        "makes more than it costs to hold"
+      ]
+    },
+    "payroll": {
+      "area": "money",
+      "code": "Payroll",
+      "easy": "Staff pay",
+      "normal": "Payroll",
+      "tycoon": "Payroll and overhead",
+      "avoid": [
+        "overhead (Easy)"
+      ]
+    },
+    "site": {
+      "area": "property",
+      "code": "Site",
+      "easy": "Site",
+      "normal": "Site",
+      "tycoon": "Site",
+      "avoid": [
+        "lot (for property)",
+        "parcel",
+        "tract",
+        "dirt (on labels)",
+        "your place (for property)",
+        "center",
+        "the strip"
+      ]
+    },
+    "pad_site": {
+      "area": "property",
+      "code": "PadSite",
+      "easy": "Small site to sell",
+      "normal": "Pad site (small site to sell)",
+      "tycoon": "Pad site",
+      "avoid": [
+        "pad (alone, Easy/Normal)",
+        "Corner pad"
+      ]
+    },
+    "project": {
+      "area": "property",
+      "code": "Project",
+      "easy": "Project",
+      "normal": "Project",
+      "tycoon": "Project",
+      "avoid": [
+        "property (in errors)",
+        "development"
+      ]
+    },
+    "building": {
+      "area": "property",
+      "code": "Building",
+      "easy": "Building",
+      "normal": "Building",
+      "tycoon": "Building",
+      "avoid": [
+        "product",
+        "asset (Easy/Normal)"
+      ]
+    },
+    "grid_square": {
+      "area": "property",
+      "code": "Cell",
+      "easy": "Square",
+      "normal": "Square",
+      "tycoon": "Square",
+      "avoid": [
+        "cell",
+        "cells"
+      ]
+    },
+    "floor_area": {
+      "area": "property",
+      "code": "Sf",
+      "easy": "Size (square feet)",
+      "normal": "Square feet",
+      "tycoon": "SF",
+      "avoid": [
+        "SF (Easy/Normal)",
+        "a foot (for area)",
+        "per foot"
+      ]
+    },
+    "parking": {
+      "area": "property",
+      "code": "ParkingStalls",
+      "easy": "Parking spots",
+      "normal": "Parking spots",
+      "tycoon": "Parking stalls",
+      "avoid": [
+        "stalls (Easy/Normal)",
+        "a spot"
+      ]
+    },
+    "tenant_tier": {
+      "area": "property",
+      "code": "TenantTier",
+      "easy": "Budget / Regular / Top tenants",
+      "normal": "Budget / Regular / Top tenants",
+      "tycoon": "Class C / Class B / Class A",
+      "avoid": [
+        "Low / Basic / Premium",
+        "Class A/B/C (Easy/Normal)"
+      ]
+    },
+    "anchor": {
+      "area": "property",
+      "code": "Anchor",
+      "easy": "Big store that brings shoppers",
+      "normal": "Anchor store",
+      "tycoon": "Anchor",
+      "avoid": [
+        "anchor (alone, Easy)",
+        "trophy tenant"
+      ]
+    },
+    "renovation": {
+      "area": "property",
+      "code": "Renovation",
+      "easy": "Fix-up",
+      "normal": "Fix-up",
+      "tycoon": "Renovation",
+      "avoid": [
+        "tired building (as a label)",
+        "value-add (Easy/Normal)"
+      ]
+    },
+    "break_ground": {
+      "area": "property",
+      "code": "BreakGround",
+      "easy": "Start building",
+      "normal": "Break ground",
+      "tycoon": "Break ground",
+      "avoid": [
+        "new starts"
+      ]
+    },
+    "top_out": {
+      "area": "property",
+      "code": "TopOut",
+      "easy": "Top beam goes on",
+      "normal": "Top beam goes on",
+      "tycoon": "Top out",
+      "avoid": [
+        "Top out (Easy/Normal)",
+        "Topping out (Easy/Normal)"
+      ]
+    },
+    "grand_opening": {
+      "area": "property",
+      "code": "Open",
+      "easy": "Grand opening",
+      "normal": "Grand opening",
+      "tycoon": "Grand opening",
+      "avoid": [
+        "opens its doors (as a label)"
+      ]
+    },
+    "landmark": {
+      "area": "property",
+      "code": "Landmark",
+      "easy": "Landmark",
+      "normal": "Landmark",
+      "tycoon": "Landmark",
+      "avoid": [
+        "signature building",
+        "One of a kind (as a type)"
+      ]
+    },
+    "driveway_riro": {
+      "area": "property",
+      "code": "DriveRiro",
+      "easy": "Driveway: right turns only",
+      "normal": "Driveway: right turns only",
+      "tycoon": "Driveway: right in, right out",
+      "avoid": [
+        "median (Easy/Normal)"
+      ]
+    },
+    "driveway_full": {
+      "area": "property",
+      "code": "DriveFull",
+      "easy": "Driveway: all turns",
+      "normal": "Driveway: all turns",
+      "tycoon": "Driveway: full access",
+      "avoid": [
+        "full-access (Easy/Normal)"
+      ]
+    },
+    "driveway_signal": {
+      "area": "property",
+      "code": "DriveSignal",
+      "easy": "Driveway: with a stoplight",
+      "normal": "Driveway: with a stoplight",
+      "tycoon": "Driveway: signal",
+      "avoid": [
+        "city light"
+      ]
+    },
+    "homes_nearby": {
+      "area": "property",
+      "code": "Rooftops",
+      "easy": "Homes nearby",
+      "normal": "Homes nearby",
+      "tycoon": "Rooftops",
+      "avoid": [
+        "rooftops (Easy/Normal)",
+        "households"
+      ]
+    },
+    "visitors": {
+      "area": "property",
+      "code": "Buzz",
+      "easy": "Visitors",
+      "normal": "Visitors",
+      "tycoon": "Visitors",
+      "avoid": [
+        "crowd (as a stat)",
+        "foot traffic",
+        "buzz",
+        "customers (as a stat)"
+      ]
+    },
+    "street_traffic": {
+      "area": "property",
+      "code": "Traffic",
+      "easy": "Cars a day",
+      "normal": "Cars a day",
+      "tycoon": "Traffic count",
+      "avoid": [
+        "traf",
+        "street traffic (as a stat)"
+      ]
+    },
+    "freeway_road": {
+      "area": "property",
+      "code": "AccessRoad",
+      "easy": "Freeway side road",
+      "normal": "Access road",
+      "tycoon": "Access road",
+      "avoid": [
+        "Service Rd",
+        "frontage road",
+        "frontage (Easy/Normal)"
+      ]
+    },
+    "leased_share": {
+      "area": "leasing",
+      "code": "Occupancy",
+      "easy": "Leased",
+      "normal": "Leased",
+      "tycoon": "Occupancy",
+      "avoid": [
+        "rented",
+        "full house",
+        "filled",
+        "occupancy (Easy/Normal)"
+      ]
+    },
+    "empty_share": {
+      "area": "leasing",
+      "code": "Vacancy",
+      "easy": "Empty space",
+      "normal": "Empty space",
+      "tycoon": "Vacancy",
+      "avoid": [
+        "vacancy (Easy/Normal)",
+        "half empty"
+      ]
+    },
+    "market_vacancy": {
+      "area": "leasing",
+      "code": "MarketVacancy",
+      "easy": "Empty space in town",
+      "normal": "Empty space in town",
+      "tycoon": "Market vacancy",
+      "avoid": [
+        "Market vacancy (Easy/Normal)"
+      ]
+    },
+    "break_even_occupancy": {
+      "area": "leasing",
+      "code": "BreakEvenOcc",
+      "easy": "(hidden)",
+      "normal": "(hidden)",
+      "tycoon": "Break-even occupancy",
+      "avoid": []
+    },
+    "lease": {
+      "area": "leasing",
+      "code": "Lease",
+      "easy": "Lease",
+      "normal": "Lease",
+      "tycoon": "Lease",
+      "avoid": [
+        "paper"
+      ]
+    },
+    "rent_break": {
+      "area": "leasing",
+      "code": "Concession",
+      "easy": "Rent break",
+      "normal": "Rent break",
+      "tycoon": "Free rent / concession",
+      "avoid": [
+        "concession (Easy/Normal)",
+        "rent abatement"
+      ]
+    },
+    "build_out": {
+      "area": "leasing",
+      "code": "Ti",
+      "easy": "Setup money for the tenant",
+      "normal": "Build-out money",
+      "tycoon": "TI (build-out)",
+      "avoid": [
+        "build-out (Easy)",
+        "tenant improvements (Easy/Normal)"
+      ]
+    },
+    "tenant_moves_out": {
+      "area": "leasing",
+      "code": "LeaseEnded",
+      "easy": "Moves out",
+      "normal": "Moves out",
+      "tycoon": "Lease ends",
+      "avoid": [
+        "goes dark",
+        "went dark"
+      ]
+    },
+    "tenant_fails": {
+      "area": "leasing",
+      "code": "TenantFailed",
+      "easy": "Closes for good",
+      "normal": "Closes for good",
+      "tycoon": "Tenant default",
+      "avoid": [
+        "files for bankruptcy (Easy)",
+        "goes dark"
+      ]
+    },
+    "tenant_credit": {
+      "area": "leasing",
+      "code": "Credit",
+      "easy": "Shaky / Steady / Strong",
+      "normal": "Weak / Solid / Strong credit",
+      "tycoon": "Weak / Solid / Strong credit",
+      "avoid": [
+        "tenant credit (Easy)"
+      ]
+    },
+    "guarantor": {
+      "area": "leasing",
+      "code": "Guarantor",
+      "easy": "Someone to back the lease",
+      "normal": "Co-signer",
+      "tycoon": "Guarantor",
+      "avoid": [
+        "guarantor (Easy)",
+        "somebody bigger on the paper"
+      ]
+    },
+    "co_tenancy": {
+      "area": "leasing",
+      "code": "CoTenancy",
+      "easy": "(hidden)",
+      "normal": "Anchor clause",
+      "tycoon": "Co-tenancy clause",
+      "avoid": [
+        "co-tenancy (Easy/Normal)"
+      ]
+    },
+    "eviction": {
+      "area": "leasing",
+      "code": "Evict",
+      "easy": "Make them leave",
+      "normal": "Evict",
+      "tycoon": "Evict",
+      "avoid": [
+        "re-lease (Easy)"
+      ]
+    },
+    "lender": {
+      "area": "loans",
+      "code": "Lender",
+      "easy": "Bank",
+      "normal": "Lender",
+      "tycoon": "Lender",
+      "avoid": [
+        "the bank (for a non-bank lender, Normal/Tycoon)",
+        "banker (as a type)"
+      ]
+    },
+    "lender_type": {
+      "area": "loans",
+      "code": "LenderType",
+      "easy": "(hidden)",
+      "normal": "(hidden)",
+      "tycoon": "Local bank / Life company / CMBS lender / Debt fund / Agency lender",
+      "avoid": [
+        "CMBS (Easy/Normal)",
+        "Construction loan (as a lender name)"
+      ]
+    },
+    "loan_payment": {
+      "area": "loans",
+      "code": "Payment",
+      "easy": "Loan payment a month",
+      "normal": "Loan payment a month",
+      "tycoon": "Debt service a month",
+      "avoid": [
+        "Payment a month",
+        "Loan payments a month",
+        "payment (for a tenant plan)"
+      ]
+    },
+    "capital_stack": {
+      "area": "loans",
+      "code": "CapitalStack",
+      "easy": "Money plan",
+      "normal": "Money plan",
+      "tycoon": "Capital stack",
+      "avoid": [
+        "stack (Easy/Normal)"
+      ]
+    },
+    "risk_presets": {
+      "area": "loans",
+      "code": "Preset",
+      "easy": "Safe / Balanced / Risky",
+      "normal": "Safe / Balanced / Risky",
+      "tycoon": "Safe / Balanced / Risky",
+      "avoid": [
+        "Play it safe",
+        "Bold (as a risk choice)",
+        "Small / Medium / Big"
+      ]
+    },
+    "layer_senior": {
+      "area": "loans",
+      "code": "Senior",
+      "easy": "Bank loan",
+      "normal": "Main loan",
+      "tycoon": "Senior loan",
+      "avoid": []
+    },
+    "layer_mezz": {
+      "area": "loans",
+      "code": "Mezz",
+      "easy": "Second loan",
+      "normal": "Second loan",
+      "tycoon": "Mezz loan",
+      "avoid": [
+        "mezz (Easy/Normal)",
+        "mezzanine"
+      ]
+    },
+    "layer_pref": {
+      "area": "loans",
+      "code": "PrefEquity",
+      "easy": "Partner money, paid first",
+      "normal": "Partner money, paid first",
+      "tycoon": "Preferred equity",
+      "avoid": [
+        "preferred equity (Easy/Normal)"
+      ]
+    },
+    "layer_investor": {
+      "area": "loans",
+      "code": "Investor",
+      "easy": "Investor money",
+      "normal": "Investor money",
+      "tycoon": "Investor equity",
+      "avoid": []
+    },
+    "ltv": {
+      "area": "loans",
+      "code": "Ltv",
+      "easy": "(hidden)",
+      "normal": "(hidden)",
+      "tycoon": "LTV",
+      "avoid": [
+        "Loans to value",
+        "Loan to value",
+        "Lenders lend up to"
+      ]
+    },
+    "dscr": {
+      "area": "loans",
+      "code": "Dscr",
+      "easy": "(hidden)",
+      "normal": "(hidden)",
+      "tycoon": "DSCR",
+      "avoid": [
+        "Income over loan payments",
+        "Debt coverage",
+        "Lender DSCR floor"
+      ]
+    },
+    "income_drop_to_default": {
+      "area": "loans",
+      "code": "DropToDefault",
+      "easy": "(hidden)",
+      "normal": "Income can fall this much before you miss a payment",
+      "tycoon": "Income can fall this much before you miss a payment",
+      "avoid": [
+        "Drop to default",
+        "Default cushion",
+        "break-even (for this line)"
+      ]
+    },
+    "cap_rate": {
+      "area": "loans",
+      "code": "CapRate",
+      "easy": "(hidden)",
+      "normal": "(hidden)",
+      "tycoon": "Cap rate",
+      "avoid": [
+        "Market cap rate",
+        "Cap rate (market)",
+        "Buyer's cap rate",
+        "value rate"
+      ]
+    },
+    "interest_rate": {
+      "area": "loans",
+      "code": "Rate",
+      "easy": "(hidden)",
+      "normal": "(hidden)",
+      "tycoon": "All-in rate",
+      "avoid": [
+        "All-in loan rate",
+        "Borrowing costs"
+      ]
+    },
+    "base_rate": {
+      "area": "loans",
+      "code": "BaseRate",
+      "easy": "(hidden)",
+      "normal": "(hidden)",
+      "tycoon": "Base rate",
+      "avoid": [
+        "Treasury",
+        "Spread over Treasury"
+      ]
+    },
+    "loan_spread": {
+      "area": "loans",
+      "code": "Spread",
+      "easy": "(hidden)",
+      "normal": "(hidden)",
+      "tycoon": "Loan spread (bps)",
+      "avoid": [
+        "spread (alone)",
+        "Loan spread in %"
+      ]
+    },
+    "dev_spread": {
+      "area": "loans",
+      "code": "DevSpread",
+      "easy": "(hidden)",
+      "normal": "(hidden)",
+      "tycoon": "Development spread (bps)",
+      "avoid": [
+        "spread (alone)"
+      ]
+    },
+    "floating_rate": {
+      "area": "loans",
+      "code": "Floating",
+      "easy": "Payment can change",
+      "normal": "Changing rate",
+      "tycoon": "Floating rate",
+      "avoid": [
+        "floating (Easy/Normal)",
+        "Keep floating (Easy)"
+      ]
+    },
+    "fixed_rate": {
+      "area": "loans",
+      "code": "Fixed",
+      "easy": "Locked payment",
+      "normal": "Locked rate",
+      "tycoon": "Fixed rate",
+      "avoid": [
+        "Rate lock (Easy)",
+        "fix the payment for good"
+      ]
+    },
+    "missed_payment": {
+      "area": "loans",
+      "code": "Late",
+      "easy": "Missed payment",
+      "normal": "Missed payment",
+      "tycoon": "Missed payment",
+      "avoid": [
+        "default (Easy/Normal)",
+        "stops the clock"
+      ]
+    },
+    "foreclosure": {
+      "area": "loans",
+      "code": "Foreclosed",
+      "easy": "The bank takes the building",
+      "normal": "Lost to the lender",
+      "tycoon": "Foreclosure",
+      "avoid": [
+        "foreclosure (Easy)",
+        "The lender took the building (Easy)",
+        "Bank foreclosure (Easy)"
+      ]
+    },
+    "credit_line": {
+      "area": "loans",
+      "code": "CreditLine",
+      "easy": "Backup loan",
+      "normal": "Credit line",
+      "tycoon": "Credit line",
+      "avoid": [
+        "drew on your credit line (Easy)"
+      ]
+    },
+    "refinance": {
+      "area": "loans",
+      "code": "Refi",
+      "easy": "Get a new loan",
+      "normal": "Refinance",
+      "tycoon": "Refinance",
+      "avoid": [
+        "refinanced (Easy)",
+        "pull cash out (Easy)"
+      ]
+    },
+    "investor_target": {
+      "area": "loans",
+      "code": "PrefRate",
+      "easy": "(hidden)",
+      "normal": "(hidden)",
+      "tycoon": "Pref (preferred return)",
+      "avoid": [
+        "Return target, % a year",
+        "Blended return target"
+      ]
+    },
+    "promote": {
+      "area": "loans",
+      "code": "Split",
+      "easy": "(hidden)",
+      "normal": "(hidden)",
+      "tycoon": "Promote (your split)",
+      "avoid": [
+        "Your share above their target",
+        "Investor pref / your split"
+      ]
+    },
+    "backs_out": {
+      "area": "loans",
+      "code": "Walk",
+      "easy": "Backs out",
+      "normal": "Backs out",
+      "tycoon": "Backs out",
+      "avoid": [
+        "walks",
+        "walked",
+        "pulled out",
+        "pulls out"
+      ]
+    },
+    "check_size": {
+      "area": "loans",
+      "code": "CheckSize",
+      "easy": "How much they put in",
+      "normal": "How much they put in",
+      "tycoon": "Check size",
+      "avoid": [
+        "Check size (Normal)"
+      ]
+    },
+    "cycle_phase": {
+      "area": "market",
+      "code": "CyclePhase",
+      "easy": "Expansion / Peak / Bust / Recovery",
+      "normal": "Expansion / Peak / Bust / Recovery",
+      "tycoon": "Expansion / Peak / Bust / Recovery",
+      "avoid": [
+        "Recession",
+        "slump",
+        "storm (as a phase)",
+        "crash (as a phase)"
+      ]
+    },
+    "rate_cut_news": {
+      "area": "market",
+      "code": "RateNews",
+      "easy": "Loans get cheaper",
+      "normal": "Rates fall",
+      "tycoon": "Base rate cut",
+      "avoid": [
+        "The Fed",
+        "Fed"
+      ]
+    },
+    "lenders_pull_back": {
+      "area": "market",
+      "code": "CreditTight",
+      "easy": "Banks lend less",
+      "normal": "Lenders pull back",
+      "tycoon": "Max LTV falls",
+      "avoid": [
+        "call loans",
+        "loan committee"
+      ]
+    },
+    "sell": {
+      "area": "exits",
+      "code": "Sell",
+      "easy": "Sell",
+      "normal": "Sell",
+      "tycoon": "Sell (disposition)",
+      "avoid": []
+    },
+    "closing": {
+      "area": "exits",
+      "code": "Closing",
+      "easy": "When the sale is done",
+      "normal": "At closing",
+      "tycoon": "At closing",
+      "avoid": [
+        "closing (Easy)"
+      ]
+    },
+    "roll_over": {
+      "area": "exits",
+      "code": "RollOver",
+      "easy": "Roll your profit into a new deal",
+      "normal": "Roll-over",
+      "tycoon": "Roll-over",
+      "avoid": [
+        "1031",
+        "exchange (for roll-over)"
+      ]
+    },
+    "exit_tax": {
+      "area": "exits",
+      "code": "ExitTax",
+      "easy": "Profit tax",
+      "normal": "Tax on the gain",
+      "tycoon": "Exit tax",
+      "avoid": [
+        "exit tax (Easy)",
+        "gain (Easy)"
+      ]
+    },
+    "buyer_reit": {
+      "area": "exits",
+      "code": "BuyerReit",
+      "easy": "Big property company",
+      "normal": "Property trust",
+      "tycoon": "Listed property trust (REIT)",
+      "avoid": [
+        "A listed property trust (Easy)"
+      ]
+    },
+    "buyer_private": {
+      "area": "exits",
+      "code": "BuyerPrivate",
+      "easy": "Local investor",
+      "normal": "Local investor",
+      "tycoon": "Private investor",
+      "avoid": [
+        "investor (for a buyer, Normal/Easy)"
+      ]
+    },
+    "buyer_1031": {
+      "area": "exits",
+      "code": "Buyer1031",
+      "easy": "Buyer in a hurry",
+      "normal": "Buyer on a deadline",
+      "tycoon": "Roll-over buyer",
+      "avoid": [
+        "A roll-over buyer on a deadline (Easy)"
+      ]
+    },
+    "go_public": {
+      "area": "exits",
+      "code": "GoPublic",
+      "easy": "Sell shares of your company",
+      "normal": "Go public",
+      "tycoon": "IPO",
+      "avoid": [
+        "IPO (Easy/Normal)",
+        "Take the company public (Easy)"
+      ]
+    },
+    "shareholders": {
+      "area": "exits",
+      "code": "Shareholders",
+      "easy": "People who own your shares",
+      "normal": "Shareholders",
+      "tycoon": "Shareholders",
+      "avoid": []
+    },
+    "quarter_target": {
+      "area": "exits",
+      "code": "QuarterTarget",
+      "easy": "Income you promised",
+      "normal": "Quarter target",
+      "tycoon": "Earnings guidance",
+      "avoid": [
+        "the number (as a label)"
+      ]
+    },
+    "seller_note": {
+      "area": "exits",
+      "code": "SellerNote",
+      "easy": "You lend the buyer the money",
+      "normal": "Seller loan",
+      "tycoon": "Seller note",
+      "avoid": [
+        "seller note (Easy/Normal)"
+      ]
+    },
+    "contractor": {
+      "area": "construction",
+      "code": "Contractor",
+      "easy": "Contractor",
+      "normal": "Contractor",
+      "tycoon": "Contractor",
+      "avoid": [
+        "builder (for the contractor)",
+        "crew (as a role)"
+      ]
+    },
+    "site_problem": {
+      "area": "construction",
+      "code": "Problem",
+      "easy": "Trouble on site",
+      "normal": "Trouble on site",
+      "tycoon": "Construction problem",
+      "avoid": [
+        "drama"
+      ]
+    },
+    "change_order": {
+      "area": "construction",
+      "code": "ChangeOrder",
+      "easy": "Extra work bill",
+      "normal": "Change order",
+      "tycoon": "Change order",
+      "avoid": [
+        "Change order (Easy)"
+      ]
+    },
+    "overrun": {
+      "area": "construction",
+      "code": "Overrun",
+      "easy": "Went over budget",
+      "normal": "Over budget",
+      "tycoon": "Overrun",
+      "avoid": [
+        "overrun (Easy/Normal)"
+      ]
+    },
+    "contingency": {
+      "area": "construction",
+      "code": "Contingency",
+      "easy": "Spare money for surprises",
+      "normal": "Safety budget",
+      "tycoon": "Contingency",
+      "avoid": [
+        "contingency (Easy/Normal)"
+      ]
+    },
+    "repair_reserve": {
+      "area": "construction",
+      "code": "Reserve",
+      "easy": "Repair savings",
+      "normal": "Repair savings",
+      "tycoon": "Repair reserve",
+      "avoid": [
+        "repair reserve (Easy/Normal)"
+      ]
+    },
+    "quote": {
+      "area": "construction",
+      "code": "Quote",
+      "easy": "Price quote",
+      "normal": "Quote",
+      "tycoon": "Quote",
+      "avoid": [
+        "bid (for a repair price, Easy/Normal)"
+      ]
+    },
+    "bill": {
+      "area": "construction",
+      "code": "Invoice",
+      "easy": "Bill",
+      "normal": "Bill",
+      "tycoon": "Invoice",
+      "avoid": []
+    },
+    "delay": {
+      "area": "construction",
+      "code": "Slip",
+      "easy": "Late by a quarter",
+      "normal": "Slips a quarter",
+      "tycoon": "Slips a quarter",
+      "avoid": [
+        "two-quarter delay"
+      ]
+    },
+    "offer": {
+      "area": "deals",
+      "code": "Offer",
+      "easy": "Offer",
+      "normal": "Offer",
+      "tycoon": "Offer",
+      "avoid": [
+        "bid (for buying land, except auctions)"
+      ]
+    },
+    "counter_offer": {
+      "area": "deals",
+      "code": "Counter",
+      "easy": "Counter-offer",
+      "normal": "Counter-offer",
+      "tycoon": "Counter",
+      "avoid": [
+        "counters (Easy)"
+      ]
+    },
+    "handshake_deal": {
+      "area": "deals",
+      "code": "Handshake",
+      "easy": "Handshake deal",
+      "normal": "Handshake deal",
+      "tycoon": "Handshake deal",
+      "avoid": []
+    },
+    "diligence": {
+      "area": "deals",
+      "code": "Diligence",
+      "easy": "Check the site",
+      "normal": "Site check",
+      "tycoon": "Due diligence",
+      "avoid": [
+        "diligence (Easy/Normal)"
+      ]
+    },
+    "title_problem": {
+      "area": "deals",
+      "code": "TitleProblem",
+      "easy": "Problem with who owns it",
+      "normal": "Title problem",
+      "tycoon": "Title defect",
+      "avoid": [
+        "title (Easy)"
+      ]
+    },
+    "dirty_ground": {
+      "area": "deals",
+      "code": "Environmental",
+      "easy": "Dirty ground",
+      "normal": "Dirty ground",
+      "tycoon": "Environmental",
+      "avoid": [
+        "Old gas station tanks (as the title)"
+      ]
+    },
+    "easement": {
+      "area": "deals",
+      "code": "Easement",
+      "easy": "Someone else's right to cross the land",
+      "normal": "Easement (right to cross)",
+      "tycoon": "Easement",
+      "avoid": [
+        "easement (Easy)"
+      ]
+    },
+    "off_market": {
+      "area": "deals",
+      "code": "OffMarket",
+      "easy": "Deals nobody else has seen",
+      "normal": "Quiet deal",
+      "tycoon": "Off-market deal",
+      "avoid": [
+        "off-market (Easy/Normal)",
+        "off the books"
+      ]
+    },
+    "distressed": {
+      "area": "deals",
+      "code": "Distressed",
+      "easy": "Owner who has to sell",
+      "normal": "Owner who has to sell",
+      "tycoon": "Distressed owner",
+      "avoid": [
+        "Distressed (Easy/Normal)"
+      ]
+    },
+    "auction": {
+      "area": "deals",
+      "code": "Auction",
+      "easy": "Courthouse auction",
+      "normal": "Courthouse auction",
+      "tycoon": "Foreclosure auction",
+      "avoid": [
+        "Foreclosure auction (Easy)",
+        "bank-owned"
+      ]
+    },
+    "infill": {
+      "area": "deals",
+      "code": "Infill",
+      "easy": "Empty lot in town",
+      "normal": "Infill site",
+      "tycoon": "Infill site",
+      "avoid": [
+        "Infill lot"
+      ]
+    },
+    "city_approval": {
+      "area": "city",
+      "code": "Entitlement",
+      "easy": "City approval",
+      "normal": "City approval",
+      "tycoon": "Entitlements",
+      "avoid": [
+        "entitlement (Easy/Normal)",
+        "City review",
+        "Approval risk"
+      ]
+    },
+    "council_hearing": {
+      "area": "city",
+      "code": "Hearing",
+      "easy": "Council hearing",
+      "normal": "Council hearing",
+      "tycoon": "Council hearing",
+      "avoid": [
+        "council meeting",
+        "City hall (as an event)"
+      ]
+    },
+    "city_goodwill": {
+      "area": "city",
+      "code": "Goodwill",
+      "easy": "City goodwill",
+      "normal": "City goodwill",
+      "tycoon": "City goodwill",
+      "avoid": [
+        "reputation (for the city)"
+      ]
+    },
+    "impact_fee": {
+      "area": "city",
+      "code": "ImpactFee",
+      "easy": "City building fee",
+      "normal": "Impact fee",
+      "tycoon": "Impact fee",
+      "avoid": [
+        "impact fees (Easy)",
+        "point (for a percent)"
+      ]
+    },
+    "permit": {
+      "area": "city",
+      "code": "Permit",
+      "easy": "Permit",
+      "normal": "Permit",
+      "tycoon": "Permit",
+      "avoid": []
+    },
+    "relationship": {
+      "area": "people",
+      "code": "Rel",
+      "easy": "Good / Okay / Strained",
+      "normal": "Excellent / Good / Okay / Strained / Broken",
+      "tycoon": "Excellent / Good / Okay / Strained / Broken",
+      "avoid": [
+        "Fair (as a relationship level)",
+        "raw 0-100 number on a gate"
+      ]
+    },
+    "skill_level": {
+      "area": "people",
+      "code": "SkillLevel",
+      "easy": "Level 1 to 5",
+      "normal": "Level 1 to 5",
+      "tycoon": "Level 1 to 5",
+      "avoid": [
+        "stars (for skills)"
+      ]
+    },
+    "player_role": {
+      "area": "people",
+      "code": "Developer",
+      "easy": "Developer",
+      "normal": "Developer",
+      "tycoon": "Developer",
+      "avoid": [
+        "builder (generic)",
+        "landlord (as a title)",
+        "hotshot (as a title)"
+      ]
+    },
+    "speaker_tenant": {
+      "area": "people",
+      "code": "SpeakerTenant",
+      "easy": "Tenant",
+      "normal": "Tenant",
+      "tycoon": "Tenant",
+      "avoid": []
+    },
+    "speaker_banker": {
+      "area": "people",
+      "code": "SpeakerBanker",
+      "easy": "Banker",
+      "normal": "Banker",
+      "tycoon": "Banker",
+      "avoid": []
+    },
+    "speaker_broker": {
+      "area": "people",
+      "code": "SpeakerBroker",
+      "easy": "Broker",
+      "normal": "Broker",
+      "tycoon": "Broker",
+      "avoid": []
+    },
+    "speaker_buyer": {
+      "area": "people",
+      "code": "SpeakerBuyer",
+      "easy": "Buyer",
+      "normal": "Buyer",
+      "tycoon": "Buyer",
+      "avoid": []
+    },
+    "speaker_contractor": {
+      "area": "people",
+      "code": "SpeakerContractor",
+      "easy": "Contractor",
+      "normal": "Contractor",
+      "tycoon": "Contractor",
+      "avoid": []
+    },
+    "speaker_council": {
+      "area": "people",
+      "code": "SpeakerCouncil",
+      "easy": "Council member",
+      "normal": "Council member",
+      "tycoon": "Council member",
+      "avoid": []
+    },
+    "speaker_crew": {
+      "area": "people",
+      "code": "SpeakerCrew",
+      "easy": "Crew",
+      "normal": "Crew",
+      "tycoon": "Crew",
+      "avoid": []
+    },
+    "speaker_inspector": {
+      "area": "people",
+      "code": "SpeakerInspector",
+      "easy": "Inspector",
+      "normal": "Inspector",
+      "tycoon": "Inspector",
+      "avoid": []
+    },
+    "speaker_investor": {
+      "area": "people",
+      "code": "SpeakerInvestor",
+      "easy": "Investor",
+      "normal": "Investor",
+      "tycoon": "Investor",
+      "avoid": []
+    },
+    "speaker_mayor": {
+      "area": "people",
+      "code": "SpeakerMayor",
+      "easy": "Mayor",
+      "normal": "Mayor",
+      "tycoon": "Mayor",
+      "avoid": []
+    },
+    "speaker_mentor": {
+      "area": "people",
+      "code": "SpeakerMentor",
+      "easy": "Mentor",
+      "normal": "Mentor",
+      "tycoon": "Mentor",
+      "avoid": []
+    },
+    "speaker_neighbor": {
+      "area": "people",
+      "code": "SpeakerNeighbor",
+      "easy": "Neighbor",
+      "normal": "Neighbor",
+      "tycoon": "Neighbor",
+      "avoid": []
+    },
+    "speaker_owner": {
+      "area": "people",
+      "code": "SpeakerOwner",
+      "easy": "Owner",
+      "normal": "Owner",
+      "tycoon": "Owner",
+      "avoid": []
+    },
+    "speaker_planner": {
+      "area": "people",
+      "code": "SpeakerPlanner",
+      "easy": "Planner",
+      "normal": "Planner",
+      "tycoon": "Planner",
+      "avoid": []
+    },
+    "speaker_reporter": {
+      "area": "people",
+      "code": "SpeakerReporter",
+      "easy": "Reporter",
+      "normal": "Reporter",
+      "tycoon": "Reporter",
+      "avoid": []
+    },
+    "speaker_rival": {
+      "area": "people",
+      "code": "SpeakerRival",
+      "easy": "Rival",
+      "normal": "Rival",
+      "tycoon": "Rival",
+      "avoid": []
+    },
+    "honor": {
+      "area": "honor",
+      "code": "Honor",
+      "easy": "Honor",
+      "normal": "Honor",
+      "tycoon": "Honor (-8 to +8)",
+      "avoid": [
+        "Reputation (as the meter name)",
+        "goodwill"
+      ]
+    },
+    "honor_bands": {
+      "area": "honor",
+      "code": "HonorBand",
+      "easy": "Shark / Hard Dealer / New in Town / Fair Dealer / Straight Shooter",
+      "normal": "Shark / Hard Dealer / New in Town / Fair Dealer / Straight Shooter",
+      "tycoon": "Shark / Hard Dealer / New in Town / Fair Dealer / Straight Shooter",
+      "avoid": [
+        "Unknown"
+      ]
+    },
+    "fame": {
+      "area": "honor",
+      "code": "Fame",
+      "easy": "Fame",
+      "normal": "Fame",
+      "tycoon": "Fame",
+      "avoid": [
+        "Status (for fame)",
+        "Known around town (as fame)"
+      ]
+    },
+    "heat": {
+      "area": "honor",
+      "code": "Heat",
+      "easy": "Heat stars",
+      "normal": "Heat stars",
+      "tycoon": "Heat stars (1 to 5)",
+      "avoid": [
+        "wanted level",
+        "stars (for anything but heat)"
+      ]
+    },
+    "bad_sport": {
+      "area": "honor",
+      "code": "BadSport",
+      "easy": "Bad Sport",
+      "normal": "Bad Sport",
+      "tycoon": "Bad Sport",
+      "avoid": [
+        "flake"
+      ]
+    },
+    "archetype": {
+      "area": "personality",
+      "code": "Archetype",
+      "easy": "Showman / Closer / Builder / Insider",
+      "normal": "Showman / Closer / Builder / Insider",
+      "tycoon": "Showman / Closer / Builder / Insider",
+      "avoid": [
+        "class"
+      ]
+    },
+    "slider_flash": {
+      "area": "personality",
+      "code": "SliderFlash",
+      "easy": "Flashy to Discreet",
+      "normal": "Flashy to Discreet",
+      "tycoon": "Flashy to Discreet",
+      "avoid": []
+    },
+    "slider_bold": {
+      "area": "personality",
+      "code": "SliderBold",
+      "easy": "Bold to Careful",
+      "normal": "Bold to Careful",
+      "tycoon": "Bold to Careful",
+      "avoid": [
+        "Bold (as a risk choice)"
+      ]
+    },
+    "slider_charm": {
+      "area": "personality",
+      "code": "SliderCharm",
+      "easy": "Charming to Ruthless",
+      "normal": "Charming to Ruthless",
+      "tycoon": "Charming to Ruthless",
+      "avoid": []
+    },
+    "brand_value": {
+      "area": "brand",
+      "code": "BrandValue",
+      "easy": "Brand Value",
+      "normal": "Brand Value",
+      "tycoon": "Brand Value",
+      "avoid": [
+        "brand score",
+        "net brand"
+      ]
+    },
+    "awareness": {
+      "area": "brand",
+      "code": "Awareness",
+      "easy": "(hidden)",
+      "normal": "Awareness",
+      "tycoon": "Awareness",
+      "avoid": [
+        "reach"
+      ]
+    },
+    "trust": {
+      "area": "brand",
+      "code": "Trust",
+      "easy": "(hidden)",
+      "normal": "Trust",
+      "tycoon": "Trust",
+      "avoid": [
+        "trust (as a synonym for honor)"
+      ]
+    },
+    "prestige": {
+      "area": "brand",
+      "code": "Prestige",
+      "easy": "(hidden)",
+      "normal": "Prestige",
+      "tycoon": "Prestige",
+      "avoid": [
+        "Premium (as a brand stat)"
+      ]
+    },
+    "scandal_drag": {
+      "area": "brand",
+      "code": "ScandalDrag",
+      "easy": "(hidden)",
+      "normal": "Scandal drag",
+      "tycoon": "Scandal drag",
+      "avoid": [
+        "bad press (as the stat)"
+      ]
+    },
+    "brand_position": {
+      "area": "brand",
+      "code": "BrandPosition",
+      "easy": "Luxury / Mass market / Edgy",
+      "normal": "Luxury / Mass market / Edgy",
+      "tycoon": "Luxury / Mass market / Edgy",
+      "avoid": []
+    },
+    "known_for": {
+      "area": "brand",
+      "code": "KnownFor",
+      "easy": "Known for",
+      "normal": "Known for",
+      "tycoon": "Known for",
+      "avoid": [
+        "class",
+        "path (as a label)"
+      ]
+    },
+    "licensing": {
+      "area": "brand",
+      "code": "License",
+      "easy": "Name deal",
+      "normal": "Licensing deal",
+      "tycoon": "Licensing deal (NIL)",
+      "avoid": [
+        "NIL (Easy/Normal)"
+      ]
+    },
+    "rich_list": {
+      "area": "brand",
+      "code": "RichList",
+      "easy": "Rich list",
+      "normal": "Rich list",
+      "tycoon": "Rich list",
+      "avoid": [
+        "Lone Star 100 (until cleared)"
+      ]
+    },
+    "lifestyle": {
+      "area": "brand",
+      "code": "Status",
+      "easy": "Lifestyle",
+      "normal": "Lifestyle",
+      "tycoon": "Lifestyle",
+      "avoid": [
+        "Status",
+        "Player (as a band)"
+      ]
+    },
+    "turn": {
+      "area": "time",
+      "code": "Quarter",
+      "easy": "Quarter",
+      "normal": "Quarter",
+      "tycoon": "Quarter",
+      "avoid": [
+        "turn",
+        "phase start",
+        "Q (Easy)"
+      ]
+    },
+    "date": {
+      "area": "time",
+      "code": "Date",
+      "easy": "Quarter 3, Year 2",
+      "normal": "Q3 Year 2",
+      "tycoon": "Q3 Year 2",
+      "avoid": [
+        "Year 2, Q3",
+        "3rd quarter"
+      ]
+    },
+    "time_slot": {
+      "area": "time",
+      "code": "TimeSlot",
+      "easy": "Morning / Afternoon / Evening",
+      "normal": "Morning / Afternoon / Evening",
+      "tycoon": "Morning / Afternoon / Evening",
+      "avoid": [
+        "slot (as a label)"
+      ]
+    },
+    "close_timing": {
+      "area": "time",
+      "code": "CloseQuarters",
+      "easy": "Close this quarter / next quarter",
+      "normal": "Close this quarter / next quarter",
+      "tycoon": "Close in N quarters",
+      "avoid": [
+        "Close in 2 weeks",
+        "Close in 30 days",
+        "Close in 90 days"
+      ]
+    },
+    "staff_level": {
+      "area": "staff",
+      "code": "StaffTier",
+      "easy": "Junior / Pro / Ace",
+      "normal": "Junior / Pro / Ace",
+      "tycoon": "Junior / Pro / Ace",
+      "avoid": [
+        "Star (as a staff level)"
+      ]
+    },
+    "leasing_agent": {
+      "area": "staff",
+      "code": "LeasingBroker",
+      "easy": "Leasing agent",
+      "normal": "Leasing agent",
+      "tycoon": "Leasing agent",
+      "avoid": [
+        "Leasing broker"
+      ]
+    },
+    "asset_manager": {
+      "area": "staff",
+      "code": "AssetManager",
+      "easy": "Building manager",
+      "normal": "Building manager",
+      "tycoon": "Asset manager",
+      "avoid": [
+        "Asset manager (Easy/Normal)"
+      ]
+    },
+    "construction_manager": {
+      "area": "staff",
+      "code": "ConstructionManager",
+      "easy": "Construction manager",
+      "normal": "Construction manager",
+      "tycoon": "Construction manager",
+      "avoid": [
+        "your manager"
+      ]
+    },
+    "finance_chief": {
+      "area": "staff",
+      "code": "CapitalMarkets",
+      "easy": "Money raiser",
+      "normal": "Finance chief",
+      "tycoon": "Capital markets chief",
+      "avoid": [
+        "Capital markets chief (Easy/Normal)"
+      ]
+    },
+    "marketing_director": {
+      "area": "staff",
+      "code": "Marketing",
+      "easy": "Marketing director",
+      "normal": "Marketing director",
+      "tycoon": "Marketing director",
+      "avoid": []
+    },
+    "delegate": {
+      "area": "staff",
+      "code": "Delegate",
+      "easy": "I'll handle it / Delegate",
+      "normal": "I'll handle it / Delegate",
+      "tycoon": "I'll handle it / Delegate",
+      "avoid": []
+    },
+    "mode": {
+      "area": "system",
+      "code": "Difficulty",
+      "easy": "Mode",
+      "normal": "Mode",
+      "tycoon": "Mode",
+      "avoid": [
+        "difficulty",
+        "Play style (for difficulty)"
+      ]
+    },
+    "save": {
+      "area": "system",
+      "code": "Save",
+      "easy": "Save",
+      "normal": "Save",
+      "tycoon": "Save",
+      "avoid": [
+        "checksum",
+        "formatVersion",
+        "exception names"
+      ]
+    },
+    "save_error": {
+      "area": "system",
+      "code": "SaveError",
+      "easy": "This save could not be read. Your other saves are safe.",
+      "normal": "This save could not be read. Your other saves are safe.",
+      "tycoon": "This save could not be read. Your other saves are safe.",
+      "avoid": [
+        "checksum mismatch",
+        "IOException",
+        "save format v2"
+      ]
+    },
+    "phone": {
+      "area": "system",
+      "code": "Phone",
+      "easy": "Phone",
+      "normal": "Phone",
+      "tycoon": "Phone",
+      "avoid": [
+        "tablet (for the phone)"
+      ]
+    },
+    "tablet": {
+      "area": "system",
+      "code": "Tablet",
+      "easy": "Site tablet",
+      "normal": "Site tablet",
+      "tycoon": "Site tablet",
+      "avoid": [
+        "tablet (for the phone)"
+      ]
+    },
+    "phone_money_app": {
+      "area": "system",
+      "code": "MoneyApp",
+      "easy": "Money",
+      "normal": "Money",
+      "tycoon": "Money",
+      "avoid": [
+        "wallet"
+      ]
+    }
+  },
+  "bannedEverywhere": [
+    "Nashville",
+    "Las Vegas",
+    "Las Vegas Blvd",
+    "Miami",
+    "Miami Beach",
+    "Collins Ave",
+    "New York",
+    "Midtown",
+    "W 48th St",
+    "W 47th St",
+    "Euless",
+    "Cheek-Sparger",
+    "Rio Grande Blvd",
+    "SH 121",
+    "Highway 121",
+    "Arlington",
+    "DFW",
+    "DFW Airport",
+    "Frisco",
+    "Celina",
+    "Buda",
+    "Leander",
+    "Queen Creek",
+    "Murfreesboro",
+    "Lakewood Ranch",
+    "Bentonville",
+    "North Texas",
+    "State Fair",
+    "Music Row",
+    "Broadway",
+    "Flamingo Rd",
+    "Koval Ln",
+    "Mesquite",
+    "Starbucks",
+    "Dunkin",
+    "Walmart",
+    "Kroger",
+    "H-E-B",
+    "Costco",
+    "Sams Club",
+    "Whole Foods",
+    "Trader Joes",
+    "Albertsons",
+    "Whataburger",
+    "McDonalds",
+    "McDonald's",
+    "Burger King",
+    "Wendys",
+    "Dairy Queen",
+    "Chick-fil-A",
+    "Raising Canes",
+    "Popeyes",
+    "KFC",
+    "Taco Bell",
+    "Taco Cabana",
+    "Chipotle",
+    "Jersey Mikes",
+    "Panera",
+    "Shake Shack",
+    "In-N-Out",
+    "Five Guys",
+    "Jack in the Box",
+    "Dominos",
+    "Pizza Hut",
+    "Papa Johns",
+    "Little Caesars",
+    "Olive Garden",
+    "Applebees",
+    "Texas Roadhouse",
+    "Cheesecake Factory",
+    "Red Lobster",
+    "Golden Corral",
+    "Buc-ees",
+    "Buc-ee's",
+    "7-Eleven",
+    "QuikTrip",
+    "RaceTrac",
+    "Exxon",
+    "Chevron",
+    "Home Depot",
+    "Lowes",
+    "Best Buy",
+    "Nordstrom",
+    "Neiman Marcus",
+    "JCPenney",
+    "Old Navy",
+    "Urban Outfitters",
+    "Dollar General",
+    "Dollar Tree",
+    "Walgreens",
+    "Sephora",
+    "Petco",
+    "PetSmart",
+    "T-Mobile",
+    "Verizon",
+    "AT&T",
+    "Planet Fitness",
+    "Orangetheory",
+    "Topgolf",
+    "Dave & Busters",
+    "Cinemark",
+    "Alamo Drafthouse",
+    "Marriott",
+    "Hilton",
+    "Hyatt",
+    "Holiday Inn",
+    "Motel 6",
+    "Wells Fargo",
+    "Bank of America",
+    "Capital One",
+    "Microsoft",
+    "Tesla",
+    "Toyota",
+    "CrossFit",
+    "Bronco",
+    "Chronomaster",
+    "Space Needle",
+    "Monopoly",
+    "Federal Reserve",
+    "The Fed",
+    "Bank error in your favor",
+    "Chicago Board of Trade",
+    "NYSE",
+    "Nasdaq",
+    "Wall Street",
+    "place a bet",
+    "place your bet",
+    "place your bets",
+    "bet your savings",
+    "win at the tables",
+    "7-11",
+    "the Strip",
+    "Glade Rd",
+    "Cedar Hill",
+    "famous Texas travel center",
+    "famous drive-through chapel",
+    "famous Texas dance hall",
+    "Opry",
+    "Music City",
+    "Mirage",
+    "Sahara",
+    "High Roller",
+    "Vanderbilt",
+    "Astor",
+    "Bleecker",
+    "Gramercy",
+    "Alamo",
+    "Ocean Drive",
+    "Central Park",
+    "Sandman"
+  ],
+  "bannedCaseSensitive": [
+    "Chevron",
+    "Monopoly",
+    "Midtown",
+    "Wall Street",
+    "Bronco",
+    "Tesla",
+    "Mesquite",
+    "The Fed",
+    "the Strip",
+    "Cedar Hill",
+    "Mirage",
+    "Sahara",
+    "High Roller",
+    "Vanderbilt",
+    "Astor",
+    "Bleecker",
+    "Gramercy",
+    "Alamo",
+    "Sandman",
+    "Ocean Drive",
+    "Central Park",
+    "Twin Peaks",
+    "Lucky Strike",
+    "Central Market",
+    "Copper Kettle",
+    "Golden Chick",
+    "Main Event",
+    "Five Guys",
+    "Best Buy",
+    "Dominos",
+    "State Fair",
+    "Lifetime Fitness",
+    "Family Dollar",
+    "Great Clips",
+    "Comfort Inn",
+    "Red Robin"
+  ],
+  "ambiguousNames": [
+    "Target",
+    "Shell",
+    "Subway",
+    "Chase",
+    "Apple",
+    "Sonic",
+    "Ford",
+    "Equinox",
+    "Sprouts",
+    "Big Lots",
+    "Chilis"
+  ],
+  "jargonTycoonOnly": [
+    "cap rate",
+    "cap rates",
+    "NOI",
+    "DSCR",
+    "LTV",
+    "bps",
+    "basis point",
+    "Treasury",
+    "spread",
+    "mezz",
+    "mezzanine",
+    "preferred equity",
+    "pref",
+    "CMBS",
+    "covenant",
+    "covenants",
+    "yield on cost",
+    "occupancy",
+    "vacancy",
+    "equity",
+    "entitlement",
+    "contingency",
+    "deductible",
+    "deductibles",
+    "easement",
+    "build-out",
+    "co-tenancy",
+    "anchor",
+    "pad",
+    "pads",
+    "SF",
+    "rooftops",
+    "infill",
+    "flex",
+    "mixed-use",
+    "big-box",
+    "off-market",
+    "guarantor",
+    "impact fees",
+    "foreclosure",
+    "credit line",
+    "pencils",
+    "Class A",
+    "Class B",
+    "Class C",
+    "floating",
+    "refinance",
+    "refinanced",
+    "closing",
+    "overrun",
+    "holding cost",
+    "costs to hold",
+    "full-access",
+    "median",
+    "right in, right out",
+    "stalls",
+    "bankruptcy",
+    "shareholders",
+    "IPO",
+    "1031",
+    "exit tax",
+    "listed property trust",
+    "debt fund",
+    "agency lender"
+  ],
+  "tycoonOnlySources": [
+    "Data/difficulty.json#financeText.lender",
+    "Data/difficulty.json#financeText.rate",
+    "Data/difficulty.json#financeText.term",
+    "Data/difficulty.json#financeText.years",
+    "Data/difficulty.json#financeText.yearOne",
+    "Data/difficulty.json#financeText.ltv",
+    "Data/difficulty.json#financeText.dscr",
+    "Data/difficulty.json#financeText.spread",
+    "Data/difficulty.json#financeText.yoc",
+    "Data/difficulty.json#financeText.capRate",
+    "Data/difficulty.json#financeText.devSpread",
+    "Data/capital/stack.json#text.Mezz",
+    "Data/capital/stack.json#text.PrefEquity",
+    "Data/capital/stack.json#text.riskMezz",
+    "Data/capital/stack.json#text.riskPrefEquity",
+    "Data/capital/stack.json#text.layerLine",
+    "Data/capital/stack.json#text.ltv",
+    "Data/capital/stack.json#text.dscr",
+    "Data/capital/stack.json#text.breakEvenOcc",
+    "Data/capital/stack.json#text.investorTerms",
+    "Data/market/cycle.json#text.rate",
+    "Data/market/cycle.json#text.maxLtv",
+    "Data/market/cycle.json#text.minDscr",
+    "Data/market/cycle.json#text.spread",
+    "Data/market/cycle.json#text.allIn",
+    "Data/market/cycle.json#text.capRate",
+    "Data/market/cycle.json#text.rentIndex",
+    "Data/market/cycle.json#text.valueIndex",
+    "Data/market/cycle.json#text.covenants",
+    "Data/exits/exits.json#text.fee",
+    "Data/exits/exits.json#text.loanPaid",
+    "Data/exits/exits.json#text.impliedCap",
+    "Data/exits/exits.json#text.walkChance",
+    "Data/exits/exits.json#text.newLoan",
+    "Data/exits/exits.json#text.coverage",
+    "Data/capital/investors.json#text.target",
+    "Data/capital/investors.json#text.temper",
+    "Data/capital/investors.json#text.blended",
+    "Data/capital/investors.json#text.split"
+  ],
+  "skipFiles": [
+    "Data/rename-map.json",
+    "Data/code-refs.json",
+    "Data/Balance.json",
+    "Data/ui/lexicon.json",
+    "Data/products/towers-balance.json"
+  ],
+  "skipKeys": [
+    "_note",
+    "_notes",
+    "note",
+    "notes",
+    "id",
+    "ids",
+    "key",
+    "keys",
+    "source",
+    "sources",
+    "url",
+    "urls",
+    "exportedFrom",
+    "status",
+    "Banned",
+    "icon",
+    "links",
+    "speaker",
+    "tags",
+    "tag",
+    "kind",
+    "type",
+    "cond",
+    "formatVersion",
+    "why",
+    "src",
+    "sig"
+  ],
+  "playerTextUnderSkippedKeys": {
+    "note": [
+      "Data/buildings.json#",
+      "Data/products/towers.json#variants",
+      "Data/exits/exits.json#buyers",
+      "Data/catalogs.json#catalogs.KITS"
+    ],
+    "why": [
+      "Data/buildings.json#variants",
+      "Data/products/towers.json#variants"
+    ]
+  },
+  "effectTextKinds": [
+    "Headline"
+  ]
+}

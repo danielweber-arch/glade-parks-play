@@ -1,0 +1,37 @@
+{
+  "formatVersion": 1,
+  "note": "Gamepad cursor feel on the overhead grid. Stick past deadzone moves one cell, then repeats after firstRepeatSeconds every repeatSeconds (faster when pushed fully).",
+  "deadzone": 0.35,
+  "firstRepeatSeconds": 0.28,
+  "repeatSeconds": 0.09,
+  "fastRepeatSeconds": 0.045,
+  "fastThreshold": 0.9,
+  "floorFeet": 10.5,
+  "defaultHeightFeet": 14,
+  "flatHeightFeet": 0.6,
+  "heightNote": "Placeholder box heights: floors x 10.5 ft for types with floors, else U.h, else 14 ft (browser drawing, builder-v30.html line 1363, 1437: H=(U[t].fl?fl*10.5:(U[t].h||14))). Roads, lots, parks (not isB) draw flat.",
+  "groundColors": {
+    "0": "#55704a",
+    "1": "#6f7f5a",
+    "2": "#7d8a5c",
+    "3": "#3f6f9a"
+  },
+  "highlightColor": "#ffb347",
+  "highlightBadColor": "#ff8585",
+  "toolWheel": {
+    "note": "Controller tool picking, any tool within 3 presses: 1) a bumper opens a wheel (ToolWheelPrev = left bumper opens wheel 1, ToolWheelNext = right bumper opens wheel 2; pressed again while open they flip wheels), 2) a slot button picks a group page, 3) a slot button picks the tool. Groups with more than 'slots' tools split into pages labelled by pageLabel, each its own wheel slot. Pages fill wheels in dock order (Data/ui/tool-groups.json), 'slots' per wheel, so up to 2 x slots pages stay within 3 presses. ToolWheelBack (View/Back button, Escape) steps back. Mouse is unchanged: dock tab, then tool (2 clicks). Lower 'slots' to 7 and drop ToolSlotEast to keep B as back.",
+    "slots": 8,
+    "slotActions": [
+      "ToolSlotUp",
+      "ToolSlotRight",
+      "ToolSlotDown",
+      "ToolSlotLeft",
+      "ToolSlotNorth",
+      "ToolSlotEast",
+      "ToolSlotSouth",
+      "ToolSlotWest"
+    ],
+    "slotBindings": "ToolSlotUp/Right/Down/Left = d-pad; ToolSlotNorth = Y/triangle, ToolSlotEast = B/circle, ToolSlotSouth = A/cross, ToolSlotWest = X/square (gamepad only, active while the wheel is open)",
+    "pageLabel": "{group} {page}/{pages}"
+  }
+}

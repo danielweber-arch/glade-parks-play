@@ -1,0 +1,14 @@
+{
+  "formatVersion": 1,
+  "_note": "P7.4 change difficulty mid-game from Settings. One line says what changes. Rules stay the same; only the surprise rate and what screens show change. Starting cash is not paid again.",
+  "text": {
+    "same": "You are already on {to}.",
+    "summary": "Now {to}: surprises {surprise}, {detail}.",
+    "moreSurprises": "come more often",
+    "fewerSurprises": "come less often",
+    "sameSurprises": "stay the same",
+    "detailOn": "full loan and finance numbers show",
+    "detailOff": "money talk stays simple",
+    "ironmanOff": " Ironman is off now."
+  }
+}

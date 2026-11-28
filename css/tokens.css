@@ -1,0 +1,97 @@
+/* Owner call 36: Atkinson Hyperlegible (Braille Institute, SIL OFL 1.1; ThirdParty/fonts, LICENSES.md),
+   shipped as woff2 under Web/Client/fonts. The system stack stays as the fallback (font-display: swap). */
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("../fonts/AtkinsonHyperlegible-Regular.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
+@font-face {
+  font-family: "Atkinson Hyperlegible";
+  src: url("../fonts/AtkinsonHyperlegible-Bold.woff2") format("woff2");
+  font-weight: 700; font-style: normal; font-display: swap;
+}
+/* Color tokens from Docs/ui/style-guide.md section 2. Light is the default;
+   dark comes from the OS (prefers-color-scheme) unless data-theme says light,
+   or from data-theme="dark" on <html>. */
+:root {
+  --bg: #F6F4EF; --panel: #FFFFFF; --ink: #1D1F24; --ink-2: #4A4F59; --line: #C9C4B8;
+  --accent: #1F5FBF; --good: #1B7F4B; --warn: #B26B00; --bad: #B3261E; --focus: #FFB000;
+  --focus-ring: 4px;
+  /* N437 sunny look (owner 2026-11-27 "make it more colorful"). Each fill has its own ink that passes AA on it;
+     Tests/Web/tools/contrast.test.mjs checks every pair in light, dark and color help. */
+  --sky-top: #5BB8F0; --sky-bottom: #D6F1FF; --sun: #FFD23F; --sun-glow: rgba(255, 210, 63, 0.45);
+  --hill-1: #8ED47A; --hill-2: #4FAE5E;
+  --panel-surface: #FFFDF7; --panel-shadow: 0 10px 28px rgba(26, 64, 102, 0.22);
+  --title-ink: #C2410C; --title-shadow: #FFE7A3;
+  --grp-build: #FFC23D; --grp-build-ink: #2B1B00;
+  --grp-money: #5FD38D; --grp-money-ink: #0B2A17;
+  --grp-people: #FF9DB0; --grp-people-ink: #3A0A14;
+  --grp-city: #74C9FF; --grp-city-ink: #08263D;
+  --grp-end: #BBA3FF; --grp-end-ink: #1E0F45;
+  --grp-more: #8FE3D4; --grp-more-ink: #06302A;
+  --tile-cash: #7EDC9E; --tile-cash-ink: #0B3A1E;
+  --tile-worth: #FFE08A; --tile-worth-ink: #3A2A00;
+  --tile-inbox: #D2C2FF; --tile-inbox-ink: #1E0F45;
+  --tile-date: #A8DCFF; --tile-date-ink: #08263D;
+  --client-bg: #FF8A65; --client-ink: #2A0A00; --client-line: #D9542E;
+  --focus-inner: #111318; --focus-outer: #FFD000;
+  --font-body: "Atkinson Hyperlegible", Inter, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  color-scheme: light;
+  /* Scene layer tokens (N208 item 7): a scene is always dark, in both themes. */
+  --cine-bg: #000; --cine-ink: #F1EFE9; --cine-ink-2: #B9BCC4; --cine-speaker: #FFD27A;
+  --cine-btn-bg: rgba(0, 0, 0, 0.55); --cine-btn-line: rgba(241, 239, 233, 0.5);
+  --cine-note-shadow: rgba(0, 0, 0, 0.18);
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #15171B; --panel: #22252B; --ink: #F1EFE9; --ink-2: #B9BCC4; --line: #3C4049;
+    --accent: #6EA8FF; --good: #5CC98D; --warn: #F0A83C; --bad: #FF7B72; --focus: #FFB000;
+    --sky-top: #0E2A4F; --sky-bottom: #3A4F7A; --sun: #FFD23F; --sun-glow: rgba(255, 210, 63, 0.25);
+    --hill-1: #1F5A3A; --hill-2: #154229;
+    --panel-surface: #22252B; --panel-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
+    --title-ink: #FFB347; --title-shadow: #5A2A00;
+    --grp-build: #8A5A00; --grp-build-ink: #FFF4D6;
+    --grp-money: #1E6B3C; --grp-money-ink: #E6FFEF;
+    --grp-people: #9C2D47; --grp-people-ink: #FFE6EC;
+    --grp-city: #1D5E8C; --grp-city-ink: #E3F4FF;
+    --grp-end: #5B3FA8; --grp-end-ink: #F0EAFF;
+    --grp-more: #1B6E63; --grp-more-ink: #DFFFF8;
+    --tile-cash: #1F6B3E; --tile-cash-ink: #E6FFEF;
+    --tile-worth: #7A5B00; --tile-worth-ink: #FFF4D6;
+    --tile-inbox: #4E3A99; --tile-inbox-ink: #F0EAFF;
+    --tile-date: #1D5E8C; --tile-date-ink: #E3F4FF;
+    --client-bg: #A8402A; --client-ink: #FFEDE7; --client-line: #FF8A65;
+    --focus-inner: #000000; --focus-outer: #FFD000;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #15171B; --panel: #22252B; --ink: #F1EFE9; --ink-2: #B9BCC4; --line: #3C4049;
+  --accent: #6EA8FF; --good: #5CC98D; --warn: #F0A83C; --bad: #FF7B72; --focus: #FFB000;
+  --sky-top: #0E2A4F; --sky-bottom: #3A4F7A; --sun: #FFD23F; --sun-glow: rgba(255, 210, 63, 0.25);
+  --hill-1: #1F5A3A; --hill-2: #154229;
+  --panel-surface: #22252B; --panel-shadow: 0 10px 28px rgba(0, 0, 0, 0.5);
+  --title-ink: #FFB347; --title-shadow: #5A2A00;
+  --grp-build: #8A5A00; --grp-build-ink: #FFF4D6;
+  --grp-money: #1E6B3C; --grp-money-ink: #E6FFEF;
+  --grp-people: #9C2D47; --grp-people-ink: #FFE6EC;
+  --grp-city: #1D5E8C; --grp-city-ink: #E3F4FF;
+  --grp-end: #5B3FA8; --grp-end-ink: #F0EAFF;
+  --grp-more: #1B6E63; --grp-more-ink: #DFFFF8;
+  --tile-cash: #1F6B3E; --tile-cash-ink: #E6FFEF;
+  --tile-worth: #7A5B00; --tile-worth-ink: #FFF4D6;
+  --tile-inbox: #4E3A99; --tile-inbox-ink: #F0EAFF;
+  --tile-date: #1D5E8C; --tile-date-ink: #E3F4FF;
+  --client-bg: #A8402A; --client-ink: #FFEDE7; --client-line: #FF8A65;
+  --focus-inner: #000000; --focus-outer: #FFD000;
+  color-scheme: dark;
+}
+/* Color help setting: good becomes blue, bad becomes orange. */
+:root[data-color-help="on"] { --good: #1F5FBF; --bad: #C25400; }
+:root[data-theme="dark"][data-color-help="on"] { --good: #6EA8FF; --bad: #FF9E4A; }
+/* N437: color help keeps cash off green (blue, like good), in light and in both dark sets. */
+:root[data-color-help="on"] { --tile-cash: #9CC4FF; --tile-cash-ink: #0A2552; }
+:root[data-theme="dark"][data-color-help="on"] { --tile-cash: #1F4F99; --tile-cash-ink: #E6F0FF; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"])[data-color-help="on"] { --good: #6EA8FF; --bad: #FF9E4A; --tile-cash: #1F4F99; --tile-cash-ink: #E6F0FF; }
+}

@@ -1,0 +1,8 @@
+{
+  "_note": "Host and browser build guard for the cine wire (N228). Read by Web/Host/HostLog.cs CineGuard.",
+  "maxFailures": {
+    "value": 3,
+    "source": "A",
+    "why": "A scene that fails to build three polls in a row is broken, not busy. After that the host finishes it so the next scene can play."
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "formatVersion": 1,
+  "note": "S6 (r55 g6) menu words for the Signs, Fonts, college, deal room and trade counter rows. Fictional names only.",
+  "text": {
+    "signs": "Signs",
+    "fonts": "Fonts",
+    "signOn": "Put your name on project {0} ({1})",
+    "signCompany": "Sign on project {0}: use the company name",
+    "signSub": "Sign on project {0}: use {1}",
+    "font": "Font: {0}",
+    "noProjects": "Nothing here can carry a sign yet.",
+    "bringCollege": "Bring a college here ({0})",
+    "guest": "Who to invite",
+    "venue": "Where to take them",
+    "choice": "What you do there",
+    "counter": "Counter at 90%: {0}"
+  }
+}

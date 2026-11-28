@@ -1,0 +1,20 @@
+{
+  "_note": "N440 open world places. Lives in Data/ui because only Data/ui is served by the host (/data/ui/{name}) and copied into the wasm build. Anchors name a city.json poi id (landmark), a node id, or 'site' (the player's site; snapToNode moves it to the closest road node, since CityView gives a site its district center). Offsets are meters from the anchor (x east, z north). Positions are placeholders for the owner to tune.",
+  "places": [
+    { "id": "site", "opens": "build", "anchor": "site", "snapToNode": true, "district": "", "label": "Your site", "color": "#ff7a1a",
+      "offset": { "value": [0, 0], "source": "guess", "why": "Stand at the site itself." },
+      "radius": { "value": 45, "source": "guess", "why": "The site snaps to the road node closest to its district center; this ring is a comfortable stop around it." } },
+    { "id": "bank", "opens": "money", "anchor": "bank", "district": "corner", "label": "", "color": "#2fbf5b",
+      "offset": { "value": [0, 0], "source": "guess", "why": "The bank parking spot is on the road." },
+      "radius": { "value": 25, "source": "guess", "why": "Big enough to stop in without hitting the curb." } },
+    { "id": "office", "opens": "people", "anchor": "n_main_prairieridge", "district": "corner", "label": "Your team office", "color": "#3b82f6",
+      "offset": { "value": [-60, 0], "source": "guess", "why": "60 m west of the Main St and Prairie Ridge Rd corner, at (1000, 580) on Prairie Ridge Rd." },
+      "radius": { "value": 25, "source": "guess", "why": "Same stop ring as the bank." } },
+    { "id": "city_hall", "opens": "city", "anchor": "city_hall", "district": "corner", "label": "", "color": "#a855f7",
+      "offset": { "value": [0, 0], "source": "guess", "why": "The city hall parking spot is on the road." },
+      "radius": { "value": 25, "source": "guess", "why": "Same stop ring as the bank." } },
+    { "id": "hq", "opens": "end", "anchor": "home", "district": "creek", "label": "Head office", "color": "#f43f5e",
+      "offset": { "value": [-14.5, -60], "source": "guess", "why": "Near your place, at (820, 176) on Bluebonnet Blvd; the old [90, -35] fell inside the Creekside parcel. Owner question: is this the spot?" },
+      "radius": { "value": 30, "source": "guess", "why": "A little wider: the end of the game should be easy to find." } }
+  ]
+}

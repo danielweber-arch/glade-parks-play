@@ -1,0 +1,23 @@
+{
+  "_note": "N440 open world content tunables. Visual only, no game rules.",
+  "minimapPixels": {
+    "value": 180,
+    "source": "guess",
+    "why": "Square minimap size on screen."
+  },
+  "markerHeight": {
+    "value": 36,
+    "source": "guess",
+    "why": "Taller than the 30 m landmark boxes so markers stand out."
+  },
+  "pedestrians": {
+    "value": 12,
+    "source": "guess",
+    "why": "Small crowd so the town feels alive without slowing old laptops."
+  },
+  "trafficCars": {
+    "value": 10,
+    "source": "guess",
+    "why": "A few cars on the main roads."
+  }
+}

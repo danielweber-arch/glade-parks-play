@@ -1,0 +1,25 @@
+{
+  "formatVersion": 1,
+  "_note": "Owner call 45: a caption or dialogue speaker that is not a cast member shows a role word. Speaker id (the '# speaker:' tag in Dialogue/*.ink and Data/cutscenes captions) -> Data/ui/lexicon.json concept key. Cast ids show the cast name first; 'narrator' and 'player' never use this table. An id missing here shows no name, never the raw id.",
+  "source": "Docs/owner-calls.md 45 (name or role word); speaker ids found in Dialogue/*.ink and Data/cutscenes",
+  "why": "One place maps ids to words so the word bible owns the spelling.",
+  "Roles": {
+    "tenant": "speaker_tenant",
+    "banker": "speaker_banker",
+    "broker": "speaker_broker",
+    "top_broker": "speaker_broker",
+    "buyer": "speaker_buyer",
+    "contractor": "speaker_contractor",
+    "council": "speaker_council",
+    "crew": "speaker_crew",
+    "inspector": "speaker_inspector",
+    "investor": "speaker_investor",
+    "mayor": "speaker_mayor",
+    "mentor": "speaker_mentor",
+    "neighbor": "speaker_neighbor",
+    "owner": "speaker_owner",
+    "planner": "speaker_planner",
+    "reporter": "speaker_reporter",
+    "rival": "speaker_rival"
+  }
+}

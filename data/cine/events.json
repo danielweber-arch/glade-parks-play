@@ -1,0 +1,1034 @@
+{
+ "_note": "P12.7a director table (plan-cinematic section 3). Script to mood, beat sequences per template and for ceremonies, people marks and the plain district stage. Read by Sim/Cine/Director. Each beat lists the shot types it may use; an FNV-1a hash of (seed, script, turn, shot) picks one. Camera ranges stay in shots.json.",
+ "formatVersion": 1,
+ "moods": {
+  "value": {
+   "cold_open": "dawn_hope",
+   "first_lot": "dawn_hope",
+   "first_tenant": "warm_deal",
+   "first_rent_day": "warm_deal",
+   "groundbreaking": "noon_clean",
+   "topping_out": "golden_hour",
+   "ribbon_cutting": "celebration",
+   "bust": "bust_cold",
+   "boom": "dawn_hope",
+   "hearing_won": "court_steel",
+   "hearing_settled": "court_steel",
+   "hearing_lost": "court_steel",
+   "top_ten": "gloss_night",
+   "rich_list_in": "gloss_night",
+   "rich_list_first": "gloss_night",
+   "bell_ringing": "celebration",
+   "landmark_open": "epic_night",
+   "broke": "bleak_gray",
+   "comeback": "dawn_hope",
+   "transit_stop_open": "noon_clean",
+   "name_removal": "bleak_gray",
+   "trip_pine_ridge": "golden_hour",
+   "cs_rival_challenge": "tense_steel",
+   "cs_hearing_result": "court_steel",
+   "cs_bell": "celebration",
+   "cs_grand_opening": "celebration",
+   "cs_groundbreaking": "noon_clean",
+   "cs_topping_out": "golden_hour",
+   "cs_first_land": "dawn_hope",
+   "cs_ending": "gold_warm",
+   "chapter_open": "dawn_hope",
+   "chapter_done": "golden_hour",
+   "rival_showdown": "tense_steel",
+   "lease_signed": "warm_deal",
+   "cs_meet_mentor": "warm_deal",
+   "cs_flight": "golden_hour",
+   "cs_ch1_title": "dawn_hope",
+   "cs_ch2_title": "noon_clean",
+   "cs_ch3_title": "warm_deal",
+   "cs_ch4_title": "golden_hour",
+   "cs_ch5_title": "dawn_hope",
+   "cs_ch6_title": "golden_hour",
+   "cs_ch7_title": "bust_cold",
+   "cs_ch8_title": "celebration",
+   "cs_ch9_title": "golden_hour",
+   "cs_comeback_title": "dawn_hope"
+  },
+  "source": "plan-cinematic section 3 event map (copied from rules.json baseline.moods); chapter_open, chapter_done, rival_showdown and lease_signed added in P12.7a; cs_meet_mentor (warm_deal) and cs_flight (golden_hour) are starting guesses; R48 title cards cs_ch1_title to cs_ch9_title and cs_comeback_title added after the Fable story merge: chapter openers bright (dawn_hope for a new start, noon_clean, warm_deal for the bank chapter, golden_hour for payday, the fix up and the last beam, celebration for the bell), ch7 bust_cold to match bust, the comeback dawn_hope to match comeback",
+  "why": "Script id to mood id in Data/cine/moods.json. rival_showdown and lease_signed are career scripts slot m3 adds this round."
+ },
+ "defaultMood": {
+  "value": "golden_hour",
+  "source": "P12.1 Part C brief",
+  "why": "Mood for a script this table does not name."
+ },
+ "sequences": {
+  "value": {
+   "site_flyover": [
+    {
+     "types": [
+      "establishing_aerial"
+     ],
+     "subject": "site",
+     "seconds": 4
+    },
+    {
+     "types": [
+      "crane_reveal",
+      "orbit"
+     ],
+     "subject": "site",
+     "seconds": 4
+    },
+    {
+     "types": [
+      "push_in"
+     ],
+     "subject": "player",
+     "seconds": 4
+    }
+   ],
+   "construction_timelapse": [
+    {
+     "types": [
+      "establishing_aerial"
+     ],
+     "subject": "site",
+     "seconds": 4
+    },
+    {
+     "types": [
+      "static_wide",
+      "high_angle"
+     ],
+     "subject": "site",
+     "seconds": 4
+    },
+    {
+     "types": [
+      "orbit"
+     ],
+     "subject": "site",
+     "seconds": 4
+    }
+   ],
+   "two_people_talking": [
+    {
+     "types": [
+      "two_shot"
+     ],
+     "subject": "left",
+     "seconds": 4
+    },
+    {
+     "types": [
+      "over_shoulder"
+     ],
+     "subject": "right",
+     "seconds": 4
+    },
+    {
+     "types": [
+      "over_shoulder",
+      "two_shot"
+     ],
+     "subject": "left",
+     "seconds": 4
+    }
+   ],
+   "crowd_moment": [
+    {
+     "types": [
+      "static_wide"
+     ],
+     "subject": "place",
+     "seconds": 4
+    },
+    {
+     "types": [
+      "hero_low",
+      "high_angle"
+     ],
+     "subject": "place",
+     "seconds": 4
+    },
+    {
+     "types": [
+      "push_in"
+     ],
+     "subject": "player",
+     "seconds": 4
+    }
+   ],
+   "travel": [
+    {
+     "types": [
+      "follow"
+     ],
+     "subject": "from",
+     "seconds": 4
+    },
+    {
+     "types": [
+      "establishing_aerial"
+     ],
+     "subject": "to",
+     "seconds": 4
+    },
+    {
+     "types": [
+      "static_wide",
+      "orbit"
+     ],
+     "subject": "to",
+     "seconds": 4
+    }
+   ],
+   "cold_open": [
+    {
+     "types": [
+      "establishing_aerial"
+     ],
+     "subject": "site",
+     "seconds": 5
+    },
+    {
+     "types": [
+      "crane_reveal"
+     ],
+     "subject": "site",
+     "seconds": 4
+    },
+    {
+     "types": [
+      "push_in"
+     ],
+     "subject": "player",
+     "seconds": 3
+    }
+   ],
+   "first_lot": [
+    {
+     "types": [
+      "establishing_aerial"
+     ],
+     "subject": "site",
+     "seconds": 4
+    },
+    {
+     "types": [
+      "crane_reveal"
+     ],
+     "subject": "site",
+     "seconds": 4
+    },
+    {
+     "types": [
+      "push_in"
+     ],
+     "subject": "player",
+     "seconds": 4
+    }
+   ],
+   "first_tenant": [
+    {
+     "types": [
+      "two_shot"
+     ],
+     "subject": "left",
+     "seconds": 3.5
+    },
+    {
+     "types": [
+      "over_shoulder"
+     ],
+     "subject": "right",
+     "seconds": 3
+    },
+    {
+     "types": [
+      "insert"
+     ],
+     "subject": "prop",
+     "seconds": 2
+    },
+    {
+     "types": [
+      "push_in"
+     ],
+     "subject": "left",
+     "seconds": 3.5
+    }
+   ],
+   "lease_signed": [
+    {
+     "types": [
+      "two_shot"
+     ],
+     "subject": "left",
+     "seconds": 3.5
+    },
+    {
+     "types": [
+      "over_shoulder"
+     ],
+     "subject": "right",
+     "seconds": 3
+    },
+    {
+     "types": [
+      "insert"
+     ],
+     "subject": "prop",
+     "seconds": 2
+    },
+    {
+     "types": [
+      "push_in"
+     ],
+     "subject": "left",
+     "seconds": 3.5
+    }
+   ],
+   "first_rent_day": [
+    {
+     "types": [
+      "static_wide"
+     ],
+     "subject": "site",
+     "seconds": 4.5
+    },
+    {
+     "types": [
+      "push_in"
+     ],
+     "subject": "player",
+     "seconds": 3.5
+    },
+    {
+     "types": [
+      "high_angle"
+     ],
+     "subject": "site",
+     "seconds": 4
+    }
+   ],
+   "bust": [
+    {
+     "types": [
+      "static_wide"
+     ],
+     "subject": "site",
+     "seconds": 4
+    },
+    {
+     "types": [
+      "static_wide"
+     ],
+     "subject": "place",
+     "seconds": 4
+    },
+    {
+     "types": [
+      "high_angle"
+     ],
+     "subject": "player",
+     "seconds": 4
+    }
+   ],
+   "boom": [
+    {
+     "types": [
+      "establishing_aerial"
+     ],
+     "subject": "site",
+     "seconds": 4
+    },
+    {
+     "types": [
+      "static_wide"
+     ],
+     "subject": "site",
+     "seconds": 4
+    },
+    {
+     "types": [
+      "crane_reveal"
+     ],
+     "subject": "site",
+     "seconds": 4
+    }
+   ],
+   "rival_showdown": [
+    {
+     "types": [
+      "two_shot"
+     ],
+     "subject": "left",
+     "seconds": 3.5
+    },
+    {
+     "types": [
+      "over_shoulder"
+     ],
+     "subject": "right",
+     "seconds": 2.5
+    },
+    {
+     "types": [
+      "over_shoulder"
+     ],
+     "subject": "left",
+     "seconds": 2.5
+    },
+    {
+     "types": [
+      "push_in"
+     ],
+     "subject": "left",
+     "seconds": 3.5
+    }
+   ],
+   "hearing_won": [
+    {
+     "types": [
+      "hero_low"
+     ],
+     "subject": "site",
+     "seconds": 3
+    },
+    {
+     "types": [
+      "over_shoulder"
+     ],
+     "subject": "right",
+     "seconds": 3
+    },
+    {
+     "types": [
+      "insert"
+     ],
+     "subject": "prop",
+     "seconds": 2
+    },
+    {
+     "types": [
+      "push_in"
+     ],
+     "subject": "left",
+     "seconds": 4
+    }
+   ],
+   "hearing_settled": [
+    {
+     "types": [
+      "hero_low"
+     ],
+     "subject": "site",
+     "seconds": 3
+    },
+    {
+     "types": [
+      "over_shoulder"
+     ],
+     "subject": "right",
+     "seconds": 3
+    },
+    {
+     "types": [
+      "insert"
+     ],
+     "subject": "prop",
+     "seconds": 2
+    },
+    {
+     "types": [
+      "push_in"
+     ],
+     "subject": "left",
+     "seconds": 4
+    }
+   ],
+   "hearing_lost": [
+    {
+     "types": [
+      "hero_low"
+     ],
+     "subject": "site",
+     "seconds": 3
+    },
+    {
+     "types": [
+      "over_shoulder"
+     ],
+     "subject": "right",
+     "seconds": 3
+    },
+    {
+     "types": [
+      "insert"
+     ],
+     "subject": "prop",
+     "seconds": 2
+    },
+    {
+     "types": [
+      "push_in"
+     ],
+     "subject": "left",
+     "seconds": 4
+    }
+   ],
+   "top_ten": [
+    {
+     "types": [
+      "static_wide"
+     ],
+     "subject": "site",
+     "seconds": 3
+    },
+    {
+     "types": [
+      "orbit"
+     ],
+     "subject": "site",
+     "seconds": 5
+    },
+    {
+     "types": [
+      "push_in"
+     ],
+     "subject": "player",
+     "seconds": 4
+    }
+   ],
+   "rich_list_in": [
+    {
+     "types": [
+      "static_wide"
+     ],
+     "subject": "site",
+     "seconds": 3
+    },
+    {
+     "types": [
+      "orbit"
+     ],
+     "subject": "site",
+     "seconds": 5
+    },
+    {
+     "types": [
+      "push_in"
+     ],
+     "subject": "player",
+     "seconds": 4
+    }
+   ],
+   "rich_list_first": [
+    {
+     "types": [
+      "static_wide"
+     ],
+     "subject": "site",
+     "seconds": 3
+    },
+    {
+     "types": [
+      "orbit"
+     ],
+     "subject": "site",
+     "seconds": 5
+    },
+    {
+     "types": [
+      "push_in"
+     ],
+     "subject": "player",
+     "seconds": 4
+    }
+   ],
+   "bell_ringing": [
+    {
+     "types": [
+      "static_wide"
+     ],
+     "subject": "place",
+     "seconds": 4.5
+    },
+    {
+     "types": [
+      "high_angle"
+     ],
+     "subject": "place",
+     "seconds": 3.5
+    },
+    {
+     "types": [
+      "push_in"
+     ],
+     "subject": "player",
+     "seconds": 4
+    }
+   ],
+   "landmark_open": [
+    {
+     "types": [
+      "hero_low"
+     ],
+     "subject": "site",
+     "seconds": 4
+    },
+    {
+     "types": [
+      "establishing_aerial"
+     ],
+     "subject": "site",
+     "seconds": 4
+    },
+    {
+     "types": [
+      "orbit"
+     ],
+     "subject": "site",
+     "seconds": 4
+    }
+   ],
+   "broke": [
+    {
+     "types": [
+      "high_angle"
+     ],
+     "subject": "player",
+     "seconds": 4
+    },
+    {
+     "types": [
+      "static_wide"
+     ],
+     "subject": "site",
+     "seconds": 4
+    },
+    {
+     "types": [
+      "high_angle"
+     ],
+     "subject": "site",
+     "seconds": 4
+    }
+   ],
+   "comeback": [
+    {
+     "types": [
+      "hero_low"
+     ],
+     "subject": "site",
+     "seconds": 4
+    },
+    {
+     "types": [
+      "crane_reveal"
+     ],
+     "subject": "site",
+     "seconds": 4
+    },
+    {
+     "types": [
+      "push_in"
+     ],
+     "subject": "player",
+     "seconds": 4
+    }
+   ],
+   "transit_stop_open": [
+    {
+     "types": [
+      "follow"
+     ],
+     "subject": "site",
+     "seconds": 4
+    },
+    {
+     "types": [
+      "static_wide"
+     ],
+     "subject": "place",
+     "seconds": 4
+    },
+    {
+     "types": [
+      "high_angle"
+     ],
+     "subject": "place",
+     "seconds": 4
+    }
+   ],
+   "name_removal": [
+    {
+     "types": [
+      "high_angle"
+     ],
+     "subject": "site",
+     "seconds": 4
+    },
+    {
+     "types": [
+      "static_wide"
+     ],
+     "subject": "site",
+     "seconds": 4
+    },
+    {
+     "types": [
+      "establishing_aerial"
+     ],
+     "subject": "site",
+     "seconds": 4
+    }
+   ],
+   "trip_pine_ridge": [
+    {
+     "types": [
+      "follow"
+     ],
+     "subject": "from",
+     "seconds": 4
+    },
+    {
+     "types": [
+      "establishing_aerial"
+     ],
+     "subject": "to",
+     "seconds": 4.5
+    },
+    {
+     "types": [
+      "static_wide"
+     ],
+     "subject": "to",
+     "seconds": 3.5
+    }
+   ],
+   "chapter_open": [
+    {
+     "types": [
+      "establishing_aerial"
+     ],
+     "subject": "site",
+     "seconds": 5
+    },
+    {
+     "types": [
+      "static_wide"
+     ],
+     "subject": "site",
+     "seconds": 3
+    },
+    {
+     "types": [
+      "orbit"
+     ],
+     "subject": "site",
+     "seconds": 4
+    }
+   ],
+   "chapter_done": [
+    {
+     "types": [
+      "static_wide"
+     ],
+     "subject": "site",
+     "seconds": 4
+    },
+    {
+     "types": [
+      "hero_low"
+     ],
+     "subject": "site",
+     "seconds": 4
+    },
+    {
+     "types": [
+      "push_in"
+     ],
+     "subject": "player",
+     "seconds": 4
+    }
+   ],
+   "groundbreaking": [
+    {
+     "types": [
+      "static_wide"
+     ],
+     "subject": "place",
+     "seconds": 5
+    },
+    {
+     "types": [
+      "hero_low"
+     ],
+     "subject": "place",
+     "seconds": 5
+    },
+    {
+     "types": [
+      "push_in"
+     ],
+     "subject": "player",
+     "seconds": 4
+    }
+   ],
+   "topping_out": [
+    {
+     "types": [
+      "hero_low"
+     ],
+     "subject": "place",
+     "seconds": 5
+    },
+    {
+     "types": [
+      "crane_reveal"
+     ],
+     "subject": "place",
+     "seconds": 5
+    },
+    {
+     "types": [
+      "orbit"
+     ],
+     "subject": "place",
+     "seconds": 5
+    }
+   ],
+   "ribbon_cutting": [
+    {
+     "types": [
+      "static_wide"
+     ],
+     "subject": "place",
+     "seconds": 4
+    },
+    {
+     "types": [
+      "push_in"
+     ],
+     "subject": "player",
+     "seconds": 3
+    },
+    {
+     "types": [
+      "high_angle"
+     ],
+     "subject": "place",
+     "seconds": 3.5
+    },
+    {
+     "types": [
+      "crane_reveal"
+     ],
+     "subject": "place",
+     "seconds": 4.5
+    }
+   ]
+  },
+  "source": "Templates: Cine.Recipes in P12.1 Part C, widened with allowed alternates in P12.7a. Script entries (N167, r40): the event map rows in plan-cinematic section 3, one entry per career script and ceremony kind, cut to shot types in shots.json and to the subjects the stage can build",
+  "why": "Beats per script (looked up first) or per template (fallback for a script this table does not name): allowed shot types, the subject role and seconds. Where the map names a beat the stage has no subject for (a sold sign, a magazine cover, a bell rope) the beat is left out or held on the nearest subject; whip pans and slow motion are left to a later pass. Shared sequences only inside one map row (the hearings; top_ten and the rich list; first_tenant and lease_signed)."
+ },
+ "ceremony": {
+  "value": [
+   {
+    "types": [
+     "static_wide"
+    ],
+    "subject": "place",
+    "seconds": 5
+   },
+   {
+    "types": [
+     "hero_low",
+     "high_angle"
+    ],
+    "subject": "place",
+    "seconds": 5
+   },
+   {
+    "types": [
+     "orbit"
+    ],
+    "subject": "place",
+    "seconds": 5
+   }
+  ],
+  "source": "CeremonyRecipe in P12.1 Part C",
+  "why": "Beats for the three ceremonies (15 s)."
+ },
+ "stinger": {
+  "value": [
+   {
+    "types": [
+     "static_wide",
+     "push_in"
+    ],
+    "subject": "main",
+    "seconds": 3
+   }
+  ],
+  "source": "plan-cinematic section 1 and 3: a stinger is 2 to 4 s with 1 or 2 shots (rules.json sceneLength and shotCount); one 3 s shot is the middle of that range",
+  "why": "The stinger form every compiled list carries (N167). Subject main is the full form subject with the most screen time. static_wide (2 to 8 s) and push_in (2 to 4 s) both hold 3 s in one shot, so Lay never splits it."
+ },
+ "marks": {
+  "value": {
+   "A": [
+    -1.5,
+    1.4,
+    0.0
+   ],
+   "B": [
+    1.5,
+    1.4,
+    0.0
+   ],
+   "C": [
+    0.0,
+    1.4,
+    -2.5
+   ]
+  },
+  "source": "starting guess, owner to tune by feel",
+  "why": "Where people stand in stage meters (x, eye height, z). The first two people stand on A and B; any more stand on C and beyond."
+ },
+ "personRadius": {
+  "value": 0.9,
+  "source": "P12.1 Part C baseline",
+  "why": "Framing radius of a person in meters."
+ },
+ "propRadius": {
+  "value": 0.5,
+  "source": "starting guess, owner to tune by feel",
+  "why": "Framing radius of the prop between two people (a table) in meters."
+ },
+ "district": {
+  "value": [
+   {
+    "center": [
+     0.0,
+     6.0,
+     -30.0
+    ],
+    "radius": 20.0,
+    "floors": 3
+   },
+   {
+    "center": [
+     60.0,
+     6.0,
+     -30.0
+    ],
+    "radius": 20.0,
+    "floors": 3
+   },
+   {
+    "center": [
+     -60.0,
+     4.5,
+     -30.0
+    ],
+    "radius": 16.0,
+    "floors": 2
+   }
+  ],
+  "source": "P12.1 Part C baseline numbers",
+  "why": "Plain district stage for a scene with no site: building subjects in order of first use."
+ },
+ "floorMeters": {
+  "value": 3.5,
+  "source": "starting guess, owner to tune by feel",
+  "why": "Height of one floor in meters, for a site building's center and height."
+ },
+ "cellMeters": {
+  "value": 8.0,
+  "source": "SiteGrid.CellFeet 26.25 ft times 0.3048, rounded",
+  "why": "Width of one grid cell in meters."
+ },
+ "distanceBySize": {
+  "value": {
+   "extreme_wide": [
+    3.0,
+    4.0
+   ],
+   "wide": [
+    2.5,
+    3.5
+   ],
+   "medium_wide": [
+    2.5,
+    3.2
+   ],
+   "medium": [
+    2.2,
+    3.0
+   ],
+   "medium_close": [
+    2.0,
+    2.8
+   ],
+   "extreme_close": [
+    3.5,
+    4.5
+   ],
+   "link": [
+    3.0,
+    3.0
+   ]
+  },
+  "source": "starting guess, owner to tune by feel; P12.1 used 3 (4 for extreme_close)",
+  "why": "Camera distance range in subject radii per shot size."
+ },
+ "lineMarginDegrees": {
+  "value": 5,
+  "source": "starting guess",
+  "why": "Extra degrees past rules.json line180.neutralDegrees a held shot keeps from the line."
+ },
+ "fallbackStepDegrees": {
+  "value": 5,
+  "source": "N178 safe fallback literal (r39 n3), moved to data N200 r42",
+  "why": "Azimuth step in degrees the camera fallback turns, either way in turn, from the scene side's base angle."
+ },
+ "fallbackSteps": {
+  "value": 72,
+  "source": "N178 safe fallback literal (r39 n3), moved to data N200 r42",
+  "why": "How many fallback azimuth steps to try past the base angle; 72 steps of 5 degrees covers the full circle both ways."
+ },
+ "fallbackElevationLiftDegrees": {
+  "value": 0.5,
+  "source": "N178 safe fallback literal (r39 n3), moved to data N200 r42",
+  "why": "Degrees above the floor elevation the fallback camera sits, so rounding cannot put it under the floor."
+ },
+ "fallbackDistanceAt": {
+  "value": 0.5,
+  "source": "N178 safe fallback literal (r39 n3), moved to data N200 r42",
+  "why": "Where in each distance range (distanceBySize and the type's distance change) the fallback stands: 0 near end, 1 far end, 0.5 the middle."
+ },
+ "distanceNudge": {
+  "value": 0.001,
+  "source": "CineCamera.ToDist literal (r38 m1), moved to data N200 r42",
+  "why": "Step, in subject radii, that nudges a rounded end distance back inside the type's distance change range."
+ },
+ "distanceNudgeTries": {
+  "value": 20,
+  "source": "CineCamera.ToDist literal (r38 m1), moved to data N200 r42",
+  "why": "Most nudges ToDist makes each way before it gives up and lets the shot fail its fit."
+ },
+ "clearMarginMeters": {
+  "value": 0.01,
+  "source": "Staging.ClearOfBuildings literal (562d1e0), moved to data N200 r42",
+  "why": "Meters past a building's radius plus a person's or prop's radius that the staged group stands, so touching counts as clear."
+ },
+ "sightMarginMeters": {
+  "value": 0.005,
+  "source": "N199 real fix r43 u5",
+  "why": "Meters added to a building's radius plus a person's or prop's radius when the camera checks its sight line to every staged mark. Kept below clearMarginMeters so a cleared mark (positions round to 1 mm) is never judged behind its own clearance ring."
+ },
+ "stageFrontDegrees": {
+  "value": 0,
+  "source": "N199 real fix r43 u5; the old degenerate direction (0, 1) in Staging.ClearOfBuildings",
+  "why": "Plan azimuth (0 = +z) of the stage front, the side the people stand on and the camera shoots from, used only when the marks sit on the buildings' center."
+ }
+}

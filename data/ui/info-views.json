@@ -1,0 +1,48 @@
+{
+  "formatVersion": 1,
+  "note": "Overhead info views (P1.7). Each view tints the site by one value. Ramps are colorblind-safe: viridis, cividis, magma and purple-orange (ColorBrewer PuOr), checked for red-green colorblindness. 'min'/'max' fix the scale so colors mean the same thing on every site. Cells with no value get no tint. Summary text uses {name} slots.",
+  "order": ["land", "traffic", "vacancy", "demand", "transit"],
+  "views": {
+    "land": {
+      "title": "Land value",
+      "min": 0.85, "max": 1.15,
+      "ramp": ["#440154", "#3b528b", "#21918c", "#5ec962", "#fde725"],
+      "legendLow": "Worth less (trucks, drive-thrus nearby)",
+      "legendHigh": "Worth more (parks, water nearby)",
+      "summary": { "high": "Land here is worth about {pct}% more than normal.", "low": "Land here is worth about {pct}% less than normal.", "even": "Land here is worth about normal.", "none": "Land value is not on for this site yet." }
+    },
+    "traffic": {
+      "title": "Traffic",
+      "min": 0, "max": 400,
+      "ramp": ["#00204d", "#414d6b", "#7c7b78", "#bcaf6f", "#ffea46"],
+      "legendLow": "Quiet",
+      "legendHigh": "Busy at rush hour",
+      "summary": { "some": "Busiest path: about {cars} cars at evening rush. {trucks} trucks a day.", "none": "No cars yet. Build a driveway and something to drive to." }
+    },
+    "vacancy": {
+      "title": "Empty space",
+      "min": 0, "max": 1,
+      "ramp": ["#fcfdbf", "#fc8961", "#b73779", "#51127c", "#000004"],
+      "legendLow": "Full of tenants",
+      "legendHigh": "Empty",
+      "summary": { "some": "{pct}% of your space is empty.", "full": "Every space is rented.", "none": "No spaces to rent yet." }
+    },
+    "demand": {
+      "title": "Demand",
+      "min": 0, "max": 1.4,
+      "ramp": ["#b35806", "#f1a340", "#f7f7f7", "#998ec3", "#542788"],
+      "legendLow": "Not enough customers",
+      "legendHigh": "Lots of customers",
+      "summary": { "over": "More shop space than shoppers want here. Build less or build something else.", "room": "Shoppers want more than you have built. There is room to grow.", "none": "Nothing built yet." }
+    },
+    "transit": {
+      "title": "Transit",
+      "min": 0, "max": 1,
+      "radius": { "value": 10, "source": "N307 build default: about an 80 m walk at 8 m cells, a short stroll on the site grid", "why": "Past this the tint stops, so the bright spot reads as the stop and its short walk, not the whole site" },
+      "ramp": ["#0d0887", "#7e03a8", "#cc4778", "#f89540", "#f0f921"],
+      "legendLow": "A long walk to the stop",
+      "legendHigh": "Right by the stop",
+      "summary": { "open": "The stop is open. {pct}% of the site is a short walk away.", "planned": "A stop is planned here. Win the vote and {pct}% of the site is a short walk away.", "none": "No transit stop here yet. Ask the city for one." }
+    }
+  }
+}

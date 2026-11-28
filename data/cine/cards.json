@@ -1,0 +1,27 @@
+{
+  "_note": "P12.2 card text for scenes. Shapes follow Docs/plan-cinematic.md appendix B contract v1. Limits are character counts (words for captionWords). Slot c1 keeps a copy of the limits in Data/cine/rules.json; the numbers must match.",
+  "limits": { "title": 28, "sub": 48, "name": 32, "role": 48, "captionLine": 42, "captionLines": 2, "captionWords": 14 },
+  "hints": { "skip": "Skip", "next": "Next" },
+  "title": { "title": "{title}", "sub": "{sub}" },
+  "chapter": { "number": "Chapter {n}", "name": "{name}", "blurb": "{blurb}" },
+  "moneyHold": { "up": "Company cash went up {amount}.", "down": "Company cash went down {amount}." },
+  "lowerThird": {
+    "person": "{role}, {business}",
+    "personAlone": "{role}",
+    "rival": "Developer, {company}",
+    "building": "{type}, {floors} floors",
+    "buildingOne": "{type}, 1 floor"
+  },
+  "roles": { "mentor": "Mentor", "rival": "Developer", "mayor": "Mayor", "banker": "Banker", "top_broker": "Top broker" },
+  "type": {
+    "font": "system",
+    "weight": "bold",
+    "letterSpacingEm": 0.08,
+    "referenceHeightPx": 1080,
+    "titlePx": 56,
+    "subPx": 24,
+    "lowerThirdPx": 24,
+    "captionPx": 24,
+    "why": "Owner call 36: the system font tonight, Bold with wide letter spacing. Sizes are at 1080p and scale with the screen height. Owner call 34: captions stay text with no voice."
+  }
+}

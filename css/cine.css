@@ -1,0 +1,54 @@
+/* Cinematic overlay: bars, cards, captions, cash row, money hold, vignette and grain.
+   Plan-cinematic sections 4 and 8. No filter of any kind. Only transform and opacity
+   change over time, and js/cine/overlay sets both from the scene clock.
+   --cine-text-scale is set by the page on :root and inherited; never redeclare it here. */
+.cine-root {
+  --cine-ink: #F1EFE9;
+  --cine-ink-2: #B9BCC4;
+  --cine-black: #000;
+  --cine-unit: min(calc(100vh / 1080), calc(100vw / 1920));
+  position: fixed; inset: 0; pointer-events: none; overflow: hidden;
+  font-family: var(--font-body); /* owner call 36, N264: Atkinson Hyperlegible from css/tokens.css */
+  color: var(--cine-ink); z-index: 50;
+}
+.cine-root[hidden] { display: none; }
+.cine-layer { position: absolute; inset: 0; opacity: 0; will-change: opacity; }
+.cine-dip { background: var(--cine-black); z-index: 4; }
+.cine-look { z-index: 2; }
+.cine-grain { inset: -128px; z-index: 3; background-repeat: repeat; will-change: transform, opacity; }
+:root[data-reduce-motion="on"] .cine-grain { display: none; }
+
+.cine-bar { position: absolute; left: 0; right: 0; height: 0; background: var(--cine-black);
+  z-index: 6; opacity: 0; will-change: transform, opacity; }
+.cine-bar-top { top: 0; }
+.cine-bar-bottom { bottom: 0; }
+
+.cine-box { position: absolute; opacity: 0; z-index: 7; margin: 0; box-sizing: border-box;
+  font-weight: 700; letter-spacing: 0.08em; line-height: 1.25; will-change: transform, opacity;
+  overflow-wrap: anywhere; text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6); }
+.cine-box[hidden] { display: none; }
+.cine-line { display: block; margin: 0; }
+.cine-t56 { font-size: calc(56 * var(--cine-unit) * var(--cine-text-scale, 1)); line-height: 1.2; }
+.cine-t24 { font-size: calc(24 * var(--cine-unit) * var(--cine-text-scale, 1)); }
+.cine-t48 { font-size: calc(48 * var(--cine-unit) * var(--cine-text-scale, 1)); line-height: 1.2; }
+.cine-sub { color: var(--cine-ink-2); margin-top: 0.4em; }
+.cine-t20 { font-size: calc(20 * var(--cine-unit) * var(--cine-text-scale, 1)); }
+/* Owner call 45: the speaker's name above the caption line, readable at 390 wide (min 14px). */
+.cine-speaker { color: var(--cine-speaker); font-weight: 700; letter-spacing: 0.03em; margin-bottom: 0.25em;
+  font-size: max(14px, calc(20 * var(--cine-unit) * var(--cine-text-scale, 1))); overflow-wrap: anywhere; }
+
+.cine-title, .cine-lower { left: calc(96 * var(--cine-unit)); max-width: calc(100vw - 192 * var(--cine-unit)); }
+.cine-chapter { left: 50%; top: 50%; width: min(90vw, 36em); margin-left: max(-45vw, -18em);
+  text-align: center; translate: 0 -50%; }
+.cine-caption { left: 50%; width: min(92vw, 48em); margin-left: max(-46vw, -24em); text-align: center; }
+.cine-holdline { left: 50%; width: min(92vw, 40em); margin-left: max(-46vw, -20em); text-align: center; }
+
+.cine-cash, .cine-skip { z-index: 8; white-space: nowrap; }
+/* N264: Atkinson runs wider than the system face; the cash row keeps one line and never runs
+   under the Skip hint (at 390 wide it may shrink, never wrap). */
+.cine-cash { max-width: calc(100vw - 96 * var(--cine-unit) - 12em); overflow: hidden; text-overflow: clip; letter-spacing: 0.04em; }
+.cine-cash { left: calc(48 * var(--cine-unit)); }
+/* Atkinson's glyphs stand 1px above a 1.2 line (45px text, 55px ink in 54px), which clipped the large
+   money-hold row (cine-overlay textsize C5-2). 1.25 gives the ink room and still fits the 2.0 bar. */
+.cine-cash .cine-line { line-height: 1.25; }
+.cine-skip { right: calc(48 * var(--cine-unit)); color: var(--cine-ink-2); }

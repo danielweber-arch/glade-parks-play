@@ -1,0 +1,667 @@
+{
+ "_note": "P12.1 shot grammar (plan-cinematic section 1). Each shot type: size, lens range in mm, elevation range in degrees, length range in real seconds, default ease and move limits. Ranges are [min, max]. Source 'plan-cinematic section 1' is the plan table; 'starting guess' means the plan gave no number and this is a first estimate. Data/camera.json keeps the gameplay cameras and is not used here.",
+ "formatVersion": 1,
+ "sizes": [
+  "extreme_wide",
+  "wide",
+  "medium_wide",
+  "medium",
+  "medium_close",
+  "extreme_close",
+  "link"
+ ],
+ "types": {
+  "establishing_aerial": {
+   "size": "extreme_wide",
+   "lensMm": {
+    "value": [
+     18,
+     24
+    ],
+    "source": "plan-cinematic section 1",
+    "why": "Lens range for this shot type."
+   },
+   "elevation": {
+    "value": [
+     35,
+     60
+    ],
+    "source": "plan-cinematic section 1",
+    "why": "Camera elevation range in degrees above the subject center."
+   },
+   "lengthSeconds": {
+    "value": [
+     4,
+     7
+    ],
+    "source": "plan-cinematic section 1",
+    "why": "Shot length range in real seconds."
+   },
+   "ease": "inOutSine",
+   "maxAzimuthSwing": {
+    "value": 30,
+    "source": "starting guess, owner to tune by feel",
+    "why": "Largest azimuth change from start to end of the shot, in degrees."
+   },
+   "maxElevationSwing": {
+    "value": 15,
+    "source": "starting guess, owner to tune by feel",
+    "why": "Largest elevation change from start to end of the shot, in degrees."
+   },
+   "distanceChange": {
+    "value": [
+     -0.3,
+     0.3
+    ],
+    "source": "starting guess, owner to tune by feel",
+    "why": "Allowed (to minus from) over from for the camera distance."
+   },
+   "_note": "Open a scene and show the district. High drift."
+  },
+  "crane_reveal": {
+   "size": "wide",
+   "lensMm": {
+    "value": [
+     24,
+     24
+    ],
+    "source": "plan-cinematic section 1",
+    "why": "Lens range for this shot type."
+   },
+   "elevation": {
+    "value": [
+     5,
+     35
+    ],
+    "source": "plan-cinematic section 1",
+    "why": "Camera elevation range in degrees above the subject center."
+   },
+   "lengthSeconds": {
+    "value": [
+     4,
+     6
+    ],
+    "source": "plan-cinematic section 1",
+    "why": "Shot length range in real seconds."
+   },
+   "ease": "inOutSine",
+   "maxAzimuthSwing": {
+    "value": 20,
+    "source": "starting guess, owner to tune by feel",
+    "why": "Largest azimuth change from start to end of the shot, in degrees."
+   },
+   "maxElevationSwing": {
+    "value": 30,
+    "source": "starting guess, owner to tune by feel",
+    "why": "Largest elevation change from start to end of the shot, in degrees."
+   },
+   "distanceChange": {
+    "value": [
+     -0.2,
+     0.3
+    ],
+    "source": "starting guess, owner to tune by feel",
+    "why": "Allowed (to minus from) over from for the camera distance."
+   },
+   "_note": "Rise from behind a fence or tree to reveal a building."
+  },
+  "hero_low": {
+   "size": "wide",
+   "lensMm": {
+    "value": [
+     24,
+     24
+    ],
+    "source": "plan-cinematic section 1",
+    "why": "Lens range for this shot type."
+   },
+   "elevation": {
+    "value": [
+     -10,
+     10
+    ],
+    "source": "starting guess, owner to tune by feel",
+    "why": "Camera elevation range in degrees above the subject center."
+   },
+   "lengthSeconds": {
+    "value": [
+     3,
+     5
+    ],
+    "source": "plan-cinematic section 1",
+    "why": "Shot length range in real seconds."
+   },
+   "ease": "outCubic",
+   "maxAzimuthSwing": {
+    "value": 10,
+    "source": "starting guess, owner to tune by feel",
+    "why": "Largest azimuth change from start to end of the shot, in degrees."
+   },
+   "maxElevationSwing": {
+    "value": 5,
+    "source": "starting guess, owner to tune by feel",
+    "why": "Largest elevation change from start to end of the shot, in degrees."
+   },
+   "distanceChange": {
+    "value": [
+     -0.1,
+     0.1
+    ],
+    "source": "starting guess, owner to tune by feel",
+    "why": "Allowed (to minus from) over from for the camera distance."
+   },
+   "_note": "Low and looking up with a tiny rise."
+  },
+  "high_angle": {
+   "size": "medium_wide",
+   "lensMm": {
+    "value": [
+     35,
+     35
+    ],
+    "source": "plan-cinematic section 1",
+    "why": "Lens range for this shot type."
+   },
+   "elevation": {
+    "value": [
+     30,
+     70
+    ],
+    "source": "plan-cinematic section 1",
+    "why": "Camera elevation range in degrees above the subject center."
+   },
+   "lengthSeconds": {
+    "value": [
+     3,
+     5
+    ],
+    "source": "plan-cinematic section 1",
+    "why": "Shot length range in real seconds."
+   },
+   "ease": "inOutSine",
+   "maxAzimuthSwing": {
+    "value": 10,
+    "source": "starting guess, owner to tune by feel",
+    "why": "Largest azimuth change from start to end of the shot, in degrees."
+   },
+   "maxElevationSwing": {
+    "value": 10,
+    "source": "starting guess, owner to tune by feel",
+    "why": "Largest elevation change from start to end of the shot, in degrees."
+   },
+   "distanceChange": {
+    "value": [
+     0,
+     0.3
+    ],
+    "source": "starting guess, owner to tune by feel",
+    "why": "Allowed (to minus from) over from for the camera distance."
+   },
+   "_note": "Looking down with a slow pull back."
+  },
+  "dolly_in": {
+   "size": "medium_wide",
+   "lensMm": {
+    "value": [
+     35,
+     35
+    ],
+    "source": "plan-cinematic section 1",
+    "why": "Lens range for this shot type."
+   },
+   "elevation": {
+    "value": [
+     -10,
+     30
+    ],
+    "source": "starting guess, owner to tune by feel",
+    "why": "Camera elevation range in degrees above the subject center."
+   },
+   "lengthSeconds": {
+    "value": [
+     3,
+     5
+    ],
+    "source": "plan-cinematic section 1",
+    "why": "Shot length range in real seconds."
+   },
+   "ease": "inOutCubic",
+   "maxAzimuthSwing": {
+    "value": 10,
+    "source": "starting guess, owner to tune by feel",
+    "why": "Largest azimuth change from start to end of the shot, in degrees."
+   },
+   "maxElevationSwing": {
+    "value": 5,
+    "source": "starting guess, owner to tune by feel",
+    "why": "Largest elevation change from start to end of the shot, in degrees."
+   },
+   "distanceChange": {
+    "value": [
+     -0.4,
+     -0.3
+    ],
+    "source": "plan-cinematic section 1",
+    "why": "Allowed (to minus from) over from for the camera distance."
+   },
+   "_note": "Move 30 to 40 percent closer."
+  },
+  "orbit": {
+   "size": "wide",
+   "lensMm": {
+    "value": [
+     28,
+     35
+    ],
+    "source": "plan-cinematic section 1",
+    "why": "Lens range for this shot type."
+   },
+   "elevation": {
+    "value": [
+     5,
+     45
+    ],
+    "source": "plan-cinematic section 1",
+    "why": "Camera elevation range in degrees above the subject center."
+   },
+   "lengthSeconds": {
+    "value": [
+     4,
+     6
+    ],
+    "source": "plan-cinematic section 1",
+    "why": "Shot length range in real seconds."
+   },
+   "ease": "inOutSine",
+   "maxAzimuthSwing": {
+    "value": 60,
+    "source": "starting guess, owner to tune by feel",
+    "why": "Largest azimuth change from start to end of the shot, in degrees."
+   },
+   "maxElevationSwing": {
+    "value": 10,
+    "source": "starting guess, owner to tune by feel",
+    "why": "Largest elevation change from start to end of the shot, in degrees."
+   },
+   "distanceChange": {
+    "value": [
+     -0.1,
+     0.1
+    ],
+    "source": "starting guess, owner to tune by feel",
+    "why": "Allowed (to minus from) over from for the camera distance."
+   },
+   "_note": "Arc of 60 degrees or less at 20 degrees a second or less.",
+   "maxAzimuthRate": {
+    "value": 20,
+    "source": "plan-cinematic section 1",
+    "why": "Average orbit speed cap in degrees a second."
+   }
+  },
+  "push_in": {
+   "size": "medium_close",
+   "lensMm": {
+    "value": [
+     50,
+     50
+    ],
+    "source": "plan-cinematic section 1",
+    "why": "Lens range for this shot type."
+   },
+   "elevation": {
+    "value": [
+     -10,
+     15
+    ],
+    "source": "starting guess, owner to tune by feel",
+    "why": "Camera elevation range in degrees above the subject center."
+   },
+   "lengthSeconds": {
+    "value": [
+     2,
+     4
+    ],
+    "source": "plan-cinematic section 1",
+    "why": "Shot length range in real seconds."
+   },
+   "ease": "outCubic",
+   "maxAzimuthSwing": {
+    "value": 5,
+    "source": "starting guess, owner to tune by feel",
+    "why": "Largest azimuth change from start to end of the shot, in degrees."
+   },
+   "maxElevationSwing": {
+    "value": 3,
+    "source": "starting guess, owner to tune by feel",
+    "why": "Largest elevation change from start to end of the shot, in degrees."
+   },
+   "distanceChange": {
+    "value": [
+     -0.15,
+     -0.1
+    ],
+    "source": "starting guess, owner to tune by feel",
+    "why": "Allowed (to minus from) over from for the camera distance."
+   },
+   "_note": "Slow 10 to 15 percent push. Never tighter than chest up."
+  },
+  "over_shoulder": {
+   "size": "medium",
+   "lensMm": {
+    "value": [
+     50,
+     50
+    ],
+    "source": "plan-cinematic section 1",
+    "why": "Lens range for this shot type."
+   },
+   "elevation": {
+    "value": [
+     -10,
+     20
+    ],
+    "source": "starting guess, owner to tune by feel",
+    "why": "Camera elevation range in degrees above the subject center."
+   },
+   "lengthSeconds": {
+    "value": [
+     2,
+     5
+    ],
+    "source": "plan-cinematic section 1",
+    "why": "Shot length range in real seconds."
+   },
+   "ease": "hold",
+   "maxAzimuthSwing": {
+    "value": 5,
+    "source": "starting guess, owner to tune by feel",
+    "why": "Largest azimuth change from start to end of the shot, in degrees."
+   },
+   "maxElevationSwing": {
+    "value": 3,
+    "source": "starting guess, owner to tune by feel",
+    "why": "Largest elevation change from start to end of the shot, in degrees."
+   },
+   "distanceChange": {
+    "value": [
+     -0.05,
+     0.05
+    ],
+    "source": "starting guess, owner to tune by feel",
+    "why": "Allowed (to minus from) over from for the camera distance."
+   },
+   "_note": "Behind one shoulder, almost still."
+  },
+  "two_shot": {
+   "size": "medium_wide",
+   "lensMm": {
+    "value": [
+     35,
+     35
+    ],
+    "source": "plan-cinematic section 1",
+    "why": "Lens range for this shot type."
+   },
+   "elevation": {
+    "value": [
+     -10,
+     25
+    ],
+    "source": "starting guess, owner to tune by feel",
+    "why": "Camera elevation range in degrees above the subject center."
+   },
+   "lengthSeconds": {
+    "value": [
+     3,
+     6
+    ],
+    "source": "plan-cinematic section 1",
+    "why": "Shot length range in real seconds."
+   },
+   "ease": "hold",
+   "maxAzimuthSwing": {
+    "value": 5,
+    "source": "starting guess, owner to tune by feel",
+    "why": "Largest azimuth change from start to end of the shot, in degrees."
+   },
+   "maxElevationSwing": {
+    "value": 3,
+    "source": "starting guess, owner to tune by feel",
+    "why": "Largest elevation change from start to end of the shot, in degrees."
+   },
+   "distanceChange": {
+    "value": [
+     -0.05,
+     0.05
+    ],
+    "source": "starting guess, owner to tune by feel",
+    "why": "Allowed (to minus from) over from for the camera distance."
+   },
+   "_note": "Both people, side on to the line."
+  },
+  "insert": {
+   "size": "extreme_close",
+   "lensMm": {
+    "value": [
+     85,
+     85
+    ],
+    "source": "plan-cinematic section 1",
+    "why": "Lens range for this shot type."
+   },
+   "elevation": {
+    "value": [
+     -10,
+     60
+    ],
+    "source": "starting guess, owner to tune by feel",
+    "why": "Camera elevation range in degrees above the subject center."
+   },
+   "lengthSeconds": {
+    "value": [
+     1,
+     2.5
+    ],
+    "source": "plan-cinematic section 1",
+    "why": "Shot length range in real seconds."
+   },
+   "ease": "hold",
+   "maxAzimuthSwing": {
+    "value": 0,
+    "source": "starting guess, owner to tune by feel",
+    "why": "Largest azimuth change from start to end of the shot, in degrees."
+   },
+   "maxElevationSwing": {
+    "value": 0,
+    "source": "starting guess, owner to tune by feel",
+    "why": "Largest elevation change from start to end of the shot, in degrees."
+   },
+   "distanceChange": {
+    "value": [
+     0,
+     0
+    ],
+    "source": "starting guess, owner to tune by feel",
+    "why": "Allowed (to minus from) over from for the camera distance."
+   },
+   "_note": "A thing, never a face. Still."
+  },
+  "follow": {
+   "size": "medium_wide",
+   "lensMm": {
+    "value": [
+     35,
+     35
+    ],
+    "source": "plan-cinematic section 1",
+    "why": "Lens range for this shot type."
+   },
+   "elevation": {
+    "value": [
+     0,
+     40
+    ],
+    "source": "plan-cinematic section 1",
+    "why": "Camera elevation range in degrees above the subject center."
+   },
+   "lengthSeconds": {
+    "value": [
+     3,
+     6
+    ],
+    "source": "plan-cinematic section 1",
+    "why": "Shot length range in real seconds."
+   },
+   "ease": "linear",
+   "maxAzimuthSwing": {
+    "value": 45,
+    "source": "starting guess, owner to tune by feel",
+    "why": "Largest azimuth change from start to end of the shot, in degrees."
+   },
+   "maxElevationSwing": {
+    "value": 10,
+    "source": "starting guess, owner to tune by feel",
+    "why": "Largest elevation change from start to end of the shot, in degrees."
+   },
+   "distanceChange": {
+    "value": [
+     -0.2,
+     0.2
+    ],
+    "source": "starting guess, owner to tune by feel",
+    "why": "Allowed (to minus from) over from for the camera distance."
+   },
+   "_note": "Track a moving thing."
+  },
+  "static_wide": {
+   "size": "wide",
+   "lensMm": {
+    "value": [
+     28,
+     28
+    ],
+    "source": "plan-cinematic section 1",
+    "why": "Lens range for this shot type."
+   },
+   "elevation": {
+    "value": [
+     0,
+     60
+    ],
+    "source": "plan-cinematic section 1",
+    "why": "Camera elevation range in degrees above the subject center."
+   },
+   "lengthSeconds": {
+    "value": [
+     2,
+     8
+    ],
+    "source": "plan-cinematic section 1",
+    "why": "Shot length range in real seconds."
+   },
+   "ease": "hold",
+   "maxAzimuthSwing": {
+    "value": 0,
+    "source": "starting guess, owner to tune by feel",
+    "why": "Largest azimuth change from start to end of the shot, in degrees."
+   },
+   "maxElevationSwing": {
+    "value": 0,
+    "source": "starting guess, owner to tune by feel",
+    "why": "Largest elevation change from start to end of the shot, in degrees."
+   },
+   "distanceChange": {
+    "value": [
+     0,
+     0
+    ],
+    "source": "starting guess, owner to tune by feel",
+    "why": "Allowed (to minus from) over from for the camera distance."
+   },
+   "_note": "Locked off. Quiet beats and stingers."
+  },
+  "whip_pan": {
+   "size": "link",
+   "lensMm": {
+    "value": [
+     18,
+     85
+    ],
+    "source": "plan-cinematic section 1",
+    "why": "Lens range for this shot type."
+   },
+   "elevation": {
+    "value": [
+     -10,
+     60
+    ],
+    "source": "starting guess, owner to tune by feel",
+    "why": "Camera elevation range in degrees above the subject center."
+   },
+   "lengthSeconds": {
+    "value": [
+     0.25,
+     0.4
+    ],
+    "source": "plan-cinematic section 1",
+    "why": "Shot length range in real seconds."
+   },
+   "ease": "outExpo",
+   "maxAzimuthSwing": {
+    "value": 180,
+    "source": "starting guess, owner to tune by feel",
+    "why": "Largest azimuth change from start to end of the shot, in degrees."
+   },
+   "maxElevationSwing": {
+    "value": 10,
+    "source": "starting guess, owner to tune by feel",
+    "why": "Largest elevation change from start to end of the shot, in degrees."
+   },
+   "distanceChange": {
+    "value": [
+     -0.2,
+     0.2
+    ],
+    "source": "starting guess, owner to tune by feel",
+    "why": "Allowed (to minus from) over from for the camera distance."
+   },
+   "_note": "Fast yaw that joins two places. Lens matches the next shot.",
+   "sameLensAsNext": true
+  }
+ },
+ "cutIds": [
+  "cut",
+  "fade_in",
+  "fade_out",
+  "dissolve",
+  "match",
+  "smash",
+  "whip"
+ ],
+ "easeIds": [
+  "linear",
+  "hold",
+  "inOutSine",
+  "inCubic",
+  "outCubic",
+  "inOutCubic",
+  "outQuint",
+  "outExpo"
+ ],
+ "aliasIds": {
+  "crane_up": "crane_reveal",
+  "wide": "static_wide",
+  "establishing_aerial": "establishing_aerial",
+  "hero_low": "hero_low",
+  "high_angle": "high_angle",
+  "dolly_in": "dolly_in",
+  "orbit": "orbit",
+  "push_in": "push_in",
+  "over_shoulder": "over_shoulder",
+  "two_shot": "two_shot",
+  "insert": "insert",
+  "follow": "follow",
+  "static_wide": "static_wide",
+  "whip_pan": "whip_pan"
+ }
+}

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="gp-transport" content="wasm">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Glade Parks Builder</title>
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/motion.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/home.css">
+  <link rel="stylesheet" href="css/start.css">
+  <link rel="stylesheet" href="css/cine.css">
+  <link rel="stylesheet" href="css/cine-flow.css">
+  <link rel="stylesheet" href="css/creator.css">
+  <script src="vendor/three.min.js"></script>
+  <script src="vendor/GLTFLoader.js"></script>
+</head>
+<body>
+  <div id="app">
+    <div class="topbar">
+      <div class="status" data-status role="status" aria-live="polite"></div>
+      <span class="tag" data-stub hidden></span>
+    </div>
+    <main id="panel" class="panel" data-screen=""></main>
+  </div>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

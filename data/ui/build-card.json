@@ -1,0 +1,18 @@
+{
+  "formatVersion": 1,
+  "_note": "P7.7 part B, owner call 44: words for the build mode details card (Sim/BuildView/BuildCard.cs). Tycoon shows money figures; Easy and Normal show the word band whose floor the figure reaches. Band floors are dollars a year (rent) or dollars (value). N270: rent and value split the site figures by cell share (the Sim keeps no per-building rent or value), so their labels say Estimated and estimateNote says how. Words follow Docs/word-bible.md; x5 may move them into Data/ui/lexicon.json.",
+  "labels": { "type": "Type", "tier": "Tier", "tenants": "Tenants", "rent": "Estimated rent", "value": "Estimated value", "noTenants": "None yet", "estimateNote": "About this building's share of the whole site, by the ground it covers." },
+  "report": { "title": "Site report", "buildings": "Buildings", "leasedEasy": "Leased", "leasedNormal": "Leased", "leasedTycoon": "Occupancy", "cash": "Company cash" },
+  "rentBands": [
+    { "floor": { "value": 0, "source": "A", "why": "Nothing coming in yet." }, "word": "No rent yet" },
+    { "floor": { "value": 1, "source": "A", "why": "Any rent at all." }, "word": "A little rent" },
+    { "floor": { "value": 250000, "source": "A", "why": "About one small shop row fully leased for a year." }, "word": "Good rent" },
+    { "floor": { "value": 1000000, "source": "A", "why": "A big building pulling its weight." }, "word": "Strong rent" }
+  ],
+  "valueBands": [
+    { "floor": { "value": 0, "source": "A", "why": "Not worth anything on paper yet." }, "word": "Not worth much yet" },
+    { "floor": { "value": 1, "source": "A", "why": "Some value on paper." }, "word": "Worth a fair amount" },
+    { "floor": { "value": 5000000, "source": "A", "why": "About what a leased small block sells for." }, "word": "Worth a lot" },
+    { "floor": { "value": 25000000, "source": "A", "why": "A big leased building." }, "word": "Worth a fortune" }
+  ]
+}

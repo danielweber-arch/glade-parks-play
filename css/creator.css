@@ -1,0 +1,30 @@
+/* P5.6 creator. Uses the shell tokens; falls back to plain colors. */
+.creator { display: grid; gap: 12px; max-width: 640px; }
+.creator-text { display: grid; gap: 4px; }
+.creator-text input { font: inherit; padding: 8px; }
+.creator-field { border: 1px solid var(--line, #8888); border-radius: 6px; padding: 8px; }
+.creator-field [role="radiogroup"] { display: flex; flex-wrap: wrap; gap: 6px; }
+.creator-field button { font: inherit; padding: 6px 10px; cursor: pointer; }
+.creator-field button[aria-checked="true"] { outline: 2px solid var(--accent, #2a6); font-weight: 600; }
+.creator button:focus-visible, .creator input:focus-visible { outline: 3px solid var(--focus, #36c); outline-offset: 2px; }
+.creator [data-create] { justify-self: start; padding: 8px 16px; }
+/* N347: Start my company and Back sit side by side; Back is a normal secondary button, not a full width bar. */
+.creator .creator-buttons { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.creator .creator-buttons button { display: inline-block; width: auto; font: inherit; padding: 8px 16px; cursor: pointer; border-radius: 6px; }
+.creator .creator-buttons [data-back] { background: transparent; color: inherit; border: 1px solid var(--line, #8888); }
+/* N351: the name row: the two cycle arrows sit either side of the field. */
+.creator .creator-name-row { display: flex; gap: 6px; align-items: center; }
+.creator .creator-name-row input { flex: 1 1 auto; min-width: 0; }
+.creator .creator-name-row button { font: inherit; padding: 6px 12px; cursor: pointer; }
+/* N438: the live figure preview. Choices left, preview right; stacked under 900px (the preview then sits under the heading). */
+.creator.creator-has-preview { max-width: 920px; grid-template-columns: minmax(0, 1fr) auto; column-gap: 24px; }
+.creator.creator-has-preview > * { grid-column: 1; }
+.creator.creator-has-preview > .creator-preview { grid-column: 2; grid-row: 1 / span var(--preview-rows, 10); align-self: start; }
+.creator-preview { border: 1px solid var(--line, #8888); border-radius: 12px; padding: 8px; background: radial-gradient(circle at 50% 35%, #fff6d8, #ffd9a8 55%, #f2a65a); line-height: 0; }
+.creator-preview canvas { display: block; cursor: grab; touch-action: none; }
+.creator-preview canvas:active { cursor: grabbing; }
+.creator-field .creator-swatch { display: inline-block; width: 16px; height: 16px; border-radius: 50%; margin-right: 6px; vertical-align: -3px; border: 1px solid #0006; }
+@media (max-width: 899px) {
+  .creator.creator-has-preview { grid-template-columns: minmax(0, 1fr); }
+  .creator.creator-has-preview > .creator-preview { grid-column: 1; grid-row: auto; justify-self: center; }
+}

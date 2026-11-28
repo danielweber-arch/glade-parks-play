@@ -1,0 +1,10 @@
+{
+  "formatVersion": 1,
+  "_note": "N355 (r55 g1): menu words for talking in the play console and the browser (Tools/play/Core/TalkLink.cs, PeopleScreens.cs, Screens.cs LeasingScreen). Words only; the talks themselves live in /Dialogue.",
+  "peoplePick": { "value": "Who to talk to", "source": "word bible, plain verbs", "why": "Title of the People you know pick." },
+  "talkToTenant": { "value": "Talk to a tenant", "source": "audit B1 (d)", "why": "Leasing row 2: sign a lease by talking." },
+  "tenantPick": { "value": "Which tenant", "source": "word bible, plain verbs", "why": "Title of the tenant pick when more than one offer is open." },
+  "noTalk": { "value": "There is nothing to talk about with them yet.", "source": "word bible, short sentences", "why": "A person with no talk in /Dialogue." },
+  "noOffer": { "value": "No tenant is waiting to talk.", "source": "word bible, short sentences", "why": "Talk to a tenant with no open offer." },
+  "noPeople": { "value": "You have not met anyone yet.", "source": "the old People you know line", "why": "No cast and no relationships." }
+}

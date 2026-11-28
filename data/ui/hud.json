@@ -1,0 +1,15 @@
+{
+  "formatVersion": 1,
+  "companyCash": "Company",
+  "personalCash": "You",
+  "reputation": "Reputation",
+  "sharkEnd": "Shark",
+  "shooterEnd": "Straight Shooter",
+  "thousand": "k",
+  "million": "M",
+  "billion": "B",
+  "cash": "Cash",
+  "value": "What it is worth",
+  "yearlyIncome": "Money in each year",
+  "leased": "Leased"
+}

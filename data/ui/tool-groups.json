@@ -1,0 +1,19 @@
+{
+  "formatVersion": 1,
+  "note": "Build dock groups, cycled left/right with the bumpers or Q/E. Item lists come from the browser's final dock, builder-v30.html line 1582 (v7 CATS), regrouped into the seven groups the port plan names. Industrial (line 1582 'ind') sits under Hotel & office until the owner decides (see docs/agent-notes/w2-ui.md). Ready-made items are kit indexes placed as tool 100+index (browser KITS line 1542, tool===100 line 1820).",
+  "readyMadeToolBase": 100,
+  "groups": [
+    { "id": "kit", "label": "Ready-made", "color": "#ffd166", "kits": ["Shop strip", "Grocery anchor", "Coffee drive-thru", "Burger drive-thru", "Restaurant + patio", "Gym", "Main street block", "Apartment block", "Townhome row", "House block", "Hotel", "Office", "Park block", "Parking field", "Pad to sell", "Home lots to sell"] },
+    { "id": "shop", "label": "Shops & food", "color": "#d9c3a0", "items": [1, 2, 45, 3, 44, 4, 5, 6, 43, 70, 71, 72, 73, 88, 90, 93, 94, 95, 99, 28] },
+    { "id": "home", "label": "Homes", "color": "#c9b8a0", "items": [7, 8, 9, 22, 42, 74, 29] },
+    { "id": "work", "label": "Hotel & office", "color": "#8fb3d1", "items": [10, 46, 75, 91, 87, 89, 92, 97, 11, 41, 54, 56, 55, 76, 79, 86, 96, 98, 48, 57, 58, 59, 47, 77, 78] },
+    { "id": "park", "label": "Parking", "color": "#6b7078", "items": [12, 13] },
+    { "id": "road", "label": "Roads", "color": "#58a6ff", "items": [14, 61, 62, 63, 17, 18, 19] },
+    { "id": "out", "label": "Parks & fun", "color": "#7fb069", "items": [16, 27, 23, 24, 25, 26, 20, 21] }
+  ],
+  "productGroupsNote": "Game-product groups (Data/products), kept out of \"groups\" until GameData and ToolCatalog merge Data/products: ToolCatalog.FromJson reads only \"groups\" and throws on a tool id buildings.json lacks. Wiring: append these after \"groups\" once the BuildingCatalog passed in has had MergeProducts applied. See Docs/agent-notes/p1-towers.md.",
+  "productGroups": [
+    { "id": "tower", "label": "Towers", "color": "#9fb8d8", "items": [166, 160, 161, 162, 163, 164, 165] }
+  ],
+  "bulldoze": { "id": "doze", "label": "Bulldoze", "color": "#ff5d5d", "tool": 0 }
+}

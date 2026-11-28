@@ -1,0 +1,54 @@
+{
+  "_note": "P12.8 building reveals (plan-cinematic section 6), read by Sim/Cine/Reveals. Angles in degrees, times in real seconds, distance in subject radii, heights in meters. Shot limits come from Data/cine/shots.json; every reveal must pass CutLint and fit sceneSeconds.reveal (6 to 15 s).",
+  "formatVersion": 1,
+  "classes": {
+    "towerFloors": { "value": 6, "source": "plan-cinematic section 6", "why": "Towers of 6 floors or more get the crane reveal." },
+    "topTier": { "value": 2, "source": "Sim/Grid/SiteGrid.cs Q: 0 low, 1 basic, 2 premium", "why": "A tower whose tallest cells carry this tenant tier adds lights on." }
+  },
+  "picks": {
+    "low": { "recipes": ["timelapse", "dollyOrbit"], "mood": "golden_hour", "typeWord": "Shops", "why": "Low buildings get a dolly in and a short orbit after the timelapse." },
+    "tower": { "recipes": ["timelapse", "crane"], "mood": "golden_hour", "typeWord": "Tower", "why": "Towers of 6 floors or more get the crane reveal." },
+    "topTier": { "recipes": ["timelapse", "crane", "lightsOn"], "mood": "epic_night", "typeWord": "Tower", "dropCraneLanding": true, "why": "Owner call 50: same rule as the landmark. Keep the timelapse, drop the crane landing so the crane lands straight on the lights: 6.5 + 4 + 4 = 14.5 s, under the 15 s cap." },
+    "landmark": { "recipes": ["timelapse", "crane", "lightsOn"], "mood": "golden_hour", "typeWord": "Landmark", "dropCraneLanding": true, "why": "Owner call 50: same rule as top tier. A landmark gets all three; with the hero low landing it runs 17 s, so the crane lands straight on the lights. The landmark flag adds only the short timelapse (6 s), so 14 s." }
+  },
+  "subject": {
+    "floorHeightM": { "value": 3.5, "source": "Data/art/models.json floorHeightM", "why": "One floor of a stretched building body." },
+    "minRadiusM": { "value": 8, "source": "starting guess, owner to tune by feel", "why": "A low shop is wider than tall; the camera frames its footprint, not its height." }
+  },
+  "timelapse": {
+    "type": "static_wide",
+    "seconds": { "value": 6.5, "source": "plan-cinematic section 6", "why": "6 to 8 s locked off; under the 8 s shot cap." },
+    "landmarkSeconds": { "value": 6, "source": "plan-cinematic section 6", "why": "The short end of 6 to 8 s so all three recipes fit in 15 s." },
+    "orbit": { "value": [0, 15, 5], "source": "starting guess, owner to tune by feel", "why": "Az, el, dist: a high wide that sees the whole lot." },
+    "leadSeconds": { "value": 0.5, "source": "starting guess, owner to tune by feel", "why": "Empty lot before the fence goes up." },
+    "tailSeconds": { "value": 0.75, "source": "starting guess, owner to tune by feel", "why": "Finished building holds before the match cut." },
+    "timelineDays": { "value": 100, "source": "starting guess, owner to tune by feel", "why": "Day grid for Stages.Timeline when a building has no schedule; 1 percent steps." },
+    "sunStart": { "value": 70, "source": "starting guess, owner to tune by feel", "why": "Sun elevation at the start: high noon light." },
+    "sunEnd": { "value": 12, "source": "plan-cinematic section 6", "why": "Sun elevation at golden hour. Falls one way only, well under one pass." }
+  },
+  "dollyOrbit": {
+    "dolly": { "type": "dolly_in", "seconds": { "value": 3, "source": "Data/cine/shots.json dolly_in 3 to 5 s", "why": "Short push toward the shop front." }, "from": { "value": [20, 10, 4], "source": "starting guess, owner to tune by feel", "why": "Az, el, dist." }, "to": { "value": [20, 10, 2.6], "source": "Data/cine/shots.json dolly_in distanceChange -0.4 to -0.3", "why": "35 percent closer." } },
+    "orbit": { "type": "orbit", "seconds": { "value": 4, "source": "Data/cine/shots.json orbit 4 to 6 s", "why": "A short orbit." }, "from": { "value": [70, 15, 3], "source": "starting guess, owner to tune by feel", "why": "50 degrees off the dolly so the cut is not a jump cut." }, "to": { "value": [100, 15, 3], "source": "starting guess, owner to tune by feel", "why": "30 degrees of turn: short." } }
+  },
+  "crane": {
+    "rise": { "type": "crane_reveal", "seconds": { "value": 4, "source": "Data/cine/shots.json crane_reveal 4 to 6 s", "why": "Rise from behind cover." }, "from": { "value": [-30, 5, 3], "source": "plan-cinematic section 6", "why": "Starts low, behind a fence or a neighbor's roof." }, "to": { "value": [-20, 30, 3], "source": "plan-cinematic section 6", "why": "Rises and tilts down onto the building." } },
+    "land": { "type": "hero_low", "seconds": { "value": 3, "source": "Data/cine/shots.json hero_low 3 to 5 s", "why": "Lands on a hero low angle." }, "from": { "value": [40, -5, 2.5], "source": "starting guess, owner to tune by feel", "why": "60 degrees off the crane end; low and looking up." }, "to": { "value": [45, -5, 2.5], "source": "starting guess, owner to tune by feel", "why": "A slow drift." } }
+  },
+  "lightsOn": {
+    "orbit": { "type": "orbit", "seconds": { "value": 4, "source": "Data/cine/shots.json orbit 4 to 6 s", "why": "Aerial orbit after the sign lights." }, "from": { "value": [100, 35, 3.2], "source": "starting guess, owner to tune by feel", "why": "High and well off the shot before." }, "to": { "value": [130, 35, 3.2], "source": "starting guess, owner to tune by feel", "why": "30 degrees of turn." } },
+    "leadSeconds": { "value": 0.4, "source": "starting guess, owner to tune by feel", "why": "Dark windows for a beat before the ground floor lights." },
+    "signGapSeconds": { "value": 0.4, "source": "starting guess, owner to tune by feel", "why": "Roof sign lights this long after the top floor." },
+    "duskSun": { "value": 4, "source": "plan-cinematic section 6", "why": "Sun elevation at dusk when lights on runs without a timelapse." }
+  },
+  "lowerThird": {
+    "leadSeconds": { "value": 0.5, "source": "Data/cine/rules.json captions afterCutSeconds 0.3", "why": "The name comes up after the last cut settles and holds to the end." }
+  },
+  "brightness": {
+    "sunFloor": { "value": 0.1, "source": "starting guess, owner to tune by feel", "why": "Scene brightness with the sun at or under the horizon." },
+    "sunGain": { "value": 0.6, "source": "starting guess, owner to tune by feel", "why": "Added brightness times sin(sun elevation)." },
+    "lightsGain": { "value": 0.25, "source": "starting guess, owner to tune by feel", "why": "Added brightness with every floor lit, shared evenly by floor." },
+    "signGain": { "value": 0.05, "source": "starting guess, owner to tune by feel", "why": "Added brightness when the roof sign lights." },
+    "flashGain": { "value": 0.5, "source": "starting guess, owner to tune by feel", "why": "Added brightness of a flash cue with no To." },
+    "flashSeconds": { "value": 0.1, "source": "starting guess, owner to tune by feel", "why": "How long one flash holds." }
+  }
+}

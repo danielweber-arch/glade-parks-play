@@ -1,0 +1,25 @@
+/* P7.9 city map screen (graybox). Colors come from tokens.css. */
+[data-city] { position: fixed; inset: 24px; z-index: 50; display: grid; grid-template-columns: 1fr 240px; grid-template-rows: auto 1fr auto;
+  gap: 12px; padding: 16px; background: var(--panel); color: var(--ink); border: 1px solid var(--line); border-radius: 8px; font-family: var(--font-body); }
+[data-city] h2 { margin: 0; grid-column: 1; }
+[data-city-close] { grid-column: 2; justify-self: end; }
+[data-city-canvas] { grid-column: 1; width: 100%; height: 100%; max-height: calc(100vh - 160px); object-fit: contain; background: var(--bg); border: 1px solid var(--line); }
+[data-city-side] { grid-column: 2; overflow: auto; }
+[data-city-side] ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+[data-city-side] button, [data-city-close] { font: inherit; padding: 6px 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--bg); color: var(--ink); cursor: pointer; }
+[data-city] button:focus-visible { outline: var(--focus-ring) solid var(--focus); }
+[data-city-line] { grid-column: 1 / -1; margin: 0; min-height: 1.4em; color: var(--ink-2); }
+[data-city-tag] { position: absolute; top: 4px; left: 50%; margin: 0; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-2); }
+[data-city-top] { grid-column: 1; display: flex; gap: 12px; align-items: center; }
+[data-city-drive] { font: inherit; padding: 6px 10px; border: 1px solid var(--line); border-radius: 6px; background: var(--accent, #1F5FBF); color: #fff; cursor: pointer; }
+
+/* P7.9 drive mode (graybox): the 3D canvas fills the window, a few lines of text sit on top. */
+[data-drive] { position: fixed; inset: 0; z-index: 60; background: #c9d6e3; font-family: var(--font-body, system-ui); }
+[data-drive-canvas] { display: block; width: 100%; height: 100%; outline: none; cursor: grab; }
+[data-drive-tag] { position: absolute; top: 8px; left: 50%; transform: translateX(-50%); margin: 0; font-size: 11px; letter-spacing: .08em; text-transform: uppercase; color: #333; }
+[data-drive-hud] { position: absolute; right: 16px; bottom: 16px; margin: 0; padding: 6px 10px; background: rgba(20,22,26,.75); color: #fff; border-radius: 6px; font-size: 18px; font-variant-numeric: tabular-nums; }
+[data-drive-toast] { position: absolute; top: 40px; left: 50%; transform: translateX(-50%); margin: 0; padding: 0 14px; max-width: 70ch; background: rgba(20,22,26,.85); color: #fff; border-radius: 6px; line-height: 2.2; }
+[data-drive-toast]:empty { display: none; }
+[data-drive-help] { position: absolute; left: 16px; bottom: 16px; margin: 0; max-width: 60ch; color: #222; font-size: 13px; }
+[data-drive-leave] { position: absolute; top: 12px; right: 16px; font: inherit; padding: 6px 10px; border: 1px solid #888; border-radius: 6px; background: #fff; color: #111; cursor: pointer; }
+[data-drive-leave]:focus-visible { outline: 2px solid #1F5FBF; }

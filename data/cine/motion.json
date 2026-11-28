@@ -1,0 +1,14 @@
+{
+  "_note": "Motion tokens for the HUD and menus (plan-cinematic section 8, P12.6). Tools/web/motion-css.mjs writes Web/Client/css/motion.css from this file; Sim/Cine/Motion reads it for Unity. Key suffix sets the unit: Ms is milliseconds, Px is pixels, Items is a count, Curve is a cubic bezier [x1, y1, x2, y2]. CSS names are --motion- plus the key in kebab case without the suffix.",
+  "focusMs": { "value": 80, "source": "Docs/ui/style-guide.md section 6; Web/Client/css/base.css line 6 (--dur-focus)", "why": "The focus ring moves in 80 ms, quick enough that a stick or arrow press feels instant." },
+  "panelOpenMs": { "value": 160, "source": "Docs/ui/style-guide.md section 6; Web/Client/css/base.css line 6 (--dur-open)", "why": "A panel slides and fades in over 160 ms, so the eye follows it without waiting on it." },
+  "panelCloseMs": { "value": 120, "source": "Docs/ui/style-guide.md section 6", "why": "Leaving is a little faster than arriving, so going back never feels slow." },
+  "largeMoveMs": { "value": 240, "source": "Docs/plan-cinematic.md section 8", "why": "Bigger moves, such as a whole screen sliding over, get a little longer so they stay easy to follow." },
+  "countUpMs": { "value": 400, "source": "Docs/ui/style-guide.md section 6; Docs/plan-cinematic.md section 8", "why": "Money changes count up over 400 ms on Easy and Normal. Tycoon and reduced motion show the final number at once." },
+  "slidePx": { "value": 12, "source": "Docs/ui/style-guide.md section 6; Docs/plan-cinematic.md section 8", "why": "A short 12 px slide shows where a panel came from without a long trip across the screen." },
+  "staggerMs": { "value": 30, "source": "Docs/plan-cinematic.md section 8", "why": "List items start 30 ms apart, so a list reads top to bottom as it arrives." },
+  "staggerMaxItems": { "value": 5, "source": "Docs/plan-cinematic.md section 8", "why": "Only the first 5 items stagger; the rest start with the fifth, so a long list never makes the player wait." },
+  "reduceFadeMs": { "value": 120, "source": "Docs/plan-cinematic.md section 8; Docs/ui/style-guide.md section 6", "why": "With reduced motion every slide becomes a plain fade of 120 ms or less, with no stagger and no count up." },
+  "easeOutCurve": { "value": [0.2, 0, 0, 1], "source": "Docs/plan-cinematic.md section 8", "why": "One ease out curve for things arriving: fast start, soft landing, no overshoot and no bounce." },
+  "easeInCurve": { "value": [0.4, 0, 1, 1], "source": "Docs/plan-cinematic.md section 8", "why": "One ease in curve for things leaving: soft start, quick exit, no overshoot and no bounce." }
+}

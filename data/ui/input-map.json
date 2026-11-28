@@ -1,0 +1,73 @@
+{
+  "_note": "The one shared input map for the web client (Web/Client/js/input) and later Unity. Map and action ids match Assets/Game/Input/GladeParks.inputactions; Overhead gains the T24 buttons and Driving gains LookBehind (camera in Data/camera.json). keys are KeyboardEvent.code values, pad ids use the W3C standard gamepad mapping (button:N, axis:N+ or axis:N-), mouse names a mouse input. Labels are player words; screens never name a physical button.",
+  "tunables": {
+    "stickDeadZone": { "value": 0.35, "source": "A", "why": "Stick travel below this counts as rest, so a worn stick does not drift focus." },
+    "repeatDelayMs": { "value": 400, "source": "A", "why": "Holding a direction waits this long before focus starts to repeat." },
+    "repeatRateMs": { "value": 120, "source": "A", "why": "Time between repeats while a direction is held." },
+    "holdToConfirmMs": { "value": 600, "source": "Docs/ui/style-guide.md section 7", "why": "Things you cannot undo need a 0.6 second hold on the same button." },
+    "repeatGuardMs": { "value": 300, "source": "owner call 55", "why": "A second press of the same action on the same screen this soon after the last is a double click, not a choice, so it is ignored." }
+  },
+  "maps": [
+    {
+      "id": "OnFoot",
+      "label": "On foot",
+      "actions": [
+        { "id": "Move", "label": "Walk", "keys": ["KeyW", "KeyA", "KeyS", "KeyD"], "pad": ["axis:0-", "axis:0+", "axis:1-", "axis:1+"] },
+        { "id": "Look", "label": "Look around", "keys": [], "pad": ["axis:2-", "axis:2+", "axis:3-", "axis:3+"], "mouse": ["move"] },
+        { "id": "Jump", "label": "Jump", "keys": ["Space"], "pad": ["button:0"] },
+        { "id": "Sprint", "label": "Run", "keys": ["ShiftLeft"], "pad": ["button:10"] },
+        { "id": "Interact", "label": "Talk or use", "keys": ["KeyE"], "pad": ["button:2"] },
+        { "id": "OpenPhone", "label": "Phone", "keys": ["KeyP"], "pad": ["button:12"] },
+        { "id": "OpenTablet", "label": "Tablet", "keys": ["Tab"], "pad": ["button:8"] }
+      ]
+    },
+    {
+      "id": "Driving",
+      "label": "Driving",
+      "actions": [
+        { "id": "Steer", "label": "Steer", "keys": ["KeyA", "KeyD"], "pad": ["axis:0-", "axis:0+"] },
+        { "id": "Throttle", "label": "Gas", "keys": ["KeyW"], "pad": ["button:7"] },
+        { "id": "Brake", "label": "Brake", "keys": ["KeyS"], "pad": ["button:6"] },
+        { "id": "Handbrake", "label": "Handbrake", "keys": ["Space"], "pad": ["button:0"] },
+        { "id": "ExitCar", "label": "Get out", "keys": ["KeyF"], "pad": ["button:3"] },
+        { "id": "Horn", "label": "Horn", "keys": ["KeyH"], "pad": ["button:10"] },
+        { "id": "Camera", "label": "Look around", "keys": [], "pad": ["axis:2-", "axis:2+", "axis:3-", "axis:3+"], "mouse": ["move"] },
+        { "id": "LookBehind", "label": "Look behind", "keys": ["KeyC"], "pad": ["button:11"], "mouse": ["middle"] }
+      ]
+    },
+    {
+      "id": "Overhead",
+      "label": "Overhead",
+      "actions": [
+        { "id": "Pan", "label": "Move the view", "keys": ["KeyW", "KeyA", "KeyS", "KeyD"], "pad": ["axis:0-", "axis:0+", "axis:1-", "axis:1+"] },
+        { "id": "Zoom", "label": "Zoom", "keys": ["Equal", "Minus"], "pad": ["button:6", "button:7"], "mouse": ["wheel"] },
+        { "id": "Rotate", "label": "Turn the view", "keys": ["KeyQ", "KeyE"], "pad": ["axis:2-", "axis:2+"] },
+        { "id": "Place", "label": "Place", "keys": ["Enter"], "pad": ["button:0"], "mouse": ["left"] },
+        { "id": "Cancel", "label": "Back", "keys": ["Escape"], "pad": ["button:1"], "mouse": ["right"] },
+        { "id": "Undo", "label": "Undo", "keys": ["KeyZ"], "pad": ["button:2"] },
+        { "id": "CycleTool", "label": "Next tool", "keys": ["KeyR"], "pad": ["button:11"] },
+        { "id": "PreviousGroup", "label": "Previous group", "keys": ["BracketLeft"], "pad": ["button:4"] },
+        { "id": "NextGroup", "label": "Next group", "keys": ["BracketRight"], "pad": ["button:5"] },
+        { "id": "PreviousItem", "label": "Previous item", "keys": ["Comma"], "pad": ["button:14"] },
+        { "id": "NextItem", "label": "Next item", "keys": ["Period"], "pad": ["button:15"] },
+        { "id": "FloorUp", "label": "Floors up", "keys": ["PageUp"], "pad": ["button:12"] },
+        { "id": "FloorDown", "label": "Floors down", "keys": ["PageDown"], "pad": ["button:13"] },
+        { "id": "Tier", "label": "Tier", "keys": ["KeyT"], "pad": ["button:3"] }
+      ]
+    },
+    {
+      "id": "UI",
+      "label": "Menus",
+      "actions": [
+        { "id": "Navigate", "label": "Move", "keys": ["ArrowUp", "ArrowDown", "ArrowLeft", "ArrowRight", "KeyW", "KeyA", "KeyS", "KeyD"], "pad": ["button:12", "button:13", "button:14", "button:15", "axis:0-", "axis:0+", "axis:1-", "axis:1+"] },
+        { "id": "Submit", "label": "Select", "keys": ["Enter", "Space", "NumpadEnter"], "pad": ["button:0"], "mouse": ["left"] },
+        { "id": "Cancel", "label": "Back", "keys": ["Escape", "Backspace"], "pad": ["button:1"] },
+        { "id": "OpenPhone", "label": "Phone", "keys": ["Tab"], "pad": ["button:8"] },
+        { "id": "TabLeft", "label": "Previous tab", "keys": ["KeyQ"], "pad": ["button:4"] },
+        { "id": "TabRight", "label": "Next tab", "keys": ["KeyE"], "pad": ["button:5"] },
+        { "id": "OpenBuild", "label": "3D build", "keys": ["KeyB"], "pad": ["button:3"] },
+        { "id": "OpenCity", "label": "City map", "keys": ["KeyM"], "pad": ["button:2"] }
+      ]
+    }
+  ]
+}

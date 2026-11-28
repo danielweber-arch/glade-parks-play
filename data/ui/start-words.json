@@ -1,0 +1,7 @@
+{
+  "_note": "R55 g2: player words for the play console's start and menu rows (M4, M6, M8). Word bible: short, plain.",
+  "More": { "value": "More", "source": "Docs/playtests/browser-wiring-audit-2026-11-26.md M4", "why": "Ninth row on a menu with more than nine items: shows the next page." },
+  "SkipTutorial": { "value": "Skip the tutorial", "source": "audit M8", "why": "Home row that turns off the tutorial lines." },
+  "SaveQuit": { "value": "Save and quit to title", "source": "audit M6", "why": "Home row that saves and goes back to the title." },
+  "SitePick": { "value": "Pick the starting site", "source": "Docs/owner-calls.md row 95", "why": "New game screen after difficulty: Cedar Glade first, then the other start maps." }
+}

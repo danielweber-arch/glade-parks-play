@@ -1,0 +1,246 @@
+{
+  "_note": "Creator live preview look (N438). Colors and proportions for the low poly figure drawn by Web/Client/js/figure/figure.js. Ids match Data/story/character.json.",
+  "formatVersion": 1,
+  "skin": {
+    "skin_1": {
+      "value": "#f7d7c4",
+      "source": "owner direction 2026-11-27 item 2 (slot n2)",
+      "why": "Skin tone swatch and figure color; a warm light to deep range"
+    },
+    "skin_2": {
+      "value": "#eec1a0",
+      "source": "owner direction 2026-11-27 item 2 (slot n2)",
+      "why": "Skin tone swatch and figure color; a warm light to deep range"
+    },
+    "skin_3": {
+      "value": "#e0a882",
+      "source": "owner direction 2026-11-27 item 2 (slot n2)",
+      "why": "Skin tone swatch and figure color; a warm light to deep range"
+    },
+    "skin_4": {
+      "value": "#c98e66",
+      "source": "owner direction 2026-11-27 item 2 (slot n2)",
+      "why": "Skin tone swatch and figure color; a warm light to deep range"
+    },
+    "skin_5": {
+      "value": "#a8704a",
+      "source": "owner direction 2026-11-27 item 2 (slot n2)",
+      "why": "Skin tone swatch and figure color; a warm light to deep range"
+    },
+    "skin_6": {
+      "value": "#8a5636",
+      "source": "owner direction 2026-11-27 item 2 (slot n2)",
+      "why": "Skin tone swatch and figure color; a warm light to deep range"
+    },
+    "skin_7": {
+      "value": "#6b3f26",
+      "source": "owner direction 2026-11-27 item 2 (slot n2)",
+      "why": "Skin tone swatch and figure color; a warm light to deep range"
+    },
+    "skin_8": {
+      "value": "#4a2a19",
+      "source": "owner direction 2026-11-27 item 2 (slot n2)",
+      "why": "Skin tone swatch and figure color; a warm light to deep range"
+    }
+  },
+  "hair": {
+    "hair_short": {
+      "value": {
+        "color": "#3b2a1e",
+        "shape": "cap"
+      },
+      "source": "owner direction 2026-11-27 item 2 (slot n2)",
+      "why": "Short hair: a low cap on the head"
+    },
+    "hair_buzz": {
+      "value": {
+        "color": "#2a211b",
+        "shape": "buzz"
+      },
+      "source": "owner direction 2026-11-27 item 2 (slot n2)",
+      "why": "Buzz cut: a thin shell"
+    },
+    "hair_curly": {
+      "value": {
+        "color": "#4a3020",
+        "shape": "curly"
+      },
+      "source": "owner direction 2026-11-27 item 2 (slot n2)",
+      "why": "Curly: a ring of small balls"
+    },
+    "hair_long": {
+      "value": {
+        "color": "#6b4a2b",
+        "shape": "long"
+      },
+      "source": "owner direction 2026-11-27 item 2 (slot n2)",
+      "why": "Long: a cap with a back drape"
+    },
+    "hair_braids": {
+      "value": {
+        "color": "#1f1712",
+        "shape": "braids"
+      },
+      "source": "owner direction 2026-11-27 item 2 (slot n2)",
+      "why": "Braids: a cap with two long braids"
+    },
+    "hair_bun": {
+      "value": {
+        "color": "#5a3a24",
+        "shape": "bun"
+      },
+      "source": "owner direction 2026-11-27 item 2 (slot n2)",
+      "why": "Bun: a cap with a ball on top"
+    },
+    "hair_cowboy_hat": {
+      "value": {
+        "color": "#8b5a2b",
+        "shape": "hat"
+      },
+      "source": "owner direction 2026-11-27 item 2 (slot n2)",
+      "why": "Cowboy hat: a brim and crown"
+    },
+    "hair_bald": {
+      "value": {
+        "color": "#000000",
+        "shape": "none"
+      },
+      "source": "owner direction 2026-11-27 item 2 (slot n2)",
+      "why": "Bald: no hair"
+    }
+  },
+  "body": {
+    "body_a": {
+      "value": {
+        "height": 1.0,
+        "width": 0.82
+      },
+      "source": "owner direction 2026-11-27 item 2 (slot n2)",
+      "why": "Slim: narrow shoulders and torso"
+    },
+    "body_b": {
+      "value": {
+        "height": 1.0,
+        "width": 1.0
+      },
+      "source": "owner direction 2026-11-27 item 2 (slot n2)",
+      "why": "Medium: the base figure"
+    },
+    "body_c": {
+      "value": {
+        "height": 1.0,
+        "width": 1.28
+      },
+      "source": "owner direction 2026-11-27 item 2 (slot n2)",
+      "why": "Broad: wide shoulders and torso"
+    },
+    "body_d": {
+      "value": {
+        "height": 1.14,
+        "width": 0.96
+      },
+      "source": "owner direction 2026-11-27 item 2 (slot n2)",
+      "why": "Tall: taller legs and torso"
+    }
+  },
+  "face": {
+    "face_1": {
+      "value": {
+        "eyes": "dot",
+        "brows": "flat",
+        "mouth": "smile",
+        "extra": "none"
+      },
+      "source": "owner direction 2026-11-27 item 2 (slot n2)",
+      "why": "Face 1: dot eyes, smile"
+    },
+    "face_2": {
+      "value": {
+        "eyes": "wide",
+        "brows": "arched",
+        "mouth": "flat",
+        "extra": "none"
+      },
+      "source": "owner direction 2026-11-27 item 2 (slot n2)",
+      "why": "Face 2: wide eyes, arched brows"
+    },
+    "face_3": {
+      "value": {
+        "eyes": "dot",
+        "brows": "thick",
+        "mouth": "grin",
+        "extra": "none"
+      },
+      "source": "owner direction 2026-11-27 item 2 (slot n2)",
+      "why": "Face 3: thick brows, grin"
+    },
+    "face_4": {
+      "value": {
+        "eyes": "dot",
+        "brows": "flat",
+        "mouth": "smile",
+        "extra": "glasses"
+      },
+      "source": "owner direction 2026-11-27 item 2 (slot n2)",
+      "why": "Face 4: glasses"
+    },
+    "face_5": {
+      "value": {
+        "eyes": "wide",
+        "brows": "flat",
+        "mouth": "smile",
+        "extra": "freckles"
+      },
+      "source": "owner direction 2026-11-27 item 2 (slot n2)",
+      "why": "Face 5: freckles"
+    },
+    "face_6": {
+      "value": {
+        "eyes": "narrow",
+        "brows": "thick",
+        "mouth": "flat",
+        "extra": "beard"
+      },
+      "source": "owner direction 2026-11-27 item 2 (slot n2)",
+      "why": "Face 6: narrow eyes, beard"
+    }
+  },
+  "shirt": {
+    "value": "#2f7dd1",
+    "source": "owner direction 2026-11-27 item 2 (slot n2)",
+    "why": "Shirt color: a bright blue that reads on light and dark"
+  },
+  "pants": {
+    "value": "#3a3f58",
+    "source": "owner direction 2026-11-27 item 2 (slot n2)",
+    "why": "Pants color"
+  },
+  "shoes": {
+    "value": "#2b2420",
+    "source": "owner direction 2026-11-27 item 2 (slot n2)",
+    "why": "Shoe color"
+  },
+  "featureColor": {
+    "value": "#22180f",
+    "source": "owner direction 2026-11-27 item 2 (slot n2)",
+    "why": "Eyes, brows and mouth"
+  },
+  "idleTurnDegPerSec": {
+    "value": 30,
+    "source": "owner direction 2026-11-27 item 2 (slot n2)",
+    "why": "Idle turn speed; slow enough to read the face"
+  },
+  "previewSize": {
+    "value": {
+      "width": 240,
+      "height": 320
+    },
+    "source": "owner direction 2026-11-27 item 2 (slot n2)",
+    "why": "Canvas size in CSS pixels"
+  },
+  "threeQuarterDeg": {
+    "value": -30,
+    "source": "owner direction 2026-11-27 item 2 (slot n2)",
+    "why": "Fixed view under reduced motion: a three quarter turn"
+  }
+}

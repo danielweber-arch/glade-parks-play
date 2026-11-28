@@ -1,0 +1,11 @@
+{
+  "_note": "Shell only words for Web/Client. All game words come from the Reply. May move to Data/ui at merge.",
+  "saveDownload": "Download my save",
+  "saveDownloadNone": "No save yet. Save a game first.",
+  "noAnswer": "The game is not answering. Check that it is running, then try again.",
+  "practiceData": "Practice data",
+  "padConnected": "Controller connected.",
+  "padGone": "Controller unplugged.",
+  "loading": "Loading the game.",
+  "mapFallback": "Using the basic controls. The control list did not load."
+}

@@ -1,0 +1,33 @@
+/* N437 sunny look: colored Home groups and stat tiles. The group comes from data-group (js/screens/home.js,
+   map in Data/ui/home-look.json); every fill has its own ink token from css/tokens.css. */
+#panel[data-screen="home"] h1 { color: var(--title-ink); text-shadow: 0 2px 0 var(--title-shadow); }
+.btn[data-group] {
+  background: var(--g-bg); color: var(--g-ink); border-color: var(--g-bg); font-weight: 700;
+  min-height: calc(var(--btn-h) + var(--s3)); box-shadow: 0 3px 0 rgba(0, 0, 0, 0.18);
+}
+.btn[data-group] .hint { color: var(--g-ink); }
+.btn[data-group]:hover { border-color: var(--g-ink); }
+.btn[data-group]:focus, .btn[data-group]:focus-visible { box-shadow: var(--ring); }
+.btn[data-group="build"] { --g-bg: var(--grp-build); --g-ink: var(--grp-build-ink); }
+.btn[data-group="money"] { --g-bg: var(--grp-money); --g-ink: var(--grp-money-ink); }
+.btn[data-group="people"] { --g-bg: var(--grp-people); --g-ink: var(--grp-people-ink); }
+.btn[data-group="city"] { --g-bg: var(--grp-city); --g-ink: var(--grp-city-ink); }
+.btn[data-group="end"] { --g-bg: var(--grp-end); --g-ink: var(--grp-end-ink); }
+.btn[data-group="more"] { --g-bg: var(--grp-more); --g-ink: var(--grp-more-ink); }
+.btn .glyph {
+  display: inline-flex; align-items: center; justify-content: center; flex: none;
+  width: 1.8em; height: 1.8em; border-radius: 50%; font-size: 1.1em; line-height: 1;
+  background: rgba(255, 255, 255, 0.55); font-family: "Apple Color Emoji", "Segoe UI Emoji", "Noto Color Emoji", sans-serif;
+}
+.btn .glyph[data-glyph]::before { content: attr(data-glyph); }
+.btn .glyph:not([data-glyph])::before { content: ""; width: 0.6em; height: 0.6em; border-radius: 50%; background: var(--g-ink); }
+/* Stat tiles: one fill per data-hud id. */
+.hud-row[data-tile] {
+  background: var(--t-bg); color: var(--t-ink); border-radius: var(--radius); padding: var(--s2) var(--s3);
+  box-shadow: 0 3px 0 rgba(0, 0, 0, 0.15);
+}
+.hud-row[data-tile] .label { color: var(--t-ink); font-weight: 700; }
+.hud-row[data-tile="cash"] { --t-bg: var(--tile-cash); --t-ink: var(--tile-cash-ink); }
+.hud-row[data-tile="netWorth"] { --t-bg: var(--tile-worth); --t-ink: var(--tile-worth-ink); }
+.hud-row[data-tile="inbox"] { --t-bg: var(--tile-inbox); --t-ink: var(--tile-inbox-ink); }
+.hud-row[data-tile="date"] { --t-bg: var(--tile-date); --t-ink: var(--tile-date-ink); }

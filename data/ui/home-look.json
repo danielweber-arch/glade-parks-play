@@ -1,0 +1,17 @@
+{
+  "formatVersion": 1,
+  "note": "N437 sunny look. Home action label (trimmed, any case) to color group and glyph. Read by Web/Client/js/screens/home.js from data/ui/home-look.json. Colors live in Web/Client/css/tokens.css (--grp-*).",
+  "order": {
+    "value": ["build", "money", "people", "city", "end", "more"],
+    "source": "Home menu order in the play console (Build, Money, People, City, End the quarter, More)",
+    "why": "Fallback when a label is not in the map: the action at that index gets this group."
+  },
+  "groups": {
+    "build": { "value": { "labels": ["build"], "glyph": "🏗️" }, "source": "Owner direction 2026-11-27 item 1", "why": "Warm amber for building, the main verb." },
+    "money": { "value": { "labels": ["money"], "glyph": "💰" }, "source": "Owner direction 2026-11-27 item 1", "why": "Green reads as cash." },
+    "people": { "value": { "labels": ["people"], "glyph": "🤝" }, "source": "Owner direction 2026-11-27 item 1", "why": "Rose for deals with people." },
+    "city": { "value": { "labels": ["city"], "glyph": "🏙️" }, "source": "Owner direction 2026-11-27 item 1", "why": "Sky blue for the town." },
+    "end": { "value": { "labels": ["end the quarter"], "glyph": "⏭️" }, "source": "Owner direction 2026-11-27 item 1", "why": "Violet sets the turn end apart." },
+    "more": { "value": { "labels": ["more"], "glyph": "✨" }, "source": "Owner direction 2026-11-27 item 1", "why": "Teal for the rest." }
+  }
+}

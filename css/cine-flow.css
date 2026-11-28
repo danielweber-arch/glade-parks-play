@@ -1,0 +1,23 @@
+/* Scene flow layer (P12.11b core): a full window scene over the panel, one Skip button. */
+.cine-flow { position: fixed; inset: 0; z-index: 40; background: var(--cine-bg); }
+.cine-flow-canvas { display: block; width: 100vw; height: 100vh; }
+.cine-flow-skip {
+  position: fixed; right: 16px; bottom: 16px; z-index: 60;
+  min-width: 88px; min-height: 44px; padding: 8px 18px;
+  font: 600 16px var(--font-body);
+  color: var(--cine-ink); background: var(--cine-btn-bg);
+  border: 1px solid var(--cine-btn-line); border-radius: 6px; cursor: pointer;
+}
+.cine-flow-skip:focus-visible { outline: 2px solid var(--cine-ink); outline-offset: 2px; }
+.cine-flow-skip[hidden] { display: none; }
+/* Scenes Off note (N238): one line plus the cash row, low on the screen, over the panel. No bars. */
+.cine-note {
+  position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 30; margin: 0 auto; max-width: 640px;
+  padding: 12px 16px; border-radius: 8px; background: var(--panel); color: var(--ink);
+  border: 1px solid var(--line); box-shadow: 0 4px 16px var(--cine-note-shadow); font-family: var(--font-body);
+}
+.cine-note p { margin: 0; }
+.cine-note-line { font-size: 18px; line-height: 1.4; }
+.cine-note-line[hidden] { display: none; }
+.cine-note-cash { display: flex; gap: 12px; justify-content: space-between; margin-top: 6px; font-size: 22px; font-weight: 700; }
+.cine-note-cash .label { font-weight: 400; color: var(--ink-2); }
